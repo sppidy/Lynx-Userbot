@@ -365,10 +365,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⥶ᴘʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
+                    "⥶ ᴘʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "ɴᴇxᴛ⥸", data="{}_next({})".format(prefix, modulo_page)
+                    "ɴᴇxᴛ ⥸", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -418,18 +418,21 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "***⛧ ╔╡404-Userbot╞╗ ⛧**",
+                    "⛧ ╔╡404-Userbot╞╗ ⛧",
                     text="""**Anda Bisa Membuat 404-Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo 404-Userbot",
+                                "Lord-Userbot",
+                                "https://github.com/Zora24/Lord-Userbot"),
+                            custom.Button.url(
+                                "404-Userbot",
                                 "https://github.com/KENZO-420/404-Userbot"),
                             custom.Button.url(
-                                "Editor Repo 404-Userbot",
+                                "Editor Fork 404",
                                 "t.me/SyndicateTwenty4"),
                             custom.Button.url(
-                                "Pemilik Asli Lord-Userbot",
+                                "Pemilik Lord",
                                 "t.me/LiuAlvinasMahaputra")] 
                     ],
                     link_preview=False,
