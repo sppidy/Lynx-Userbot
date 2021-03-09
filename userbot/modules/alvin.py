@@ -409,7 +409,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.yatim(?: |$)(.*)')
+@register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
