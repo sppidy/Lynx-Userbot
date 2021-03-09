@@ -409,7 +409,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
+@register(outgoing=True, pattern='^.yatim(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -438,7 +438,7 @@ CMD_HELP.update({
     "gabut":
     "`.gabut` ; `.dino`\
     \nUsage: ntahlah gabut doang.\
-    \n\n`.gombal`\
+    \n\n`.yatim`\
     \nUsage: buat bercanda\
     \n\n`.cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
