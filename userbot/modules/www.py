@@ -46,10 +46,10 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**⛧【PING】⛧**")
-    await pong.edit("**⛤⛧【PING】⛧⛤**")
-    await pong.edit("**⛧⛤⛧【PING】⛧⛤⛧**")
-    await pong.edit("**⛤⛧⛤⛧【PING】⛧⛤⛧⛤**")
+    await pong.edit("**⛧【KONTOOOOLLL】⛧**")
+    await pong.edit("**⛤⛧【MEMEEEKKK】⛧⛤**")
+    await pong.edit("**⛧⛤⛧【ANJIIIING】⛧⛤⛧**")
+    await pong.edit("**⛤⛧⛤⛧【BANGSAAAAT】⛧⛤⛧⛤**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⛧ ⁴⁰⁴NOTFOUND 【PING】 ⛧** "
@@ -66,7 +66,7 @@ async def pingme(pong):
     await pong.edit("`Love Ping..............`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**✯ ⁴⁰⁴【PONG】! ✯**\n"
+    await pong.edit(f"**✯ ⁴⁰⁴ NOTFOUND ✯**\n"
                     f"✧ **Ping:** "
                     f"`%sms` \n"
                     f"✧ **Uptime:** "
@@ -81,7 +81,7 @@ async def pingme(pong):
     await pong.edit("`Ping..............`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**♕ ⁴⁰⁴【PONG】! ♕**\n"
+    await pong.edit(f"**♕ ⁴⁰⁴【PONG】 !! ♕**\n"
                     f"➾ __Ping:__ "
                     f"`%sms` \n"
                     f"➾ __Uptime:__ "
@@ -93,20 +93,20 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**☪**")
-    await pong.edit("**☪✞**")
-    await pong.edit("**☪✞✡**")
-    await pong.edit("**☪✞✡☯**")
-    await pong.edit("**☪✞✡☯☸**")
-    await pong.edit("**✦҈͜͡☥ ⁴⁰⁴'PONG!**")
+    await pong.edit("**⛧**")
+    await pong.edit("**⛧⛤**")
+    await pong.edit("**⛧⛤⛧**")
+    await pong.edit("**⛧⛤⛧⛤**")
+    await pong.edit("**⛧⛤⛧⛤⛧**")
+    await pong.edit("**✦҈͜͡ ➠ PONG !!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**❖ ⁴⁰⁴NOTFOUND 【PING】 ❖**\n"
-                    f"☫ **Ping:** "
+    await pong.edit(f"**❖ ⁴⁰⁴ NOTFOUND ❖**\n"
+                    f"☫ - **Ping:** "
                     f"`%sms` \n"
-                    f"☫ **Uptime:** "
+                    f"☫ - **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡☤ My Lord:** `{ALIVE_NAME}`" % (duration))
+                    f"**✦҈͜͡ ➠ My Lord:** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
