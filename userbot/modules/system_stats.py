@@ -223,9 +223,9 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-           f"**╚╗404-NOTFOUND╔╝** \n"
+           f"**╚╗ 404 NOTFOUND ╔╝** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
-        f"**════════════════════**\n"
+        f"**══════════════════════**\n"
         f"**✞ Lord** \n"
         f" ➥: `{DEFAULTUSER}` \n"
         f"**⛧ Username** \n"
@@ -296,7 +296,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**✞ 404 NOTFOUND ✞*** \n"
+        f"**✞ 404 NOTFOUND ✞** \n"
         f"╔═══════════════════════ \n"
         f"╟|•🤴 `Lord     :`{DEFAULTUSER} \n"
         f"╟|•💳 `Username :`@{user.username} \n"
@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[Repo](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Owner](t.me/liualvinas)")
+        f"[Repo](https://github.com/KENZO-420/404-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Credit](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
