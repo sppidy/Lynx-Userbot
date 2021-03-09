@@ -306,7 +306,6 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n")
-        result = builder.article(
         buttons=[
             [
                custom.Button.url(
@@ -320,11 +319,8 @@ async def amireallyalive(alive):
                    "https://PAKE.LORD.AJA.YA.JANGAN.YANG.INI"),
                custom.Button.url(
                    "Editor Fork",
-                   "t.me/SyndicateTwenty4")],
-             ],
-              link_preview=False,
-             )
-    await event.answer([result] if result else None)
+                   "t.me/SyndicateTwenty4")]]
+             
 
      if ALIVE_LOGO:
         try:
