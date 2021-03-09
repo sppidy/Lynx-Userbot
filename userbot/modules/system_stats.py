@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[Repo](https://github.com/KENZO-420/404-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Credit](t.me/SyndicateTwenty4)")
+        f"[Repo Lord-Userbot](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Fork 404-Userbot](https://PAKE.LORD.AJA.YA.JANGAN.YANG.INI) | [Editor](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
