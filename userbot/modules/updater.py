@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari Lord Userbot.`'
+                ' untuk dapat deploy perubahan terbaru dari 404-Userbot.`'
             )
             repo.__del__()
             return
@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy Lord Userbot dyno.`'
+                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy 404-Userbot dyno.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno Lord-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
+                         '\nDyno 404-Userbot Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -98,7 +98,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#BOT \n"
-                "`Lord-Userbot Berhasil Di Update`")
+                "`404-Userbot Berhasil Di Update`")
 
     else:
         await event.edit('`[HEROKU]:'
@@ -115,18 +115,18 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✥ Lord-Userbot** `Berhasil Di Update!`')
+    await event.edit('**✥ 404-Userbot** `Berhasil Di Update!`')
     await asyncio.sleep(1)
-    await event.edit('**✥ Lord-Userbot** `Di Restart....`')
+    await event.edit('**✥ 404-Userbot** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik Lord ツ`')
+    await event.edit('`Mohon Menunggu Beberapa Detik My Lord ツ`')
     await asyncio.sleep(10)
     await event.delete()
 
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#BOT \n"
-            "**Lord-Userbot Telah Di Perbarui ツ**")
+            "**404-Userbot Telah Di Perbarui ツ**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ Lord-Userbot Sudah Versi Terbaru**\n')
+            f'\n**✣ 404-Userbot Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk Lord-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ Pembaruan Untuk 404-Userbot [{ac_br}]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -214,12 +214,12 @@ async def upstream(event):
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....20%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....35%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Loading....77%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update Lord-Userbot, Mohon Menunggu Lord....100%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Loading....1%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Loading....20%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Loading....35%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Loading....77%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Updating...90%`')
+        await event.edit('`✲ Proses Update 404-Userbot, Mohon Menunggu My Lord....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -236,7 +236,7 @@ CMD_HELP.update({
     ".update"
     "\nUsage: Untuk Melihat Pembaruan Terbaru Lord-Userbot."
     "\n\n.update now"
-    "\nUsage: Memperbarui Lord-Userbot."
+    "\nUsage: Memperbarui 404-Userbot."
     "\n\n.update deploy"
-    "\nUsage: Memperbarui Lord-Userbot Dengan Cara Deploy Ulang."
+    "\nUsage: Memperbarui 404-Userbot Dengan Cara Deploy Ulang."
 })
