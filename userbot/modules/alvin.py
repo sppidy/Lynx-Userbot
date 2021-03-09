@@ -409,36 +409,36 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
+@register(outgoing=True, pattern='^.yatim(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("`Hai, I LOVE YOU 💞`")
+    await typew.edit("`Hai Anak Kontol 🙈, Jangan Lupa Makan Yaa`")
     sleep(1)
-    await typew.edit("`I LOVE YOU SO MUCH!`")
+    await typew.edit("`Jangan Bilang Lu Ga Dikasih Makan Sama Ortu 😁`")
     sleep(1)
-    await typew.edit("`I NEED YOU!`")
+    await typew.edit("`APA PERLU GUA SANTUNIN ?? 🙈🙈 xixixi`")
     sleep(1)
-    await typew.edit("`I WANT TO BE YOUR BOYFRIEND!`")
+    await typew.edit("`OH IYAA LUPAAA, LU KAN BEBAN KELUARGA 🤣`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💕💗`")
+    await typew.edit("`MANA MUNGKIN ORTU LU PEDULII xixixi 🙈`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💗💞`")
+    await typew.edit("`KETAWA DULU BOLEH KALI YAA 😁`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💝💗`")
+    await typew.edit("`HAHAHAHAHAHAHA`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💟💖`")
+    await typew.edit("`KASIAN ORTUNYAA GAPEDULIII 🙈🤣`")
     sleep(1)
-    await typew.edit("`I LOVEE YOUUUU💘💓`")
+    await typew.edit("`MAAF YA, CANDAA BEBANNNN xixixi 🙈`")
     sleep(1)
-    await typew.edit("`Tapi Bo'ong`")
+    await typew.edit("`Tapi Bo'ong Hiyahiyahiya`")
 # Create by myself @localheart
 
 CMD_HELP.update({
     "gabut":
     "`.gabut` ; `.dino`\
     \nUsage: ntahlah gabut doang.\
-    \n\n`.gombal`\
+    \n\n`.yatim`\
     \nUsage: buat bercanda\
     \n\n`.cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
