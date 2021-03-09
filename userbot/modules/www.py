@@ -41,7 +41,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern="^$sping$")
+@register(outgoing=True, pattern="^.sping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
@@ -58,7 +58,7 @@ async def pingme(pong):
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^$lping$")
+@register(outgoing=True, pattern="^.lping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -73,7 +73,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^$xping$")
+@register(outgoing=True, pattern="^.xping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -88,7 +88,7 @@ async def pingme(pong):
                     f"`{uptime}` \n" % (duration))
 
 
-@register(outgoing=True, pattern="^$ping$")
+@register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
@@ -109,7 +109,7 @@ async def pingme(pong):
                     f"**✦҈͜͡ ➠ My Lord:** `{ALIVE_NAME}`" % (duration))
 
 
-@register(outgoing=True, pattern="^$speed$")
+@register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
     await spd.edit("`Menjalankan Tes Kecepatan Tinggi, Mohon Tunggu...🚀`")
@@ -149,7 +149,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@register(outgoing=True, pattern="^$pong$")
+@register(outgoing=True, pattern="^.pong$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
@@ -159,10 +159,10 @@ async def pingme(pong):
     await pong.edit("❖ **Ping!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
-    {"ping": "`$ping` ; `$lping` ; `$xping` ; `$sping`\
+    {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
     \nUsage: Untuk menunjukkan ping bot.\
-    \n\n`$speed`\
+    \n\n`.speed`\
     \nUsage: Untuk menunjukkan kecepatan.\
-    \n\n`$pong`\
+    \n\n`.pong`\
     \nUsage: sama kaya perintah ping."
      })
