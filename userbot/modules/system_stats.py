@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n")
-       else:
+    else:
         result = builder.article(
         buttons=[
             [
@@ -325,7 +325,7 @@ async def amireallyalive(alive):
              ],
               link_preview=False,
              )
-       await event.answer([result] if result else None)
+    await event.answer([result] if result else None)
 
      if ALIVE_LOGO:
         try:
