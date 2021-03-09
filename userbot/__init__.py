@@ -403,8 +403,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**❃ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Lord Userbot:** \n".format(
-                        "**⛧ 404-NOTFOUND**",
+                    text="{}\n\n**➸ Jumlah Modul Yang Tersedia:** `{}`\n               \n**➸ Daftar Modul 404-Userbot:** \n".format(
+                        "**⛧ ╔404-Userbot╗ ⛧**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,21 +412,21 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Lord✗Userbot ",
+                    "Bantuan ⛧ ╔404-Userbot╗ ⛧",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**404-NOTFOUND**",
-                    text="""**Anda Bisa Membuat Lord Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "**⛧ ╔404-Userbot╗ ⛧**",
+                    text="""**Anda Bisa Membuat 404-Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo 404-NOTFOUND",
+                                "Repo 404-Userbot",
                                 "https://github.com/KENZO-420/404-Userbot"),
                             custom.Button.url(
-                                "Pemilik Repo",
+                                "Editor Repo",
                                 "t.me/SyndicateTwenty4")],
                     ],
                     link_preview=False,
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Lord Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy 404-Userbot Anda Sendiri, Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
