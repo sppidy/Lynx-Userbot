@@ -438,7 +438,7 @@ CMD_HELP.update({
     "gabut":
     "`.gabut` ; `.dino`\
     \nUsage: ntahlah gabut doang.\
-    \n\n`.yatim`\
+    \n\n`.gombal`\
     \nUsage: buat bercanda\
     \n\n`.cinta`\
     \nUsage: mengirim cintamu ke seseorang.\
