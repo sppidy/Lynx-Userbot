@@ -269,7 +269,7 @@ async def amireallyalive(alive):
         f"✮ **Python :**   \n   ➥ `Versi {python_version()}` \n"
         f"✮ **Versi Bot :**\n   ➥ `{BOT_VER}` \n"
         f"✮ **Modul :**    \n   ➥ `{len(modules)}` \n\n"
-        f"✮ **Repo Userbot :** [404-Userbot](https://github.com/KENZO-420/404-Userbot)\n❃ **Grup Lord Userbot: **[Tekan Disini](t.me/LordUserbot_Group)\n❃ **Fork 404:** [AXEL](t.me/SyndicateTwenty4)\n" **Pemilik: ** [ALVIN](t.me/liualvinas)\n"
+        f"✮ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Grup Lord Userbot: **[Tekan Disini](t.me/LordUserbot_Group)\n❃ **Fork 404:** [Axel](t.me/SyndicateTwenty4)\n" **Pemilik: ** [Alvin](t.me/liualvinas)\n"
         f"**⊱•═══════•⊰║۩★۩║⊱•═══════•⊰**")
     if ALIVE_LOGO:
         try:
