@@ -306,7 +306,6 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n")
-    else:
         result = builder.article(
         buttons=[
             [
