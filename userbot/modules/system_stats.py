@@ -305,9 +305,24 @@ async def amireallyalive(alive):
         f"╟|•🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH}|404-Userbot \n"
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
-        f"╚═══════════════════════ \n\n"
-        f"[Repo Lord-Userbot](https://github.com/Zora24/Lord-Userbot) | [Grup Support](t.me/LordUserbot_Group) | [Fork 404-Userbot](https://PAKE.LORD.AJA.YA.JANGAN.YANG.INI) | [Editor](t.me/SyndicateTwenty4)")
-    if ALIVE_LOGO:
+        f"╚═══════════════════════ \n\n")
+        buttons=[
+            [
+               custom.Button.url(
+                   "Lord-Userbot",
+                   "https://github.com/Zora24/Lord-Userbot"),
+               custom.Button.url(
+                   "Grup Support",
+                   "t.me/LordUserbot_Group"),
+               custom.Button.url(
+                   "404-Userbot",
+                   "https://PAKE.LORD.AJA.YA.JANGAN.YANG.INI"),
+               custom.Button.url(
+                   "Editor Fork",
+                   "t.me/SyndicateTwenty4")],
+             ]
+
+     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
             await alive.delete()
