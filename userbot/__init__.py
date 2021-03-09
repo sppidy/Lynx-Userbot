@@ -365,10 +365,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "◀ᴘʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
+                    "⥶ᴘʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "ɴᴇxᴛ▶", data="{}_next({})".format(prefix, modulo_page)
+                    "ɴᴇxᴛ⥸", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -426,8 +426,11 @@ with bot:
                                 "Repo 404-Userbot",
                                 "https://github.com/KENZO-420/404-Userbot"),
                             custom.Button.url(
-                                "Editor Repo",
-                                "t.me/SyndicateTwenty4")],
+                                "Editor Repo 404-Userbot",
+                                "t.me/SyndicateTwenty4"),
+                            custom.Button.url(
+                                "Pemilik Asli Lord-Userbot",
+                                "t.me/LiuAlvinasMahaputra")] 
                     ],
                     link_preview=False,
                 )
