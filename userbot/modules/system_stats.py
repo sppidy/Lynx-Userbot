@@ -307,7 +307,7 @@ async def amireallyalive(alive):
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
         f"[♕REPO LORD♕](https://github.com/Zora24/Lord-Userbot) | [🛡️Grup Support🛡️](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [⚡FORK 404⚡](https://YANG.INI.GABOLEEH.DIPAKE.KATA.ALVIIN) | [👤EDIT FORK](t.me/SyndicateTwenty4)")
-     if ALIVE_LOGO:
+    if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
             await alive.delete()
