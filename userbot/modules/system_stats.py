@@ -306,23 +306,7 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        buttons=[
-                        [
-                            custom.Button.url(
-                                "Repo Lord",
-                                "https://github.com/Zora24/Lord-Userbot"),
-                            custom.Button.url(
-                                "Pemilik Repo",
-                                "t.me/liualvinas"),
-                            custom.Button.url(
-                                "Fork 404",
-                                "https://github.com/KENZO-420/404-Userbot"),
-                            custom.Button.url(
-                                "Editor Fork",
-                                "t.me/SyndicateTwenty4")],
-                    ],
-                    link_preview=False,
-                )
+        f"[♕•REPO LORD•♕](https://github.com/Zora24/Lord-Userbot) | [🛡️Grup Support🛡️](t.me/LordUserbot_Group) | [👤OWNER](t.me/liualvinas) | [⚡FORK 404⚡](https://YANG.INI.GABOLEEH.DIPAKE.KATA.ALVIIN) | [👤EDITED BY](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
