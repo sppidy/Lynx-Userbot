@@ -1,4 +1,4 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5511980.gif" width="295" height="49" alt="404 NOTFOUND" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5511982.gif" width="530" height="80" alt="404 NOTFOUND" /></a>
 
 <p align="center">
   <a href="https://github.com/Zora24/Lord-Userbot/fork">
