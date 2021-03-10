@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK!**",
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK\n Tunggu Sampai Dia Kembali Online!**",
-    f"**Lord {ALIVE_NAME} Sedang AFK\n Tunggulah Sampai Online**",
-    f"**Maaf Lord {ALIVE_NAME} Sedang AFK!**",
+    f"**Mohon Maaf, Baginda {ALIVE_NAME} Sedang AFK !!!**",
+    f"**Mohon Maaf Baginda {ALIVE_NAME} Sedang AFK\n Tunggu Sampai Dia Kembali Online. `Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**",
+    f"**Baginda {ALIVE_NAME} Sedang AFK\n Tunggulah Sampai Online. `Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**",
+    f"**Mohon Maaf Baginda {ALIVE_NAME} Sedang AFK !!!**",
 ]
 
 
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**⛦|✖ AFK ✖|⛦**\n**Lord Telah AFK**\
+        await afk_e.edit(f"**⛦ !AFK! ⛦**\n**Baginda Telah AFK**\
         \n➠ **Alasan:** `{string}`")
     else:
-        await afk_e.edit("**⛦|✖ AFK ✖|⛦**\n**Lord Telah AFK**")
+        await afk_e.edit("**⛦  !AFK!  ⛦**\n**Baginda Telah AFK**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "【AFK】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚒AFK⚒"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="【AFK】"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚒AFK⚒"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Lord Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Baginda Telah AFK !!!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -90,7 +90,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()  # pylint:disable=E0602
     last = user.last_name
-    if last and last.endswith("╟AFK╢"):
+    if last and last.endswith("⚒AFK⚒"):
         last1 = last[:-12]
     else:
         last1 = ""
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**Lord Telah Kembali!**")
+        msg = await notafk.respond("**Baginda Telah Kembali !!!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -106,7 +106,7 @@ async def type_afk_is_not_true(notafk):
             await notafk.client.send_message(
                 BOTLOG_CHATID,
                 "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda AFK",
+                str(len(USERS)) + " Obrolan Saat Anda Sedang AFK",
             )
             for i in USERS:
                 name = await notafk.client.get_entity(i)
@@ -166,8 +166,8 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**⛦ Lord {ALIVE_NAME} Sedang AFK** {afk_since} **Yang Lalu.**\
-                        \n➠ **Alasan:** `{AFKREASON}`")
+                    await mention.reply(f"**⛦ Baginda {ALIVE_NAME} Sedang AFK** {afk_since} **Yang Lalu. `Tunggu Sampai Dia Kembali Online. Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**\
+                        \n➠ **Alasan Baginda AFK:** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
                 USERS.update({mention.sender_id: 1})
@@ -175,8 +175,8 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**⛦ Lord Masih AFK** {afk_since} **Yang Lalu.**\
-                            \n➠ **Alasan:** `{AFKREASON}`")
+                        await mention.reply(f"**⛦ Baginda Masih AFK** {afk_since} **Yang Lalu. `Tunggu Sampai Dia Kembali Online. Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**\
+                            \n➠ **Alasan Baginda AFK:** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
@@ -243,8 +243,8 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"⛦ **Lord Sedang AFK** {afk_since} **Yang Lalu**.\
-                        \n➠ **Alasan**: `{AFKREASON}`")
+                    await sender.reply(f"⛦ **Baginda Sedang AFK** {afk_since} **Yang Lalu. `Tunggu Sampai Dia Kembali Online. Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**.\
+                        \n➠ **Alasan Baginda AFK**: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
                 USERS.update({sender.sender_id: 1})
@@ -252,8 +252,8 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"⛦ **Lord Sedang AFK** {afk_since} **Yang Lalu.**\
-                            \n➠ **Alasan**: `{AFKREASON}`")
+                        await sender.reply(f"⛦ **Baginda Sedang AFK** {afk_since} **Yang Lalu. `Tunggu Sampai Dia Kembali Online. Bila Anda Melakukan Spam Pada Baginda, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**\
+                            \n➠ **Alasan Baginda AFK**: `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
