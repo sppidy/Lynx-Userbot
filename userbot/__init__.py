@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```〖404-Userbot Telah Aktif...〗```")
+    await bot.send_message(BOTLOG_CHATID, "``` 404【⚒USERBOT⚒】 Telah Aktif...```")
     return
 
 with bot:
