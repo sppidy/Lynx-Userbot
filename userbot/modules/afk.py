@@ -106,7 +106,7 @@ async def type_afk_is_not_true(notafk):
             await notafk.client.send_message(
                 BOTLOG_CHATID,
                 "Anda Mendapatkan " + str(COUNT_MSG) + " Pesan Dari " +
-                str(len(USERS)) + " Obrolan Saat Anda Sedang AFK",
+                str(len(USERS)) + " Ini Obrolan Anda Baginda, Saat Sedang AFK",
             )
             for i in USERS:
                 name = await notafk.client.get_entity(i)
