@@ -296,17 +296,17 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**✞ | 404 NOTFOUND | ✞** \n"
+        f"**✞ | 𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃 | ✞** \n"
         f"╔═══════════════════════ \n"
         f"╟|•🤴 `Lord     :`{DEFAULTUSER} \n"
         f"╟|•💳 `Username :`@{user.username} \n"
         f"╟|•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"╟|•🐍 `Python   :`Ver {python_version()} \n"
-        f"╟|•🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH}|404-Userbot \n"
+        f"╟|•🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH} & 404-Userbot \n"
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[♕REPO LORD♕](https://github.com/Zora24/Lord-Userbot) | [🛡️Grup Support🛡️](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [⚡FORK 404⚡](https://YANG.INI.GABOLEEH.DIPAKE.KATA.ALVIIN) | [👤EDIT FORK](t.me/SyndicateTwenty4)")
+        f"[♕•REPO LORD•♕](https://github.com/Zora24/Lord-Userbot) | [🛡️•Grup Support•🛡️](t.me/LordUserbot_Group) | [👤•OWNER•](t.me/liualvinas) | [⚡•FORK 404•⚡](https://YANG.INI.GABOLEEH.DIPAKE.KATA.ALVIIN) | [👤•EDITOR FORK•](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
