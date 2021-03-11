@@ -302,11 +302,11 @@ async def amireallyalive(alive):
         f"╟|•💳 `Username :`@{user.username} \n"
         f"╟|•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"╟|•🐍 `Python   :`Ver {python_version()} \n"
-        f"╟|•🛠️ `Branch   :`{UPSTREAM_REPO_BRANCH} & 404-Userbot \n"
+        f"╟|•🛠️ `Branch   :`404-Userbot \n"
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[🧪RepoLord](https://github.com/Zora24/Lord-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [💉Fork404](https://YANG.INI.GABOLEEH.DIPAKE.KATA.ALVIIN) | [👤EditorFork](t.me/SyndicateTwenty4)")
+        f"[🧪Repo 404](https://github.com/Zora24/Lord-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [👤EditorFork](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
