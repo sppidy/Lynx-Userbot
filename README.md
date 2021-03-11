@@ -1,12 +1,12 @@
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5511982.gif" width="530" height="80" alt="404 NOTFOUND" /></a>
 
 <p align="center">
-  <a href="https://github.com/Zora24/Lord-Userbot/fork">
-    <img src="https://img.shields.io/github/forks/Zora24/Lord-Userbot?label=Fork&style=social">
+  <a href="https://github.com/KENZO-420/404-Userbot/fork">
+    <img src="https://img.shields.io/github/forks/KENZO-420/404-Userbot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/Zora24/Lord-Userbot">
-    <img src="https://img.shields.io/github/stars/Zora24/Lord-Userbot?style=social">
+  <a href="https://github.com/KENZO-420/404-Userbot">
+    <img src="https://img.shields.io/github/stars/KENZO-420/404-Userbot?style=social">
   </a>
 </p>  
 
@@ -16,7 +16,7 @@
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Ini adalah Repo Lord Userbot yang telah di commit oleh 404-NOTFOUND.
+### Ini adalah Repo Lord Userbot yang telah di Forked oleh 404-NOTFOUND.
 
 Repo Yang Dibuat [Alvin](https://t.me/liualvinas) Dari Berbagai Repo Userbot Github
 
