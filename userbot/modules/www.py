@@ -52,7 +52,7 @@ async def pingme(pong):
     await pong.edit("**⛤⛧⛤⛧【BANGSAAAAT】⛧⛤⛧⛤**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⛧【PING】⛧** "
+    await pong.edit(f"**⛧【SIGNAL】⛧** "
                     f"\n  ➥ `%sms` \n"
                     f"**✞【LORD】✞** "
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
@@ -82,7 +82,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**♕ 404【USERBOT】 ♕**\n"
-                    f"➾ __Ping:__ "
+                    f"➾ __Signal:__ "
                     f"`%sms` \n"
                     f"➾ __Uptime:__ "
                     f"`{uptime}` \n" % (duration))
@@ -102,17 +102,17 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**⚒ 404【USERBOT】 ⚒**\n"
-                    f"☫ - **Jaringan :** "
+                    f"☫ - **ꜱɪɢɴᴀʟ :** "
                     f"`%sms` \n"
-                    f"☫ - **Uptime :** "
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ :** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡ Baginda :** `{ALIVE_NAME}`" % (duration))
+                    f"**ᴘᴇᴍɪʟɪᴋ :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
-    await spd.edit("`Menjalankan Tes Kecepatan Tinggi, Mohon Tunggu...🚀`")
+    await spd.edit("`Menjalankan Tes Kecepatan Jaringan, Mohon Tunggu...⚡`")
     test = Speedtest()
 
     test.get_best_server()
@@ -121,7 +121,7 @@ async def speedtst(spd):
     test.results.share()
     result = test.results.dict()
 
-    await spd.edit("**Hasil Tes:\n**"
+    await spd.edit("**Kecepatan Jaringan:\n**"
                    "✧ **Dimulai Pada:** "
                    f"`{result['timestamp']}` \n"
                    f" **━━━━━━━━━━━━━━━━━**\n\n"
@@ -129,7 +129,7 @@ async def speedtst(spd):
                    f"`{speed_convert(result['download'])}` \n"
                    "✧ **Upload:** "
                    f"`{speed_convert(result['upload'])}` \n"
-                   "✧ **Ping:** "
+                   "✧ **Signal:** "
                    f"`{result['ping']}` \n"
                    "✧ **ISP:** "
                    f"`{result['client']['isp']}` \n"
@@ -156,7 +156,7 @@ async def pingme(pong):
     await pong.edit("`Mencari Jaringan.....⛧`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("❖ **Jaringan Baginda**\n`%sms`" % (duration))
+    await pong.edit("❖ **Signal Baginda**\n`%sms`" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping` ; `.lping` ; `.xping` ; `.sping`\
