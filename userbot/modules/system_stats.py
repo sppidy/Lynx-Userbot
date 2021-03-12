@@ -223,12 +223,12 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-           f"**𝟒𝟎𝟒【⚒USERBOT⚒】** \n"
+           f"**⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**══════════════════════**\n"
         f"**🤴 Lord** \n"
         f" ➥: `{DEFAULTUSER}` \n"
-        f"**💳 Username** \n"
+        f"**🔎 Username** \n"
         f" ➥: `@{user.username}` \n"
         f"╔═════════════════════\n"
         f"╟[•⚙️ `Telethon :`Ver {version.__version__} \n"
@@ -261,16 +261,16 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**⊱•═══════•⊰║۩♛۩║⊱•═══════•⊰**\n"
-        f"**𝟒𝟎𝟒【⚒USERBOT⚒】** \n\n"
+        f"**🔱⊱•════════•⊰║۩⛧۩║⊱•════════•⊰🔱**\n"
+        f"**⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n\n"
         f"🤴 **Lord :**     \n   ➥ `{DEFAULTUSER}` \n"
-        f"💳 **Username :** \n   ➥ `@{user.username}` \n"
+        f"🔎 **Username :** \n   ➥ `@{user.username}` \n"
         f"⚙️ **Telethon :** \n   ➥ `Versi {version.__version__}` \n"
         f"🐍 **Python :**   \n   ➥ `Versi {python_version()}` \n"
         f"👾 **Versi Bot :**\n   ➥ `{BOT_VER}` \n"
         f"📂 **Modul :**    \n   ➥ `{len(modules)}` \n\n"
-        f"🧪 **Fork Userbot :** [404-Userbot](https://github.com/KENZO-420/404-Userbot)\n👥 **LordTeam :**[Tekan Disini](t.me/LordUserbot_Group)\n👤 **ForkEdit:** [Axel](t.me/SyndicateTwenty4)\n👤 **Pemilik:** [Alvin](t.me/liualvinas)\n"
-        f"**⊱•═══════•⊰║۩★۩║⊱•═══════•⊰**")
+        f"🧪 **Repo :** [404-Userbot](https://github.com/KENZO-420/404-Userbot)\n👥 **LordTeam :**[Tekan Disini](t.me/LordUserbot_Group)\n👤 **ForkEdit:** [Axel](t.me/SyndicateTwenty4)\n👤 **Pemilik:** [Alvin](t.me/liualvinas)\n"
+        f"**🔱⊱•════════•⊰║۩✞۩║⊱•════════•⊰🔱**")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -296,17 +296,17 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**| 𝟒𝟎𝟒【⚒USERBOT⚒】 |** \n"
+        f"**⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
         f"╔═══════════════════════ \n"
-        f"╟|•🤴 `Lord     :`{DEFAULTUSER} \n"
-        f"╟|•💳 `Username :`@{user.username} \n"
-        f"╟|•⚙️ `Telethon :`Ver {version.__version__} \n"
-        f"╟|•🐍 `Python   :`Ver {python_version()} \n"
-        f"╟|•🛠️ `Branch   :`404-Userbot \n"
-        f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
-        f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
+        f"╟|⭑🤴 `Lord     :`{DEFAULTUSER} \n"
+        f"╟|⭑🔎 `Username :`@{user.username} \n"
+        f"╟|⭑⚙️ `Telethon :`Ver {version.__version__} \n"
+        f"╟|⭑🐍 `Python   :`Ver {python_version()} \n"
+        f"╟|⭑🛠️ `Branch   :`404-Userbot \n"
+        f"╟|⭑👾 `Bot Ver  :`{BOT_VER} \n"
+        f"╟|⭑📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[🧪Repo 404](https://github.com/KENZO-420/404-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [👤EditorFork](t.me/SyndicateTwenty4)")
+        f"[🧪Repo 404](https://github.com/KENZO-420/404-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
