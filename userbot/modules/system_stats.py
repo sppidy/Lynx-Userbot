@@ -296,7 +296,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**✞ | 𝟒𝟎𝟒【⚒USERBOT⚒】 | ✞** \n"
+        f"**| 𝟒𝟎𝟒【⚒USERBOT⚒】 |** \n"
         f"╔═══════════════════════ \n"
         f"╟|•🤴 `Lord     :`{DEFAULTUSER} \n"
         f"╟|•💳 `Username :`@{user.username} \n"
@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"╟|•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟|•📂 `Modules  :`{len(modules)} Modules \n"
         f"╚═══════════════════════ \n\n"
-        f"[🧪Repo 404](https://github.com/Zora24/Lord-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [👤EditorFork](t.me/SyndicateTwenty4)")
+        f"[🧪Repo 404](https://github.com/KENZO-420/404-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/liualvinas) | [👤EditorFork](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
