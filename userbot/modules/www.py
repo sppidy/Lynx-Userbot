@@ -56,6 +56,17 @@ async def pingme(pong):
     await pong.edit("__Connecti__")
     await pong.edit("__Connectin__")
     await pong.edit("__Connecting__")
+    await pong.edit("__Connecting t__")
+    await pong.edit("__Connecting to__")
+    await pong.edit("__Connecting to s__")
+    await pong.edit("__Connecting to se__")
+    await pong.edit("__Connecting to ser__")
+    await pong.edit("__Connecting to serv__")
+    await pong.edit("__Connecting to serve__")
+    await pong.edit("__Connecting to server__")
+    await pong.edit("__Connecting to server.__")
+    await pong.edit("__Connecting to server..__")
+    await pong.edit("__Connecting to server...__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**╭━━━━━━━━━━━━━━━━━╮** \n"
