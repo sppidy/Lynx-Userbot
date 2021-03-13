@@ -25,8 +25,8 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 AFKSTR = [
     f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ, {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ !!!**",
-    f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ, {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**",
-    f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`**",
+    f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ, {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`",
+    f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`",
     f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ !!!**",
 ]
 
