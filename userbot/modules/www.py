@@ -48,7 +48,7 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**⛧【KONTOOOOLLL MELEDUUKK】⛧**")
     await pong.edit("**⛤⛧【MEMEEEKKK DAKIANNN】⛧⛤**")
-    await pong.edit("**⛧⛤⛧【MUKAA LU KAYAK ANJIIIING】⛧⛤⛧**")
+    await pong.edit("**⛧⛤⛧【GOBLOOGGG】⛧⛤⛧**")
     await pong.edit("**⛤⛧⛤⛧【BANGSAAAAT】⛧⛤⛧⛤**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
@@ -63,7 +63,7 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`AKUU SANGEEEEEEEEEE...`🤤")
+    await pong.edit("`Connecting to server...`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**`{ALIVE_NAME}`**\n"
@@ -93,11 +93,16 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**⛧**")
-    await pong.edit("**⛧⛤**")
-    await pong.edit("**⛧⛤⛧**")
-    await pong.edit("**⛧⛤⛧⛤**")
-    await pong.edit("**⛧⛤⛧⛤⛧**")
+    await pong.edit("**⁴**")
+    await pong.edit("**⁴⁰**")
+    await pong.edit("**⁴⁰⁴**")
+    await pong.edit("**⁴⁰⁴ᴜ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱᴇ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱᴇʀ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱᴇʀʙ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱᴇʀʙᴏ**")
+    await pong.edit("**⁴⁰⁴ᴜꜱᴇʀʙᴏᴛ**")
     await pong.edit("**__Connecting to server...__**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
