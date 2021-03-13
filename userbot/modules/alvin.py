@@ -349,20 +349,20 @@ async def koc(e):
         await e.edit("`GABUT`")
 
 
-@register(outgoing=True, pattern='^.terkadang(?: |$)(.*)')
+@register(outgoing=True, pattern='^.sangean(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Terkadang`")
+    await typew.edit("`Kalo Sange Modal`")
     sleep(1)
-    await typew.edit("`Mencintai Seseorang`")
+    await typew.edit("`Jangan Modal Kontol Doang`")
     sleep(1)
-    await typew.edit("`Hanya Akan Membuang Waktumu`")
+    await typew.edit("`Goblook Emang`")
     sleep(1)
-    await typew.edit("`Ketika Waktumu Habis`")
+    await typew.edit("`Kelamaan Nge Jomblo Sih`")
     sleep(1)
-    await typew.edit("`Tambah Aja 5000`")
+    await typew.edit("`Jadinya Gitu, Sange Berat`")
     sleep(1)
-    await typew.edit("`Bercanda`")
+    await typew.edit("`MAKANYA KALO HIDUP HARUS GANTENG KONTOOOLL`")
 # Create by myself @localheart
 
 
@@ -436,14 +436,14 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "gabut":
-    "`.gabut` ; `.dino`\
-    \nUsage: ntahlah gabut doang.\
-    \n\n`.yatim`\
-    \nUsage: buat bercanda\
-    \n\n`.cinta`\
-    \nUsage: mengirim cintamu ke seseorang.\
-    \n\n`.sayang`\
-    \nUsage: untuk jadi buaya.\
-    \n\n`.terkadang`\
-    \nUsage: Auk dah iseng doang."
+    "⚡**CMD**⚡: `.gabut` atau `.dino`\
+    \n↳ : __Dikala gabut, yaaa pake aja xixixi.__\
+    \n\n⚡**CMD**⚡: `.yatim`\
+    \n↳ : __Buat bercandaan, kalo gasuka jangan dipake.__\
+    \n\n⚡**CMD**⚡: `.cinta`\
+    \n↳ : __Mengirim cinta tai anjiing ke seseorang.__\
+    \n\n⚡**CMD**⚡: `.sayang`\
+    \n↳ : __Berubah menjadi kadal.__\
+    \n\n⚡**CMD**⚡: `.sangean`\
+    \n↳ : __Kasih aja buat orang yang sangean.__"
 })
