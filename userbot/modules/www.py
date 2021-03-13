@@ -46,16 +46,24 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**⛧【KONTOOOOLLL MELEDUUKK】⛧**")
-    await pong.edit("**⛤⛧【MEMEEEKKK DAKIANNN】⛧⛤**")
-    await pong.edit("**⛧⛤⛧【GOBLOOGGG】⛧⛤⛧**")
-    await pong.edit("**⛤⛧⛤⛧【BANGSAAAAT】⛧⛤⛧⛤**")
+    await pong.edit("__C__")
+    await pong.edit("__Co__")
+    await pong.edit("__Con__")
+    await pong.edit("__Conn__")
+    await pong.edit("__Conne__")
+    await pong.edit("__Connec__")
+    await pong.edit("__Connect__")
+    await pong.edit("__Connecti__")
+    await pong.edit("__Connectin__")
+    await pong.edit("__Connecting__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**-ꜱɪɢɴᴀʟ-** "
-                    f"\n 📡 : ➥ `%sms` \n"
-                    f"**-ᴏᴡɴᴇʀ-** "
-                    f"\n 👤 : ➥ `{ALIVE_NAME}` \n" % (duration))
+    await pong.edit(f"**╭━━━━━━━━━━━━━━━━━╮** "
+                    f"**          - 𝐍 𝐄 𝐓 𝐖 𝐎 𝐑 𝐊 -** "\n
+                    f"**   ▰▱▰▱▰▱▰▱▰▱▰▱** "\n
+                    f"**        • ꜱɪɴʏᴀʟ  :** `%sms` \n"
+                    f"**        • ᴏᴡɴᴇʀ   :** `{ALIVE_NAME}` \n"
+                    f"**╰━━━━━━━━━━━━━━━━━╯ \n" % (duration))
 
 
 @register(outgoing=True, pattern="^.lping$")
