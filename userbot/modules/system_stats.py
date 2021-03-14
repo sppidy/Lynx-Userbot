@@ -256,7 +256,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:404|notfound)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:notfound|nfon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
