@@ -266,7 +266,7 @@ async def amireallyalive(alive):
         f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＫΞＮＺＯ](t.me/SyndicateTwenty4)             ㅤ ║\n"
         f"╟⟩⟩ 🖥️ • `ꜱʏꜱᴛᴇᴍ.   :`Ubuntu 20.10            ║\n"
         f"╟⟩⟩ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ  :`v.{version.__version__}                ㅤㅤ  ║\n"
-        f"╟⟩⟩ 🐍 • `ᴘʏᴛʜᴏɴ.   :`v.{python_version()} \n"
+        f"╟⟩⟩ 🐍 • `ᴘʏᴛʜᴏɴ.   :`v.{python_version()} ㅤㅤㅤㅤ         ║\n"
         f"╟⟩⟩ 👾 • `ʙᴏᴛ      :`v.{BOT_VER} \n"
         f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
         f"╚══════════╣۩ ✞ ۩╠══════════╝ \n"
