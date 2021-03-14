@@ -355,8 +355,8 @@ CMD_HELP.update({
 \n↳ : __Shows the userbot version.__\
 \n\n⚡**CMD**⚡: `.pip` <module(s)>\
 \n↳ : __Does a search of pip modules(s).__\
-\n\n⚡**CMD*"⚡: `.notfound`\
-\n↳ : __Type .start to see whether your bot is working or not.__\
+\n\n⚡**CMD**"⚡: `.notfound`\
+\n↳ : __Type .notfound to see whether your bot is working or not.__\
 \n\n⚡**CMD**⚡: `.aliveu` <text>\
 \n↳ : __Changes the 'user' in alive to the text you want.__\
 \n\n⚡**CMD**⚡: `.resetalive`\
