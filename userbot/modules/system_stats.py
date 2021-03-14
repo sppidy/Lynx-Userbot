@@ -306,7 +306,7 @@ async def amireallyalive(alive):
         f"╟⊏🤴  `Lord     :`{DEFAULTUSER} \n"
         f"╟⊏🔎  `Username :`@{user.username} \n"
         f"╟⊏⚙️  `Telethon :`Ver {version.__version__} \n"
-        f"╟⊏🐍  `Pytho    :`Ver {python_version()} \n"
+        f"╟⊏🐍  `Python   :`Ver {python_version()} \n"
         f"╟⊏🛠️  `Branch   :`404-Userbot \n"
         f"╟⊏👾  `Bot Ver  :`{BOT_VER} \n"
         f"╟⊏📂  `Modules  :`{len(modules)} Modules \n"
