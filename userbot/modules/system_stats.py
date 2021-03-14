@@ -230,12 +230,12 @@ async def amireallyalive(alive):
         f" ➥: `{DEFAULTUSER}` \n"
         f"**🔎 Username** \n"
         f" ➥: `@{user.username}` \n"
-        f"╔═════════════════════\n"
+        f"╔═══════════════════════\n"
         f"╟[•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"╟[•🐍 `Python   :`Ver {python_version()} \n"
         f"╟[•👾 `Bot Ver  :`{BOT_VER} \n"
         f"╟[•📂 `Modules  :`{len(modules)} \n"
-        f"╚═════════════════════")
+        f"╚═══════════════════════")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -256,21 +256,21 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:xalive|xon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:notfound|xon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"     ⚡**【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】**⚡\n"
+        f"**ㅤㅤㅤㅤㅤ⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡**\n"
         f"╔══════════╣۩ ⛧ ۩╠══════════╗\n"
-        f"╟⟩⟩ 🤴 • ᴏᴡɴᴇʀ   ㅤ : `{DEFAULTUSER}`\n"
-        f"╟⟩⟩ 🔎 • ᴜꜱᴇʀɴᴀᴍᴇ  : `@{user.username}`\n"
-        f"╟⟩⟩ ⚙️ • ᴛᴇʟᴇᴛʜᴏɴㅤ: `v.{version.__version__}`\n"
-        f"╟⟩⟩ 🐍 • ᴘʏᴛʜᴏɴ      : `v.{python_version()}`\n"
-        f"╟⟩⟩ 👾 • ʙᴏᴛ  ㅤㅤㅤ : `v.{BOT_VER}`\n"
-        f"╟⟩⟩ 📂 • ᴍᴏᴅᴜʟᴇ   : `{len(modules)} ᴍᴏᴅᴜʟᴇ`\n"
+        f"╟⟩⟩ 🤴 • ᴏᴡɴᴇʀ.        : `{DEFAULTUSER}`\n"
+        f"╟⟩⟩ 🔎 • ᴜꜱᴇʀɴᴀᴍᴇ.  : `@{user.username}`\n"
+        f"╟⟩⟩ ⚙️ • ᴛᴇʟᴇᴛʜᴏɴ.    : `v.{version.__version__}`\n"
+        f"╟⟩⟩ 🐍 • ᴘʏᴛʜᴏɴ.        : `v.{python_version()}`\n"
+        f"╟⟩⟩ 👾 • ʙᴏᴛ.              : `v.{BOT_VER}`\n"
+        f"╟⟩⟩ 📂 • ᴍᴏᴅᴜʟᴇ.       : `{len(modules)}`\n"
         f"╚══════════╣۩ ✞ ۩╠══════════╝\n"
-        f"😼 : [𝗥𝗘𝗣𝗢-𝟰𝟬𝟰](https://github.com/KENZO-420/404-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👤 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/SyndicateTwenty4)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
+        f"😼 : [𝗥𝗘𝗣𝗢-𝟰𝟬𝟰](https://github.com/KENZO-420/404-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n🤟🏼 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/SyndicateTwenty4)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
             )
     if ALIVE_LOGO:
         try:
@@ -349,20 +349,20 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "system":
-    "`.sysd`\
-\nUsage: Shows system information using neofetch.\
-\n\n`.botver`\
-\nUsage: Shows the userbot version.\
-\n\n`.pip` <module(s)>\
-\nUsage: Does a search of pip modules(s).\
-\n\n`.start`\
-\nUsage: Type .start to see whether your bot is working or not.\
-\n\n`.aliveu` <text>\
-\nUsage: Changes the 'user' in alive to the text you want.\
-\n\n`.resetalive`\
-\nUsage: Resets the user to default.\
-\n\n`.db`\
-\nUsage:Shows database related info.\
-\n\n.`.spc`\
-\nUsage:Show system specification."
+    "⚡**CMD**⚡: `.sysd`\
+\n↳ : __Shows system information using neofetch.__\
+\n\n⚡**CMD**⚡: `.botver`\
+\n↳ : __Shows the userbot version.__\
+\n\n⚡**CMD**⚡: `.pip` <module(s)>\
+\n↳ : __Does a search of pip modules(s).__\
+\n\n⚡**CMD*"⚡: `.start`\
+\n↳ : __Type .start to see whether your bot is working or not.__\
+\n\n⚡**CMD**⚡: `.aliveu` <text>\
+\n↳ : __Changes the 'user' in alive to the text you want.__\
+\n\n⚡**CMD**⚡: `.resetalive`\
+\n↳ : __Resets the user to default.__\
+\n\n⚡**CMD**⚡: `.db`\
+\n↳ : __Shows database related info.__\
+\n\n⚡**CMD**⚡: `.spc`\
+\n↳ : __Show system specification.__"
 })
