@@ -905,7 +905,7 @@ async def get_bots(show):
 
 CMD_HELP.update(
     {
-        "𝗔𝗗𝗠𝗜𝗡": "⚡𝘾𝙈𝘿⚡: `.promote` <username/balas ke pesan> <nama title (optional)>"
+        "admin": "⚡𝘾𝙈𝘿⚡: `.promote` <username/balas ke pesan> <nama title (optional)>"
         "\n↳ : Mempromosikan member sebagai admin."
         "\n\n⚡𝘾𝙈𝘿⚡: `.demote` <username/balas ke pesan>"
         "\n↳ : Menurunkan admin sebagai member."
