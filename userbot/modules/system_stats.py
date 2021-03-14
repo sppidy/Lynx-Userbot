@@ -297,17 +297,24 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**ㅤㅤㅤㅤ⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
-        f"╔═══════════════════════ \n"
-        f"╟|⭑🤴 `Lord     :`{DEFAULTUSER} \n"
-        f"╟|⭑🔎 `Username :`@{user.username} \n"
-        f"╟|⭑⚙️ `Telethon :`Ver {version.__version__} \n"
-        f"╟|⭑🐍 `Python   :`Ver {python_version()} \n"
-        f"╟|⭑🛠️ `Branch   :`404-Userbot \n"
-        f"╟|⭑👾 `Bot Ver  :`{BOT_VER} \n"
-        f"╟|⭑📂 `Modules  :`{len(modules)} Modules \n"
-        f"╚═══════════════════════ \n\n"
-        f"[🧪Repo 404](https://github.com/KENZO-420/404-Userbot) | [👥LordTeam](t.me/LordUserbot_Group) | [👤Owner](t.me/SyndicateTwenty4)")
+        f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
+        f"**      ⊏[┊⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  ⊨〛💨 ** \n"
+        f"**ㅤㅤ  ╰─━━━━━━━━━━━─╯** \n"
+        f"╭╼════════════════════╾╮ \n"
+        f"│    🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞🔥 \n"
+        f"╽ \n"
+        f"╟⊏🤴  `Lord     :`{DEFAULTUSER} \n"
+        f"╟⊏🔎  `Username :`@{user.username} \n"
+        f"╟⊏⚙️  `Telethon :`Ver {version.__version__} \n"
+        f"╟⊏🐍  `Pytho    :`Ver {python_version()} \n"
+        f"╟⊏🛠️  `Branch   :`404-Userbot \n"
+        f"╟⊏👾  `Bot Ver  :`{BOT_VER} \n"
+        f"╟⊏📂  `Modules  :`{len(modules)} Modules \n"
+        f"╿ \n"
+        f"├| Don't forget to support our \n"
+        f"│  userbot, how to press below. \n"
+        f"╰╼════════════════════╾╯ \n"
+        f"[🧪Rᴇᴘᴏ](https://github.com/KENZO-420/404-Userbot) | [👥Lᴏʀᴅ-ᴛᴇᴀᴍ](t.me/LordUserbot_Group) | [👤Oᴡɴᴇʀ](t.me/SyndicateTwenty4)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
