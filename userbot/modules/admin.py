@@ -929,7 +929,7 @@ CMD_HELP.update(
         "\n\n⚡**CMD**⚡: `.admins`"
         "\nU↳ : __Melihat daftar admin di grup.__"
         "\n\n⚡**CMD**⚡: `.bots`"
-        "\↳ : __Melihat daftar bot dalam grup.__"
+        "\n↳ : __Melihat daftar bot dalam grup.__"
         "\n\n⚡**CMD**⚡: `.users` **Atau** >`.users` <nama member>"
         "\n↳ : __Mendapatkan daftar pengguna daam grup.__"
         "\n\n⚡**CMD**⚡: `.setgpic` <balas ke gambar>"
