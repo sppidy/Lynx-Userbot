@@ -314,7 +314,8 @@ async def amireallyalive(alive):
         f"├| Don't forget to support our \n"
         f"│  userbot, how to press below. \n"
         f"╰╼════════════════════╾╯ \n"
-        f"[⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-420/404-Userbot) | [👥𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | [👤ＫΞＮＺＯ](t.me/SyndicateTwenty4) | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell)")
+        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-420/404-Userbot) | [👥𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
+        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4) | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell) | ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
