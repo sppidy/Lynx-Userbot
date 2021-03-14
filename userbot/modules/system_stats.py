@@ -218,7 +218,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:lord|lordon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:king|lordon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -263,8 +263,8 @@ async def amireallyalive(alive):
     output = (
         f"**ㅤㅤㅤㅤㅤ⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡**\n"
         f"╔══════════╣۩ ⛧ ۩╠══════════╗\n"
-        f"╟⟩⟩ 🤴 • ᴏᴡɴᴇʀ.        : `{DEFAULTUSER}`\n"
-        f"╟⟩⟩ 🔎 • ᴜꜱᴇʀɴᴀᴍᴇ.  : `@{user.username}`\n"
+        f"╟⟩⟩ 🤴 • ᴏᴡɴᴇʀ.        : `[ＫΞＮＺＯ](t.me/SyndicateTwenty4)`\n"
+        f"╟⟩⟩ 🖥️ • ꜱʏꜱᴛᴇᴍ.       : `{uname.system}`\n"
         f"╟⟩⟩ ⚙️ • ᴛᴇʟᴇᴛʜᴏɴ.    : `v.{version.__version__}`\n"
         f"╟⟩⟩ 🐍 • ᴘʏᴛʜᴏɴ.        : `v.{python_version()}`\n"
         f"╟⟩⟩ 👾 • ʙᴏᴛ.              : `v.{BOT_VER}`\n"
@@ -297,7 +297,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
+        f"**ㅤㅤㅤㅤㅤ⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
         f"╔═══════════════════════ \n"
         f"╟|⭑🤴 `Lord     :`{DEFAULTUSER} \n"
         f"╟|⭑🔎 `Username :`@{user.username} \n"
