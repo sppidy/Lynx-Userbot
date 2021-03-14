@@ -256,7 +256,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:notfound|xon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:notfound|nfon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -264,7 +264,7 @@ async def amireallyalive(alive):
         f"**ㅤㅤㅤㅤㅤ⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡**\n"
         f"╔══════════╣۩ ⛧ ۩╠══════════╗\n"
         f"╟⟩⟩ 🤴 • ᴏᴡɴᴇʀ.        : `[ＫΞＮＺＯ](t.me/SyndicateTwenty4)`\n"
-        f"╟⟩⟩ 🖥️ • ꜱʏꜱᴛᴇᴍ.       : `{uname.system}`\n"
+        f"╟⟩⟩ 🖥️ • ꜱʏꜱᴛᴇᴍ.       : `Linux`\n"
         f"╟⟩⟩ ⚙️ • ᴛᴇʟᴇᴛʜᴏɴ.    : `v.{version.__version__}`\n"
         f"╟⟩⟩ 🐍 • ᴘʏᴛʜᴏɴ.        : `v.{python_version()}`\n"
         f"╟⟩⟩ 👾 • ʙᴏᴛ.              : `v.{BOT_VER}`\n"
