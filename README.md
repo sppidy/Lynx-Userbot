@@ -11,7 +11,7 @@
 </p>  
 
 # ⚡Lynx Userbot⚡
-![Lynx Userbot](https://telegra.ph/file/25b5c7bccd9ee5e4f52f1.jpg)
+![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
