@@ -159,8 +159,8 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**404【USERBOT】 Versi:** \n "
-            f"heads/404-Userbot-0-x634i7u1"
+            "**⚜-**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Versi:** \n "
+            f"heads/Lynx-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
@@ -223,7 +223,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-           f"**⚡【𝟺𝟶𝟺-ᴜꜱᴇʀʙᴏᴛ】⚡** \n"
+           f"**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
         f"\n__**{LORD_TEKS_KUSTOM}**__\n"
         f"**══════════════════════**\n"
         f"**🤴 Lord** \n"
@@ -261,7 +261,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"**ㅤㅤㅤㅤ ⚡【𝟒𝟎𝟒𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃】⚡**\n"
+        f"**ㅤㅤㅤㅤ ⚡【𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏】⚡**\n"
         f"╔══════════╣۩ ✞ ۩╠══════════╗ \n"
         f"╟⟩⟩ 🤴 • `ᴏᴡɴᴇʀ    :`[ＫΞＮＺＯ](t.me/SyndicateTwenty4)             ㅤ ║\n"
         f"╟⟩⟩ 🖥️ • `ꜱʏꜱᴛᴇᴍ.   :`Ubuntu 20.10            ║\n"
@@ -270,7 +270,7 @@ async def amireallyalive(alive):
         f"╟⟩⟩ 👾 • `ʙᴏᴛ      :`v.{BOT_VER}                ㅤㅤㅤ ║\n"
         f"╟⟩⟩ 📂 • `ᴍᴏᴅᴜʟᴇ   :`{len(modules)} ㅤㅤㅤㅤㅤㅤㅤ   ║\n"
         f"╚══════════╣۩ ✞ ۩╠══════════╝ \n"
-        f"😼 : [𝗥𝗘𝗣𝗢-𝟰𝟬𝟰](https://github.com/KENZO-420/404-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👩‍💻 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/SyndicateTwenty4)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
+        f"😼 : [𝗥𝗘𝗣𝗢-𝗟𝘆𝗻𝘅](https://github.com/KENZO-404/Lynx-Userbot)\n👥 : [𝗟𝗢𝗥𝗗-𝗧𝗘𝗔𝗠](t.me/LordUserbot_Group)\n👩‍💻 : [𝗙𝗢𝗥𝗞-𝗘𝗗𝗜𝗧𝗢𝗥](t.me/SyndicateTwenty4)\n👤 : [𝗢𝗪𝗡𝗘𝗥-𝗚𝗥𝗢𝗨𝗣](t.me/liualvinas)\n"
             )
     if ALIVE_LOGO:
         try:
@@ -298,7 +298,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
-        f"**       ⊏┊⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  ⊨〛💨 ** \n"
+        f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
         f"**ㅤㅤ  ╰─━━━━━━━━━━━─╯** \n"
         f"╭╼════════════════════╾╮ \n"
         f"│    🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞🔥 \n"
@@ -307,14 +307,14 @@ async def amireallyalive(alive):
         f"╟⊏🔎  `Username :`@{user.username} \n"
         f"╟⊏⚙️  `Telethon :`Ver {version.__version__} \n"
         f"╟⊏🐍  `Python   :`Ver {python_version()} \n"
-        f"╟⊏🛠️  `Branch   :`404-Userbot \n"
+        f"╟⊏🛠️  `Branch   :`Lynx-Userbot \n"
         f"╟⊏👾  `Bot Ver  :`{BOT_VER} \n"
         f"╟⊏📂  `Modules  :`{len(modules)} Modules \n"
         f"╿ \n"
         f"├| Don't forget to support our \n"
         f"│  userbot, how to press below. \n"
         f"╰╼════════════════════╾╯ \n"
-        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-420/404-Userbot) | [👥𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
+        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [👥𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
         f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4) | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell) | ")
     if ALIVE_LOGO:
         try:
@@ -357,20 +357,20 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "system":
-    "⚡**CMD**⚡: `.sysd`"\
-"\n↳ : __Shows system information using neofetch.__"
-"\n\n⚡**CMD**⚡: `.botver`"
-"\n↳ : __Shows the userbot version.__"
-"\n\n⚡**CMD**⚡: `.pip` <module(s)>"
-"\n↳ : __Does a search of pip modules(s).__"
-"\n\n⚡**CMD**⚡: `.lord`"
-"\n↳ : __Type .lord to see whether your bot is working or not.__"
-"\n\n⚡**CMD**⚡: `.aliveu` <text>"
-"\n↳ : __Changes the 'user' in alive to the text you want.__"
-"\n\n⚡**CMD**⚡: `.resetalive`"
-"\n↳ : __Resets the user to default.__"
-"\n\n⚡**CMD**⚡: `.db`"
-"\n↳ : __Shows database related info.__"
-"\n\n⚡**CMD**⚡: `.spc`"
-"\n↳ : __Show system specification.__"
+    "⚡𝘾𝙈𝘿⚡: `.sysd`"\
+"\n↳ : Shows system information using neofetch."
+"\n\n⚡𝘾𝙈𝘿⚡: `.botver`"
+"\n↳ : Shows the userbot version."
+"\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
+"\n↳ : Does a search of pip modules(s)."
+"\n\n⚡𝘾𝙈𝘿⚡: `.lord`"
+"\n↳ : Type .lord to see whether your bot is working or not."
+"\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
+"\n↳ : Changes the 'user' in alive to the text you want."
+"\n\n⚡𝘾𝙈𝘿⚡: `.resetalive`"
+"\n↳ : Resets the user to default."
+"\n\n⚡𝘾𝙈𝘿⚡: `.db`"
+"\n↳ : Shows database related info."
+"\n\n⚡𝘾𝙈𝘿⚡: `.spc`"
+"\n↳ : Show system specification."
 })
