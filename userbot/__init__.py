@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/7cc53da456e0aef00ccce.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/5916fecd5404b52457a32.mp4"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "``` ⁴⁰⁴-ᴜꜱᴇʀʙᴏᴛ ᴛᴇʟᴀʜ ᴀᴋᴛɪꜰ...```")
+    await bot.send_message(BOTLOG_CHATID, "``` ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ᴛᴇʟᴀʜ ᴀᴋᴛɪꜰ...```")
     return
 
 with bot:
@@ -390,9 +390,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("404-Userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/KENZO-420/404-Userbot.git)")
+                await event.reply("⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/KENZO-420/404-Userbot.git)")
             else:
-                await event.reply(f"`Hai Lord {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hai Yang Mulia {ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -404,7 +404,7 @@ with bot:
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
                     text="{}\n\n**✇⟩ Jumlah Modul Yang Tersedia:** `{}`\n               \n**✇⟩ Daftar Modul 404-Userbot:** \n".format(
-                        "**⛧ ╔╡404-Userbot╞╗ ⛧**",
+                        "**⛧ ╔╡⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ⛧**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,28 +412,28 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan *⛧ ╔╡404-Userbot╞╗ ⛧",
+                    "Bantuan ⛧ ╔╡⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ⛧",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "⛧ ╔╡404-Userbot╞╗ ⛧",
-                    text="""**Anda Bisa Membuat 404-Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "⛧ ╔╡⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡t╞╗ ⛧",
+                    text="""**Anda Bisa Membuat ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Lord-Userbot",
+                                "👑𝐋𝐨𝐫𝐝👑",
                                 "https://github.com/Zora24/Lord-Userbot"),
                             custom.Button.url(
-                                "404-Userbot",
+                                "𝐎𝐰𝐧𝐞𝐫 𝐋𝐨𝐫𝐝",
+                                "t.me/LiuAlvinasMahaputra"),
+                            custom.Button.url(
+                                "⚡𝟰𝟬𝟰⚡",
                                 "https://github.com/KENZO-420/404-Userbot"),
                             custom.Button.url(
-                                "Editor Fork 404",
-                                "t.me/SyndicateTwenty4"),
-                            custom.Button.url(
-                                "Pemilik Lord",
-                                "t.me/LiuAlvinasMahaputra")] 
+                                "𝗢𝘄𝗻𝗲𝗿 𝟰𝟬𝟰",
+                                "t.me/SyndicateTwenty4")] 
                     ],
                     link_preview=False,
                 )
@@ -502,7 +502,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"404-NOTFOUND !!! Jangan Menggunakan Milik Lord {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"❗❗❗𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃❗❗❗ Dilarang Menggunakan Milik {ALIVE_NAME} 🖕"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
