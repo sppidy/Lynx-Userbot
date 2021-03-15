@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update 404-Userbot**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari 404-Userbot.__')
+        return await event.respond('**Perintah Untuk Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡.__')
 
     if force_update:
         await event.edit(
@@ -234,9 +234,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\n↳ : Untuk Melihat Pembaruan Terbaru 404-Userbot."
+    "\n↳ : Untuk Melihat Pembaruan Terbaru ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update now`"
     "\nUsage: Memperbarui 404-Userbot."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update deploy`"
-    "\n↳ : Memperbarui 404-Userbot Dengan Cara Deploy Ulang."
+    "\n↳ : Memperbarui ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Dengan Cara Deploy Ulang."
 })
