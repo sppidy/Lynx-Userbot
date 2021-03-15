@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "404-USERBOT",
+      "value": "Lynx-Userbot",
       "required": false
     },
     "ALIVE_NAME": {
