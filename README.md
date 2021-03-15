@@ -11,6 +11,7 @@
 </p>  
 
 ![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
+[![GitHub License](https://img.shields.io/github/license/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE)
 
 # ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
