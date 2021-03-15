@@ -100,7 +100,7 @@ async def pingme(pong):
     await pong.edit("__Connecting to server...__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚡【⁴⁰⁴ᴜꜱᴇʀʙᴏᴛ】⚡**\n"
+    await pong.edit(f"**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡**\n"
                     f"➾ __Signal__    __:__ "
                     f"`%sms` \n"
                     f"➾ __Uptime__ __:__ "
@@ -126,7 +126,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
-                    f"**   ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
                     f"**╰─━━━━━━━━━━━─╯** \n"
                     f"☫ - **ꜱɪɢɴᴀʟ   :** "
                     f"`%sms` \n"
@@ -159,7 +159,7 @@ async def speedtst(spd):
                    f"`{result['ping']}` \n"
                    "✧ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "✧ **BOT:** `404-Userbot`")
+                   "✧ **BOT:** ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
 
 
 def speed_convert(size):
