@@ -23,7 +23,7 @@ Repo Yang Dibuat Oleh [Axel](https://t.me/SyndicateTwenty4) Dari Berbagai Repo U
 
 ### CARA MENDAPATKAN STRING SESSON
 
-Caranya Pergi Ke Grup Support Lord-Userbot Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support.
+Caranya Pergi Ke Grup Support Kami, Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support.
 ```
 Cara STRING SESSION via TERMUX
 
