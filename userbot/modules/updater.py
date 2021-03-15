@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ 404-Userbot Sudah Versi Terbaru**\n')
+            f'\n**⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Sudah Versi Terbaru**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk 404-Userbot :\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**📌 Pembaruan Untuk ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ :\n\n📌 Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,18 +208,18 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update 404-Userbot**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari 404-Userbot.__')
+        return await event.respond('**Perintah Untuk Update 404-Userbot**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari 404-Userbot.__')
 
     if force_update:
         await event.edit(
             '`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`')
     else:
-        await event.edit('`✲ Proses Update 404-Userbot, Loading....1%`')
-        await event.edit('`✲ Proses Update 404-Userbot, Loading....20%`')
-        await event.edit('`✲ Proses Update 404-Userbot, Loading....35%`')
-        await event.edit('`✲ Proses Update 404-Userbot, Loading....77%`')
-        await event.edit('`✲ Proses Update 404-Userbot, Updating...90%`')
-        await event.edit('`✲ Proses Update 404-Userbot, Mohon Menunggu My Lord....100%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Loading....1%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Loading....20%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Loading....35%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Loading....77%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Updating...90%`')
+        await event.edit('`⚡ Proses Update ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Mohon Tunggu Sebentar....100%`')
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(10)
@@ -234,9 +234,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru 404-Userbot."
-    "\n\n.update now"
+    "\n↳ : Untuk Melihat Pembaruan Terbaru 404-Userbot."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.update now`"
     "\nUsage: Memperbarui 404-Userbot."
-    "\n\n.update deploy"
-    "\nUsage: Memperbarui 404-Userbot Dengan Cara Deploy Ulang."
+    "\n\n⚡𝘾𝙈𝘿⚡: `.update deploy`"
+    "\n↳ : Memperbarui 404-Userbot Dengan Cara Deploy Ulang."
 })
