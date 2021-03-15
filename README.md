@@ -39,7 +39,7 @@ Cara STRING SESSION via TERMUX
 
  [T] (Untuk Telethon) dan [P] (Untuk Pyrogram)
  Pilih Saja Telethon Jika Ingin Deploy.
-
+```
 ## Bagaimana Cara Deploy?
 
 ```
