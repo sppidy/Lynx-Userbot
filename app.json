@@ -1,7 +1,7 @@
 {
   "name": "Lynx-Userbot",
-  "description": "[Lynx-Userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/9b131c917ecd64f7f34f1.jpg",
+  "description": "[⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/f3c656862a017f945c0bc.png",
   "keywords": [
     "telegram",
     "userbot",
@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "Lynx-Userbot",
+      "value": "⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
       "required": false
     },
     "ALIVE_NAME": {
