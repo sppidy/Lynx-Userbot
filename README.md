@@ -3,13 +3,14 @@
 <p align="center">
   <a href="https://github.com/KENZO-404/Lynx-Userbot/fork">
   <img src="https://img.shields.io/github/forks/KENZO-404/Lynx-Userbot?label=Fork&style=social">
-  [Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
-  
+
   </a>
   <a href="https://github.com/KENZO-404/Lynx-Userbot">
     <img src="https://img.shields.io/github/stars/KENZO-404/Lynx-Userbot?style=social">
   </a>
 </p>  
+
+![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
 
 # ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
