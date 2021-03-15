@@ -65,23 +65,23 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan 404-Userbot....`")
+    await event.edit("`Mematikan Lynx-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`404-Userbot Telah Dimatikan`")
+                                        "`Lynx-Userbot Telah Dimatikan`")
     await bot.disconnect()
 
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting 404-Userbot...`")
+    await event.edit("`Restarting Lynx-Userbot...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`404-Userbot Telah Di Restart`")
+                                        "`Lynx-Userbot Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -93,7 +93,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[Lord-Userbot Repo](https://github.com/Zora24/Lord-Userbot/blob/Lord-Userbot/README.md)"
+        "\n[Lynx-Userbot Repo](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
@@ -120,7 +120,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "❃ **ʀᴇᴘᴏ    :** [⁴⁰⁴ᴜꜱᴇʀʙᴏᴛ](https://github.com/YANG.INI.GABOLEH.DIPAKE.KATA.ALVIN/)\n❃ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/SyndicateTwenty4)"
+        "❃ **ʀᴇᴘᴏ    :** [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/KENZO-404/Lynx-Userbot/)\n❃ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/SyndicateTwenty4)"
     )
 
 
@@ -159,7 +159,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Lord`")
+        await img.edit("`Harap Reply Di Gambar...`")
         return
 
     if photo:
@@ -268,27 +268,27 @@ async def scam(results, lim):
 
 CMD_HELP.update({
     "random":
-    ">`.random <item1> <item2> ... <itemN>`\
-    \nUsage: Get a random item from the list of items.",
+    "⚡𝘾𝙈𝘿⚡: `.random <item1> <item2> ... <itemN>`\
+    \n↳ : Get a random item from the list of items.",
     "sleep":
-    ">`.sleep <seconds>`\
-    \nUsage: Let yours snooze for a few seconds.",
+    "⚡𝘾𝙈𝘿⚡: `.sleep <seconds>`\
+    \n↳ : Let yours snooze for a few seconds.",
     "shutdown":
-    ">`.shutdown`\
-    \nUsage: Shutdown bot",
+    "⚡𝘾𝙈𝘿⚡: `.shutdown`\
+    \n↳ : Shutdown bot",
     "repo":
-    ">`.repo`\
-    \nUsage: Github Repo of this bot",
+    "⚡𝘾𝙈𝘿⚡: `.repo`\
+    \n↳ : Github Repo of this bot",
     "readme":
-    ">`.readme`\
-    \nUsage: Provide links to setup the userbot and it's modules.",
+    "⚡𝘾𝙈𝘿⚡: `.readme`\
+    \n↳ : Provide links to setup the userbot and it's modules.",
     "repeat":
-    ">`.repeat <no> <text>`\
-    \nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",
+    "⚡𝘾𝙈𝘿⚡: `.repeat <no> <text>`\
+    \n↳ : Repeats the text for a number of times. Don't confuse this with spam tho.",
     "restart":
-    ">`.restart`\
-    \nUsage: Restarts the bot !!",
+    "⚡𝘾𝙈𝘿⚡: `.restart`\
+    \n↳ : Restarts the bot !!",
     "raw":
-    ">`.raw`\
-    \nUsage: Get detailed JSON-like formatted data about replied message."
+    "⚡𝘾𝙈𝘿⚡: `.raw`\
+    \n↳ : Get detailed JSON-like formatted data about replied message."
 })
