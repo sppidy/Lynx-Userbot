@@ -7,7 +7,7 @@ from platform import python_version, uname
 from shutil import which
 from os import remove
 from telethon import version
-from telethon import __version__, version
+from telethon import version, version
 import platform
 import sys
 import time
@@ -43,7 +43,8 @@ async def get_readable_time(seconds: int) -> str:
         seconds = int(remainder)
 
     for x in range(len(time_list)):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+       item = time_list[x] = str(time_list[x]) + time_suffix_list[x]
+       time_list[x] = result
     if len(time_list) == 4:
         up_time += time_list.pop() + ", "
 
