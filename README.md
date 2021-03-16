@@ -12,40 +12,46 @@
 
 ![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
 [![GitHub issues](https://img.shields.io/github/issues/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/issues)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/graphs/commit-activity)
+[![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
+[![CodeFactor](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot)
+
 # ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Ini adalah Repo Lynx Userbot.
+### This is a Repo Lynx-Userbot.
 
-Repo Yang Dibuat Oleh [Axel](https://t.me/SyndicateTwenty4) Dari Berbagai Repo Userbot Github
+This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various Userbots on Github.
 
 
-### CARA MENDAPATKAN STRING SESSON
+### How To Get a STRING SESSION ?
 
-Caranya Pergi Ke Grup Support Kami, Lalu Ketik #String [TEKAN DISINI](https://t.me/LordUserbot_Group) Untuk Masuk Ke Grup Support.
+The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
+
 ```
-Cara STRING SESSION via TERMUX
+* **STRING SESSION via TERMUX* _>*
 
- 1. Pertama Copy Yang Dibawah Ini.
+ 1. First copy the one below.
 
-  > pkg update -y && pkg upgrade && pkg install wget python
+   $ pkg update -y && pkg upgrade && pkg install wget python
 
- 2. Tunggu Instalasi, Bila Sudah Copy Yang Dibawah Ini.
+ 2. Wait for the installation to finish, if you have copied the one below.
 
- T > pip install telethon && wget https://raw.githubusercontent.com/adekmaulana/ProjectBish/master/string_session.py && python string_session.py
+ T $ pip install telethon && wget https://raw.githubusercontent.com/adekmaulana/ProjectBish/master/string_session.py && python string_session.py
 
- P > wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
+ P $ wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
 
- [T] (Untuk Telethon) dan [P] (Untuk Pyrogram)
- Pilih Saja Telethon Jika Ingin Deploy.
+ [T] (For Telethon) and [P] (For Pyrogram)
+ Just choose Telethon if you want to deploy.
 ```
+
 ## Bagaimana Cara Deploy?
 
 ```
-* **CARA DEPLOY** 🔧
+* **HOW TO DEPLOY** 🔧
 
   > Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
 
@@ -67,7 +73,7 @@ Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot
 </p>
 
 ## Credit
-TERIMAKASIH UNTUK
+ 🙏 THANK YOU VERY MUCH FOR
 
 *   [Alvin](https://github.com/Zora24/Lord-Userbot) - Lord Userbot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
