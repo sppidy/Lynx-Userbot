@@ -28,6 +28,6 @@ CMD_HELP.update({
     "lynxhelper":
     "`.lhelp`\
 \nUsage: Bantuan Untuk Lynx-Userbot.\
-\n`.var`\
+\n`.vars`\
 \nUsage: Melihat Daftar Vars."
 })
