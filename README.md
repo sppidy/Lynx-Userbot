@@ -15,14 +15,15 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/graphs/commit-activity)
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![CodeFactor](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot)
+[![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 
-# ⚡Lynx Userbot⚡
+## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
 
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### This is a Repo Lynx-Userbot.
+## This is a Repo Lynx-Userbot.
 
 This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various Userbots on Github.
 
@@ -32,7 +33,7 @@ This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various U
 The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
 
 ```
-* **STRING SESSION via TERMUX* _>*
+    STRING SESSION via TERMUX _>
 
  1. First copy the one below.
 
@@ -48,24 +49,12 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
  Just choose Telethon if you want to deploy.
 ```
 
-## Bagaimana Cara Deploy?
+## Group Support
 
-```
-* **HOW TO DEPLOY** 🔧
+   <a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
-  > Pertama Dapatkan API_KE & API_HASH Di my.telegram.org (Wajib)
 
-  > Dapatkan String Session Di Termux (Wajib)
-
-  > Next Tekan Tombol Deploy Dibawah
-
-  > Isi Datanya Lalu Tekan Deploy Lagi
-
-  > Terakhir Hidupkan Dyno Lalu Check Logs (settings -> view logs) Jika Berhasil Enjoy :)
-```
-Atau Bisa Gabung Ke Grup Lord Userbot -> [TEKAN DISINI](https://t.me/LordUserbot_Group)
 ## <p align="center">DEPLOY LYNX-USERBOT</p>
-
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/KENZO-404/Lynx-Userbot/tree/Lynx-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
