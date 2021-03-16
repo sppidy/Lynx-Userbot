@@ -49,6 +49,9 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 
  [T] (For Telethon) and [P] (For Pyrogram)
  Just choose Telethon if you want to deploy.
+
+📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
+
 ```
 
 ## Group Support
