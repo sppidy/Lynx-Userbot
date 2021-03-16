@@ -51,17 +51,18 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 
 ## Group Support
 
-   <a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
 
-## <p align="center">DEPLOY LYNX-USERBOT</p>
+## <p align="center">DEPLOY Lynx-Userbot</p>
 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/KENZO-404/Lynx-Userbot/tree/Lynx-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
 
-## Credit
+## Credits
+
  🙏 THANK YOU VERY MUCH FOR
 
 *   [Alvin](https://github.com/Zora24/Lord-Userbot) - Lord Userbot
@@ -78,4 +79,3 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 *   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
 *   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
 *   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
-*   DAN BANYAK LAGI 
