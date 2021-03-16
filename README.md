@@ -20,7 +20,7 @@
 ## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
 
-<h3 align="center">Userbot Used for Fun on Telegram</h3>
+<h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
 
 ## This is a Repo Lynx-Userbot.
