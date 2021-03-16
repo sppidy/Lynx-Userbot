@@ -1,4 +1,4 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5513588.gif" width="569" height="146" alt="Lynx Userbot" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5513589.gif" width="626" height="158" alt="Lynx Userbot" /></a>
 
 <p align="center">
   <a href="https://github.com/KENZO-404/Lynx-Userbot/fork">
