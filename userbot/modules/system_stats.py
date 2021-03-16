@@ -7,6 +7,7 @@ from platform import python_version, uname
 from shutil import which
 from os import remove
 from telethon import version
+from telethon import __version__, version
 import platform
 import sys
 import time
@@ -41,9 +42,9 @@ async def get_readable_time(seconds: int) -> str:
         time_list.append(int(result))
         seconds = int(remainder)
 
-    for x in enumerate(time_list):
-       item = time_list[x] = str(time_list[x]) + time_suffix_list[x]
-       time_list[x] = result
+    for x in range(len(time_list)):
+       time_list[x] = str(time_list[x]) + time_suffix_list[x]
+
     if len(time_list) == 4:
         up_time += time_list.pop() + ", "
 
@@ -342,7 +343,7 @@ async def amireallyaliveuser(username):
     output = ".aliveu [new user without brackets] nor can it be empty"
     if message != ".aliveu" and message[7:8] == " ":
         newuser = message[8:]
-        DEFAULTUSER
+        global DEFAULTUSER
         DEFAULTUSER = newuser
         output = "Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
@@ -350,7 +351,7 @@ async def amireallyaliveuser(username):
 
 @register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
-    DEFAULTUSER
+    global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
