@@ -7,7 +7,7 @@ from platform import python_version, uname
 from shutil import which
 from os import remove
 from telethon import version
-from telethon import version, version
+from telethon import version
 import platform
 import sys
 import time
