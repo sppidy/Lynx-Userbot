@@ -4,6 +4,9 @@
   <a href="https://github.com/KENZO-404/Lynx-Userbot/fork">
   <img src="https://img.shields.io/github/forks/KENZO-404/Lynx-Userbot?label=Fork&style=social">
 
+  <a href="https://www.codefactor.io/repository/github/kenzo-404/lynx-userbot">
+  <img src="https://www.codefactor.io/repository/github/kenzo-404/lynx-userbot/badge" alt="CodeFactor" /></a>
+
   </a>
   <a href="https://github.com/KENZO-404/Lynx-Userbot">
     <img src="https://img.shields.io/github/stars/KENZO-404/Lynx-Userbot?style=social">
@@ -14,7 +17,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/issues)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/graphs/commit-activity)
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
-[![CodeFactor](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/KENZO-404/Lynx-Userbot)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 
 ## ⚡Lynx Userbot⚡
