@@ -1,4 +1,4 @@
-# by:koala @mixiologist
+# by:kenzo @TeamSecret_Kz
 # Lynx Userbot
 
 from telethon.events import ChatAction
