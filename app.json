@@ -23,7 +23,7 @@
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @liualvinas di telegram",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya @SyncidateTwenty4 di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -158,8 +158,8 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "LORD_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .lord (Isi Terserah)",
+    "LYNX_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .lynx (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
