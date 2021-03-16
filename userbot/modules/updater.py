@@ -67,7 +67,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Sedang Dalam Proses, Mohon Menunggu 5-8 Menit`'
+                         '\nDyno ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Sedang Dalam Proses, Mohon Menunggu 5-7 Menit`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update, Sebagai Berikut.**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡𝟰𝟬𝟰-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡.__')
+        return await event.respond('**Perintah Untuk Update, Sebagai Berikut.**\n ⚡𝘾𝙈𝘿⚡: >`.update now`\n ⚡𝘾𝙈𝘿⚡: >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡.__')
 
     if force_update:
         await event.edit(
