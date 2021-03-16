@@ -148,7 +148,7 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # untuk perintah .lord
-LORD_TEKS_KUSTOM = os.environ.get("LORD_TEKS_KUSTOM", None)
+LYNX_TEKS_KUSTOM = os.environ.get("LYNX_TEKS_KUSTOM", None)
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -180,7 +180,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/5916fecd5404b52457a32.mp4"
+    "ALIVE_LOGO") or "https://telegra.ph/file/f3c656862a017f945c0bc.png"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
