@@ -342,7 +342,7 @@ async def amireallyaliveuser(username):
     output = ".aliveu [new user without brackets] nor can it be empty"
     if message != ".aliveu" and message[7:8] == " ":
         newuser = message[8:]
-        global DEFAULTUSER
+        DEFAULTUSER
         DEFAULTUSER = newuser
         output = "Successfully changed user to " + newuser + "!"
     await username.edit("`" f"{output}" "`")
@@ -350,7 +350,7 @@ async def amireallyaliveuser(username):
 
 @register(outgoing=True, pattern=r"^\.resetalive$")
 async def amireallyalivereset(ureset):
-    global DEFAULTUSER
+    DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
