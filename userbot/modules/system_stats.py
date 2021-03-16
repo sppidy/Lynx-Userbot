@@ -1,4 +1,4 @@
-# System Stats Lord-Userbot
+# System Stats Lynx-Userbot
 
 import asyncio
 from asyncio import create_subprocess_exec as asyncrunapp
@@ -226,10 +226,10 @@ async def amireallyalive(alive):
            f"**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
         f"\n__**{LYNX_TEKS_KUSTOM}**__\n"
         f"**══════════════════════**\n"
-        f"**🤴 Lord** \n"
-        f" ➥: `{DEFAULTUSER}` \n"
+        f"**🤴 Lynx** \n"
+        f" ↳ : `{DEFAULTUSER}` \n"
         f"**🔎 Username** \n"
-        f" ➥: `@{user.username}` \n"
+        f" ↳ : `@{user.username}` \n"
         f"╔═══════════════════════\n"
         f"╟[•⚙️ `Telethon :`Ver {version.__version__} \n"
         f"╟[•🐍 `Python   :`Ver {python_version()} \n"
@@ -303,19 +303,19 @@ async def amireallyalive(alive):
         f"╭╼════════════════════╾╮ \n"
         f"│    🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞🔥 \n"
         f"╽ \n"
-        f"╟⊏🤴  `Lord     :`{DEFAULTUSER} \n"
+        f"╟⊏🤴  `Lynx     :`{DEFAULTUSER} \n"
         f"╟⊏🔎  `Username :`@{user.username} \n"
         f"╟⊏⚙️  `Telethon :`Ver {version.__version__} \n"
         f"╟⊏🐍  `Python   :`Ver {python_version()} \n"
-        f"╟⊏🛠️  `Branch   :`Lynx-Userbot \n"
+        f"╟⊏🛠️  `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"╟⊏👾  `Bot Ver  :`{BOT_VER} \n"
         f"╟⊏📂  `Modules  :`{len(modules)} Modules \n"
         f"╿ \n"
         f"├| Don't forget to support our \n"
         f"│  userbot, how to press below. \n"
         f"╰╼════════════════════╾╯ \n"
-        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [👥𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
-        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4) | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell) | ")
+        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
+        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4)  | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell)  | ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -363,8 +363,8 @@ CMD_HELP.update({
 "\n↳ : Shows the userbot version."
 "\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
 "\n↳ : Does a search of pip modules(s)."
-"\n\n⚡𝘾𝙈𝘿⚡: `.lord`"
-"\n↳ : Type .lord to see whether your bot is working or not."
+"\n\n⚡𝘾𝙈𝘿⚡: `.alive`"
+"\n↳ : Type .alive or .on to see whether your bot is working or not."
 "\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
 "\n↳ : Changes the 'user' in alive to the text you want."
 "\n\n⚡𝘾𝙈𝘿⚡: `.resetalive`"
