@@ -8,7 +8,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.lordhelp$")
+@register(outgoing=True, pattern="^.lhelp$")
 async def usit(e):
     await e.edit(
         f"**Halo Yang Mulia {DEFAULTUSER} Jika Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
@@ -17,7 +17,7 @@ async def usit(e):
         "\n[Instagram](instagram.com/si_axeell)")
 
 
-@register(outgoing=True, pattern="^.lordvar$")
+@register(outgoing=True, pattern="^.vars$")
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
@@ -25,9 +25,9 @@ async def var(m):
 
 
 CMD_HELP.update({
-    "lordhelper":
-    "`.lordhelp`\
-\nUsage: Bantuan Untuk Lord-Userbot.\
-\n`.lordvar`\
+    "lynxhelper":
+    "`.lhelp`\
+\nUsage: Bantuan Untuk Lynx-Userbot.\
+\n`.var`\
 \nUsage: Melihat Daftar Vars."
 })
