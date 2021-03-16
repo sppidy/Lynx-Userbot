@@ -39,13 +39,13 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 
  1. First copy the one below.
 
-   $ pkg update -y && pkg upgrade && pkg install wget python
+   $ `pkg update -y && pkg upgrade && pkg install wget python`
 
  2. Wait for the installation to finish, if you have copied the one below.
 
- T $ pip install telethon && wget https://raw.githubusercontent.com/adekmaulana/ProjectBish/master/string_session.py && python string_session.py
+ T $ `pip install telethon && wget https://raw.githubusercontent.com/adekmaulana/ProjectBish/master/string_session.py && python string_session.py`
 
- P $ wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
+ P $ `wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py`
 
  [T] (For Telethon) and [P] (For Pyrogram)
  Just choose Telethon if you want to deploy.
