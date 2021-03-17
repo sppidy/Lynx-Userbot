@@ -304,7 +304,12 @@ async def amireallyalive(alive):
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server...__")
+    await alive.edit("__Connecting to server.__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server...__")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡              🐈")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡             🐈")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡            🐈")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡           🐈")
@@ -318,7 +323,21 @@ async def amireallyalive(alive):
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡   🐈")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  🐈")
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ 🐈")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊🐈⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽🐈𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍🐈𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀🐈𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎🐈𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐🐈𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-🐈𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅🐈𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻🐈-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆🐈𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟🐈𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡🐈𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("🐈𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
     output = (
         f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
@@ -337,8 +356,8 @@ async def amireallyalive(alive):
         f"├◈ **Don't forget to support our** \n"
         f"│    **userbot, how to press below.** \n"
         f"╰╼════════════════════╾╯ \n"
-        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
-        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4)  | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell)  | ")
+        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | \n"
+        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4)  | [𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](instagram.com/si_axeell)  | ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
