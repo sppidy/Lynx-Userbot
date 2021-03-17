@@ -297,6 +297,7 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
     await alive.edit("__C__")
     await alive.edit("__Co__")
     await alive.edit("__Con__")
@@ -320,6 +321,7 @@ async def amireallyalive(alive):
     await alive.edit("__Connecting to server...__")
     sleep(1)
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ __Aktif...__")
+    end = datetime.now()
     output = (
         f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
