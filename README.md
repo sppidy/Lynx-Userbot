@@ -32,6 +32,9 @@ This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various U
 
 ### How To Get a STRING SESSION ?
 
+<a href="https://replit.com/@KENZO404/Lynx-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
+
+
 The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
 
 ```
