@@ -319,7 +319,6 @@ async def amireallyalive(alive):
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server...__")
-    sleep(1)
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ __Aktif...__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
