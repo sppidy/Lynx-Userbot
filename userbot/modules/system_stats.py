@@ -322,8 +322,6 @@ async def amireallyalive(alive):
     sleep(1)
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ __Aktif...__")
     end = datetime.now()
-    duration = (end - start).microseconds / 1000
-    await get_readble_time((time.time() - StartTime))
     output = (
         f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
