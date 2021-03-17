@@ -297,45 +297,45 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__C__")
-    await alive.edit("__Co__")
-    await alive.edit("__Con__")
-    await alive.edit("__Conn__")
-    await alive.edit("__Conne__")
-    await alive.edit("__Connec__")
-    await alive.edit("__Connect__")
-    await alive.edit("__Connecti__")
-    await alive.edit("__Connectin__")
-    await alive.edit("__Connecting__")
-    await alive.edit("__Connecting t__")
-    await alive.edit("__Connecting to__")
-    await alive.edit("__Connecting to s__")
-    await alive.edit("__Connecting to se__")
-    await alive.edit("__Connecting to ser__")
-    await alive.edit("__Connecting to serv__")
-    await alive.edit("__Connecting to serve__")
-    await alive.edit("__Connecting to server__")
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server...__")
-    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ __Aktif...__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server.__")
+    await alive.edit("__Connecting to server..__")
+    await alive.edit("__Connecting to server...__")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡             🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡            🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡           🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡          🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡         🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡        🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡       🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡      🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡     🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡    🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡   🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡  🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ 🐈")
+    await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
     output = (
-        f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
+        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
-        f"**ㅤㅤ  ╰─━━━━━━━━━━━─╯** \n"
+        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
         f"╭╼════════════════════╾╮ \n"
-        f"│    🔥 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞🔥 \n"
-        f"╽ \n"
-        f"╟⊏🤴  `Lynx     :`{DEFAULTUSER} \n"
-        f"╟⊏🔎  `Username :`@{user.username} \n"
-        f"╟⊏⚙️  `Telethon :`Ver {version.__version__} \n"
-        f"╟⊏🐍  `Python   :`Ver {python_version()} \n"
-        f"╟⊏🛠️  `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"╟⊏👾  `Bot Ver  :`{BOT_VER} \n"
-        f"╟⊏📂  `Modules  :`{len(modules)} Modules \n"
-        f"╿ \n"
-        f"├| Don't forget to support our \n"
-        f"│  userbot, how to press below. \n"
+        f"│    ⇱  𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ⇲ \n"
+        f"┟╼════════════════════╾┤ \n"
+        f"╟◈ 😼  `Lynx     :`{DEFAULTUSER} \n"
+        f"╟◈ 🔎  `Username :`@{user.username} \n"
+        f"╟◈ ⚙️  `Telethon :`Ver {version.__version__} \n"
+        f"╟◈ 🐍  `Python   :`Ver {python_version()} \n"
+        f"╟◈ 🛠️  `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
+        f"╟◈ 👾  `Bot Ver  :`{BOT_VER} \n"
+        f"╟◈ 📂  `Modules  :`{len(modules)} Modules \n"
+        f"┞╼════════════════════╾┤ \n"
+        f"├◈ **Don't forget to support our** \n"
+        f"│    **userbot, how to press below.** \n"
         f"╰╼════════════════════╾╯ \n"
         f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝙇𝙤𝙧𝙙-𝙏𝙚𝙖𝙢](t.me/LordUserbot_Group) | \n"
         f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4)  | [𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢](instagram.com/si_axeell)  | ")
