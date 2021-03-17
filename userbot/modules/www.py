@@ -46,25 +46,13 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("__C__")
-    await pong.edit("__Co__")
-    await pong.edit("__Con__")
-    await pong.edit("__Conn__")
-    await pong.edit("__Conne__")
-    await pong.edit("__Connec__")
-    await pong.edit("__Connect__")
-    await pong.edit("__Connecti__")
-    await pong.edit("__Connectin__")
-    await pong.edit("__Connecting__")
-    await pong.edit("__Connecting t__")
-    await pong.edit("__Connecting to__")
-    await pong.edit("__Connecting to s__")
-    await pong.edit("__Connecting to se__")
-    await pong.edit("__Connecting to ser__")
-    await pong.edit("__Connecting to serv__")
-    await pong.edit("__Connecting to serve__")
-    await pong.edit("__Connecting to server__")
     await pong.edit("__Connecting to server.__")
+    await pong.edit("__Connecting to server..__")
+    await pong.edit("__Connecting to server...__")
+    await pong.edit("__Connecting to server..__")
+    await pong.edit("__Connecting to server.__")
+    await pong.edit("__Connecting to server..__")
+    await pong.edit("__Connecting to server...__")
     await pong.edit("__Connecting to server..__")
     await pong.edit("__Connecting to server...__")
     end = datetime.now()
@@ -112,30 +100,161 @@ async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("__C__")
-    await pong.edit("__Co__")
-    await pong.edit("__Con__")
-    await pong.edit("__Conn__")
-    await pong.edit("__Conne__")
-    await pong.edit("__Connec__")
-    await pong.edit("__Connect__")
-    await pong.edit("__Connecti__")
-    await pong.edit("__Connectin__")
-    await pong.edit("__Connecting__")
-    await pong.edit("__Connecting t__")
-    await pong.edit("__Connecting to__")
-    await pong.edit("__Connecting to s__")
-    await pong.edit("__Connecting to se__")
-    await pong.edit("__Connecting to ser__")
-    await pong.edit("__Connecting to serv__")
-    await pong.edit("__Connecting to serve__")
-    await pong.edit("__Connecting to server__")
-    await pong.edit("__Connecting to server.__")
-    await pong.edit("__Connecting to server..__")
-    await pong.edit("__Connecting to server...__")
-    await pong.edit("__Connecting to server....__")
+    await pong.edit("__Connecting to data center.__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center.__")
+    await pong.edit("__Connecting to data center..__")
+    await pong.edit("__Connecting to data center...__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** 🐈\n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡**🐈 \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏🐈** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊🐈⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽🐈𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍🐈𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀🐈𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎🐈𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐🐈𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅-🐈𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻𝘅🐈𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆𝗻🐈-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟𝘆🐈𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡𝗟🐈𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  ⚡🐈𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**  🐈𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"** 🐈⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
+                    f"**🐈 ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╰─━━━━━━━━━━━─╯** \n"
+                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+                    f"`%sms` \n"
+                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"`{uptime}` \n"
+                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
     await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
                     f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
                     f"**╰─━━━━━━━━━━━─╯** \n"
