@@ -322,7 +322,7 @@ async def amireallyalive(alive):
     await alive.edit("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ __Aktif...__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await alive.edit(
+    await alive.edit(f"{ALIVE_LOGO} \n"
         f"**ㅤㅤ  ╭─━━━━━━━━━━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
         f"**ㅤㅤ  ╰─━━━━━━━━━━━─╯** \n"
