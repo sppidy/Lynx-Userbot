@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "``` ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ᴛᴇʟᴀʜ ᴀᴋᴛɪꜰ...```")
+    await bot.send_message(BOTLOG_CHATID, "``` ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗮𝗰𝘁𝗶𝘃𝗲 🐈```")
     return
 
 with bot:
@@ -403,8 +403,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**✇⟩ Jumlah Modul Yang Tersedia:** `{}`\n               \n**✇⟩ Daftar Modul Lynx-Userbot:** \n".format(
-                        "**⛧ ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ⛧**",
+                    text="{}\n\n**⚙️⟩ Jumlah Modul Yang Tersedia:** `{}`\n               \n**⚙️⟩ Daftar Modul Lynx-Userbot:** \n".format(
+                        "**😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -412,13 +412,13 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan ⛧ ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ⛧",
+                    "Bantuan 😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "⛧ ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡t╞╗ ⛧",
+                    "😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡t╞╗ ⚙️",
                     text="""**Anda Bisa Membuat ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
                     buttons=[
                         [
@@ -447,7 +447,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Lynx-Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Lynx-Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} 😼"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
