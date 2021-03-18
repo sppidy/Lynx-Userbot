@@ -109,8 +109,6 @@ async def pingme(pong):
     await pong.edit("__Connecting to data center.__")
     await pong.edit("__Connecting to data center..__")
     await pong.edit("__Connecting to data center...__")
-    end = datetime.now()
-    duration = (end - start).microseconds / 1000
     await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
                     f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** 🐈\n"
                     f"**╰─━━━━━━━━━━━─╯** \n"
@@ -263,6 +261,8 @@ async def pingme(pong):
                     f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
                     f"`{uptime}` \n"
                     f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
 
 
 @register(outgoing=True, pattern="^.speed$")
