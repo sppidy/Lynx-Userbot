@@ -90,7 +90,9 @@ async def gben(userbot):
     else:
         dark = await dc.edit("`Memproses Global Banned Pengguna Ini ❗`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`Global Banned Akan Segera Aktif, Anda Akan Dibanned Secara Global Oleh Yang Mulia...`")
+    await dark.edit(f"`𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 Akan Segera Aktif, Anda Akan Dibanned Secara Global Oleh Yang Mulia.`")
+    await dark.edit(f"`𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 Akan Segera Aktif, Anda Akan Dibanned Secara Global Oleh Yang Mulia..`")
+    await dark.edit(f"`𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 Akan Segera Aktif, Anda Akan Dibanned Secara Global Oleh Yang Mulia...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -110,9 +112,9 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Terjadi Kesalahan...`")
     if user:
-        if user.id == 1353102497:
+        if user.id == 1448477501:
             return await dark.edit(
-                f"`Anda Tidak Bisa Melakukan Global Banned Ke Lord Axel, Dia Adalah Pembuat Saya ヅ`"
+                f"`Anda Tidak Bisa Melakukan Global Banned Ke Lord Axel, Dia Adalah Pembuat Saya 😼`"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -131,28 +133,29 @@ async def gben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await dark.edit(f"`Global Banned Aktif 🐈`")
-                await dark.edit(f"`Global Banned Aktif🐈`")
-                await dark.edit(f"`Global Banned Akti🐈`")
-                await dark.edit(f"`Global Banned Akt🐈f`")
-                await dark.edit(f"`Global Banned Ak🐈if`")
-                await dark.edit(f"`Global Banned A🐈tif`")
-                await dark.edit(f"`Global Banned 🐈ktif`")
-                await dark.edit(f"`Global Banned🐈Aktif`")
-                await dark.edit(f"`Global Banne🐈 Aktif`")
-                await dark.edit(f"`Global Bann🐈d Aktif`")
-                await dark.edit(f"`Global Ban🐈ed Aktif`")
-                await dark.edit(f"`Global Ba🐈ned Aktif`")
-                await dark.edit(f"`Global B🐈nned Aktif`")
-                await dark.edit(f"`Global 🐈anned Aktif`")
-                await dark.edit(f"`Global🐈Banned Aktif`")
-                await dark.edit(f"`Globa🐈 Banned Aktif`")
-                await dark.edit(f"`Glob🐈l Banned Aktif`")
-                await dark.edit(f"`Glo🐈al Banned Aktif`")
-                await dark.edit(f"`Gl🐈bal Banned Aktif`")
-                await dark.edit(f"`G🐈obal Banned Aktif`")
-                await dark.edit(f"`🐈lobal Banned Aktif`")
-                await dark.edit(f"⚡`Global Banned Aktif`⚡")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡ 🐈`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡🐈`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛🐈`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞🐈⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩🐈𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠🐈𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼🐈𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 🐈𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙🐈𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚🐈 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣🐈𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣🐈𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖🐈𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 𝘽🐈𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡 🐈𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖𝙡🐈𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗𝙖🐈 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤𝙗🐈𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡𝙤🐈𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂𝙡🐈𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡𝙂🐈𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"`⚡🐈𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛⚡`")
+                await dark.edit(f"⚡`𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 𝘼𝙠𝙩𝙞𝙛`⚡")
             except BaseException:
                 b += 1
     else:
@@ -163,7 +166,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**🔥 𝐀𝐤𝐬𝐢 :**🚫 𝙂𝙡𝙤𝙗𝙖𝙡 𝘽𝙖𝙣𝙣𝙚𝙙 🚫"
+        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**🔥 𝐀𝐤𝐬𝐢 :** 🚫 𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 🚫"
     )
 
 
@@ -216,7 +219,15 @@ async def gunben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await dark.edit(f"`Membatalkan Global Banned... Memproses... `")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n0%▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n4%█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses...\n8%██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n20%█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n36%█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses...\n52%█████████████▒▒▒▒▒▒▒▒▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n84%█████████████████████▒▒▒▒`")
+                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n100%█████████████████████████`")
+                await dark.edit(f"`😼 Berhasil Membatalkan Global Banned 😼`")
             except BaseException:
                 b += 1
     else:
