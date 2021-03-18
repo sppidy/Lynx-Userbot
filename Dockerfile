@@ -1,5 +1,5 @@
 # We're using Ubuntu 20.10
-FROM axelalexius/syndicate24:latest
+FROM axelalexius/docker:Lynx-Userbot
 
 #
 # Clone repo and prepare working directory
