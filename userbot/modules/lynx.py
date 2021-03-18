@@ -44,15 +44,15 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 CMD_HELP.update({
-    "lord":
-    "`.lord`\
-    \nUsage: alive bot.\
+    "Lynx":
+    "⚡𝘾𝙈𝘿⚡: `.Lynx`\
+    \nUsage: Untuk alive bot.\
     \n\n`.sadboy`\
-    \nUsage: hiks\
-    \n\n`.punten` ; `.pantau`\
-    \nUsage: coba aja.\
-    \n\n`kosong`\
-    \nUsage: tunggu update selanjutnya.\
-    \n\n`kosong`\
-    \nUsage: tunggu update selanjutnya."
+    \n↳ : Biasalah sadboy hikss\
+    \n\n⚡𝘾𝙈𝘿⚡: `.punten` dan `.pantau`\
+    \n↳ : Coba aja hehehe.\
+    \n\n⚡𝘾𝙈𝘿⚡: `kosong`\
+    \n↳ : Tunggu update selanjutnya kawan.\
+    \n\n⚡𝘾𝙈𝘿⚡: `kosong`\
+    \n↳ : Tunggu update selanjutnya kawan."
 })
