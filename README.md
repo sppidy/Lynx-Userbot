@@ -30,7 +30,7 @@
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
 
-##😼 This is a Repo Lynx-Userbot. 😼
+## 😼 This is a Repo Lynx-Userbot. 😼
 
 This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various Userbots on Github.
 
