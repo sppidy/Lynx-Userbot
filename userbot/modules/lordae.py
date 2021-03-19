@@ -1,5 +1,5 @@
 # Based Plugins
-# Ported for Lord-Userbot By liualvinas/Alvin
+# Ported By liualvinas/Alvin
 
 from telethon import events
 from userbot.events import register
@@ -30,6 +30,6 @@ async def _(event):
 
 CMD_HELP.update({
     "aeshtetic":
-    "`.ae <teks>`\
-    \nUsage: mengubah font teks"
+    "⚡𝘾𝙈𝘿⚡`.ae <teks>`\
+    \n↳ : Mengubah font teks"
 })
