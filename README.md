@@ -11,11 +11,8 @@
   <a href="https://www.codefactor.io/repository/github/kenzo-404/lynx-userbot">
   <img src="https://www.codefactor.io/repository/github/kenzo-404/lynx-userbot/badge" alt="CodeFactor" />
   </a>
-  <a href="https://www.img.shields.io/github/license/kenzo-404/lynx-userbot">
-  <img src="https://www.img.shields.io/github/license/kenzo-404/Lynx-Userbot?&style=social&logo=github">
-  </a>
   <a href="https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE">
-  <img src="https://img.shields.io/github/license/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github">
+  <img src="https://img.shields.io/github/license/KENZO-404/Lynx-Userbot?&style=social&logo=github">
   </a></p>
 
 ![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
@@ -24,7 +21,6 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls?q=is:closed)
-[![GitHub LICENSE](https://img.shields.io/github/license/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE)
 
 ## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
