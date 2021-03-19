@@ -30,12 +30,12 @@
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
 
-## This is a Repo Lynx-Userbot.
+##😼 This is a Repo Lynx-Userbot. 😼
 
 This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various Userbots on Github.
 
 
-### How To Get a STRING SESSION ?
+### 🛠️ How To Get a STRING SESSION ?
 
 <a href="https://replit.com/@KENZO404/Lynx-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
@@ -47,13 +47,13 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 
  1. First copy the one below.
 
-   $ pkg update -y && pkg upgrade && pkg install wget python
+      $ pkg update -y && pkg upgrade && pkg install wget python
 
  2. Wait for the installation to finish, if you have copied the one below.
 
- T $ pip install telethon && wget https://raw.githubusercontent.com/adekmaulana/ProjectBish/master/string_session.py && python string_session.py
+[T]   $ pip install telethon && wget https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/string_session.py && python string_session.py
 
- P $ wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
+[P]   $ wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
 
  [T] (For Telethon) and [P] (For Pyrogram)
  Just choose Telethon if you want to deploy.
@@ -62,14 +62,14 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 
 ```
 
-## Group Support
+## Group Support 😼
 
    <a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
 
-## <p align="center">DEPLOY Lynx-Userbot</p>
+## <p align="center">DEPLOY ⚡Lynx-Userbot⚡</p>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/KENZO-404/Lynx-Userbot/tree/Lynx-Userbot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/KENZO-404/Lynx-Userbot/tree/Lynx-Userbot"> <img src="https://img.shields.io/badge/Deploy%20to%20Heroku-magenta?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
