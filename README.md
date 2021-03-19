@@ -13,6 +13,9 @@
   </a>
   <a href="https://www.img.shields.io/github/license/kenzo-404/lynx-userbot">
   <img src="https://www.img.shields.io/github/license/kenzo-404/Lynx-Userbot?&style=social&logo=github">
+  </a>
+  <a href="https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE">
+  <img src="https://img.shields.io/github/license/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github">
   </a></p>
 
 ![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
