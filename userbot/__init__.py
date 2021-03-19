@@ -101,7 +101,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/KENZO-404/Lynx-Userbot.git")
+    "https://github.com/KENZO-404/Lynx-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "Lynx-Userbot")
 
@@ -147,10 +147,10 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# untuk perintah .lord
+# Untuk Perintah .lynx
 LYNX_TEKS_KUSTOM = os.environ.get("LYNX_TEKS_KUSTOM", None)
 
-# Default .alive name
+# Default .alive Name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
 # Time & Date - Country and Time Zone
@@ -160,25 +160,25 @@ TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 # Clean Welcome
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
-# Zipfile module
+# Zipfile Module
 ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 
-# bit.ly module
+# bit.ly Module
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
 TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lynx-Userbot")
 
-# Bot version
+# Bot Version
 BOT_VER = os.environ.get("BOT_VER", "4.0")
 
-# Default .alive username
+# Default .alive Username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 
 # Sticker Custom Pack Name
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
-# Default .alive logo
+# Default .alive Logo
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/f3c656862a017f945c0bc.png"
 
@@ -214,7 +214,7 @@ G_PHOTOS_AUTH_TOKEN_ID = os.environ.get("G_PHOTOS_AUTH_TOKEN_ID", None)
 if G_PHOTOS_AUTH_TOKEN_ID:
     G_PHOTOS_AUTH_TOKEN_ID = int(G_PHOTOS_AUTH_TOKEN_ID)
 
-# Genius lyrics  API
+# Genius Lyrics  API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 
 # Quotes API Token
@@ -392,7 +392,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.reply("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/KENZO-404/Lynx-Userbot.git)")
             else:
-                await event.reply(f"`Hai Yang Mulia {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hai Yang Mulia {ALIVE_NAME}\n\nApa Kabarmu ? 🐱`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -418,8 +418,8 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡t╞╗ ⚙️",
-                    text="""**Anda Bisa Membuat ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/Lorduserbot_Group)""",
+                    "😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼",
+                    text="""**Anda Bisa Membuat ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
