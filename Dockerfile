@@ -1,16 +1,15 @@
 # We're using Ubuntu 20.10
-FROM kenzo404/docker:groovy
+FROM liualvinas24/docker:groovy
 
+#
 # Clone repo and prepare working directory
-
-RUN git clone -b Lynx-Userbot https://github.com/KENZO-404/Lynx-Userbot.git /root/userbot
+#
+RUN git clone -b Lynx-Userbot https://github.com/Zora24/Lord-Userbot /root/userbot
+RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
-#working directory
 WORKDIR /root/userbot
 
-# Install requirements
-RUN pip3 install -r requirements.txt
-
-ENV PATH="/home/userbot/bin:$PATH"
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/requirements.txt
 
 CMD ["python3","-m","userbot"]
