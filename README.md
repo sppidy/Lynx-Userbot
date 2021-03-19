@@ -12,7 +12,7 @@
   <img src="https://www.codefactor.io/repository/github/kenzo-404/lynx-userbot/badge" alt="CodeFactor" />
   </a>
   <a href="https://www.img.shields.io/github/license/kenzo-404/lynx-userbot">
-  <img src="https://www.img.shields.io/github/license/kenzo-404/Lynx-Userbot?&style=social&logo=appveyor">
+  <img src="https://www.img.shields.io/github/license/kenzo-404/Lynx-Userbot?&style=social&logo=github">
   </a></p>
 
 ![Repo Size](https://img.shields.io/github/repo-size/KENZO-404/Lynx-Userbot?&style=flat-square&logo=github)
