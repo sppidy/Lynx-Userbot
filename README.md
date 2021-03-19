@@ -22,7 +22,8 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls?q=is:closed)
-[![Release Lynx Userbot](https://img.shields.io/github/v/release/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://telegra.ph/Lynx-Userbot-03-19)
+[![Release](https://img.shields.io/github/v/release/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://telegra.ph/Lynx-Userbot-03-19)
+
 ## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
 
@@ -92,4 +93,3 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 *   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
 *   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
 *   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
-
