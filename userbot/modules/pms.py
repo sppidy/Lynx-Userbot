@@ -18,21 +18,33 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
-    ALIVE_NAME,
+    ALIVE_LOGO,
 )
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
-DEF_UNAPPROVED_MSG = (
+DEF_UNAPPROVED_MSG = ((
     f"ROOM CHAT || {DEFAULTUSER}\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
-    f"HALLO SELAMAT DATANG, SAYA ADALAH GUARDIAN BOT YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI LORD {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
+    f"HALLO SELAMAT DATANG, SAYA DISINI YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
     "┏━━━━━━━━━━━━━━━━━━━\n"
     "┣[• `PESAN OTOMATIS`\n"
-    "┣[• `BY 404 NOTFOUND`\n"
+    "┣[• `BY {DEFAULTUSER}`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await alive.delete()
+            msg = await bot.send_file(alive.chat_id, logo, caption=output)
+            await asyncio.sleep(200)
+            await msg.delete()
+        except BaseException:
+            await alive.edit(
+                output + "\n\n *`The provided logo is invalid."
+                "\nMake sure the link is directed to the logo picture`"
+            )
 # =================================================================
 
 
@@ -91,7 +103,7 @@ async def permitpm(event):
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
                     "`Anda Telah Di Blokir Karna Melakukan Spam Pesan`\n"
-                    "`Ke Room Chat Lord ✞`"
+                    "`Ke Room Chat Saya 😼`"
                 )
 
                 try:
@@ -101,7 +113,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Lord, Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Bot!",
+                            "Yang Mulia, Telah Terjadi Masalah Saat Menghitung Private Message, Mohon Restart Saya 😿 !",
                         )
                     return LOGS.info("CountPM wen't rarted boi")
 
@@ -360,7 +372,7 @@ async def add_pmsg(cust_msg):
 
         if BOTLOG:
             await cust_msg.client.send_message(
-                BOTLOG_CHATID, f"**{status} PM Yang Tersimpan Dalam Room Chat Anda Lord:** \n\n{msg}"
+                BOTLOG_CHATID, f"**{status} PM Yang Tersimpan Dalam Room Chat Anda :** \n\n{msg}"
             )
 
     if conf.lower() == "reset":
@@ -385,24 +397,24 @@ async def add_pmsg(cust_msg):
 
 CMD_HELP.update(
     {
-        "pm": ">`.setuju | .ok`"
-        "\nUsage: Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
-        "\n\n>`.tolak | .nopm`"
-        "\nUsage: Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
-        "\n\n>`.block`"
-        "\nUsage: Memblokir Orang Di PM."
-        "\n\n>`.unblock`"
-        "\nUsage: Membuka Blokir."
-        "\n\n>`.notifoff`"
-        "\nUsage: Mematikan notifikasi pesan yang belum diterima."
-        "\n\n>`.notifon`"
-        "\nUsage: Menghidupkan notifikasi pesan yang belum diterima."
-        "\n\n>`.set pm_msg` <balas ke pesan>"
-        "\nUsage: Menyetel Pesan Pribadimu untuk orang yang pesannya belum diterima"
-        "\n\n>`.get pm_msg`"
-        "\nUsage: Mendapatkan Custom pesan PM mu"
-        "\n\n>`.reset pm_msg`"
-        "\nUsage: Menghapus pesan PM ke default"
+        "pm": "⚡𝘾𝙈𝘿⚡: >`.setuju | .ok`"
+        "\n↳ : Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.tolak | .nopm`"
+        "\n↳ : Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.block`"
+        "\n↳ : Memblokir Orang Di PM."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.unblock`"
+        "\n↳ : Membuka Blokir."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.notifoff`"
+        "\n↳ : Mematikan notifikasi pesan yang belum diterima."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.notifon`"
+        "\n↳ : Menghidupkan notifikasi pesan yang belum diterima."
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.set pm_msg` <balas ke pesan>"
+        "\n↳ : Menyetel Pesan Pribadimu untuk orang yang pesannya belum diterima"
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.get pm_msg`"
+        "\n↳ : Mendapatkan Custom pesan PM mu"
+        "\n\n⚡𝘾𝙈𝘿⚡: >`.reset pm_msg`"
+        "\n↳ : Menghapus pesan PM ke default"
         "\n\nPesan Pribadi yang belum diterima saat ini tidak dapat disetel"
         "\nke teks format kaya bold, underline, link, dll."
         "\nPesan akan terkirim normal saja"})
