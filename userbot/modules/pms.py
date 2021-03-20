@@ -25,13 +25,14 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"ROOM CHAT || {DEFAULTUSER}\n"
-    "━━━━━━━━━━━━━━━━━━━━\n"
-    f"HALLO SELAMAT DATANG, SAYA DISINI YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
-    "┏━━━━━━━━━━━━━━━━━━━\n"
-    "┣[• `PESAN OTOMATIS`\n"
-    f"┣[• `BY` {DEFAULTUSER}\n"
-    "┗━━━━━━━━━━━━━━━━━━━")
+    "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
+    "❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈 ❗\n"
+    f"Karena Saya Akan Otomatis Memblokir\nAnda, Tunggu Sampai {DEFAULTUSER} \nMenerima Pesan Anda, Terimakasih.\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
+    "┣[○› `PESAN OTOMATIS`\n"
+    f"┣[○› `BY {DEFAULTUSER}`\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱")
 # =================================================================
 
 
