@@ -25,7 +25,8 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
-DEF_UNAPPROVED_MSG = ((
+DEF_UNAPPROVED_MSG = (
+    " `{ALIVE_LOGO}` \n"
     f"ROOM CHAT || {DEFAULTUSER}\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
     f"HALLO SELAMAT DATANG, SAYA DISINI YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
@@ -33,18 +34,6 @@ DEF_UNAPPROVED_MSG = ((
     "┣[• `PESAN OTOMATIS`\n"
     "┣[• `BY {DEFAULTUSER}`\n"
     "┗━━━━━━━━━━━━━━━━━━━")
-    if ALIVE_LOGO:
-        try:
-            logo = ALIVE_LOGO
-            await alive.delete()
-            msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(200)
-            await msg.delete()
-        except BaseException:
-            await alive.edit(
-                output + "\n\n *`The provided logo is invalid."
-                "\nMake sure the link is directed to the logo picture`"
-            )
 # =================================================================
 
 
