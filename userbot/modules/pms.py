@@ -18,7 +18,6 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
-    ALIVE_LOGO,
 )
 from userbot.events import register
 
@@ -26,7 +25,6 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    " `{ALIVE_LOGO}` \n"
     f"ROOM CHAT || {DEFAULTUSER}\n"
     "━━━━━━━━━━━━━━━━━━━━\n"
     f"HALLO SELAMAT DATANG, SAYA DISINI YANG MENJAGA ROOM CHAT INI MOHON JANGAN MELAKUKAN SPAM KARNA SAYA OTOMATIS AKAN MEMBLOKIR ANDA, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN ANDA__\n"
