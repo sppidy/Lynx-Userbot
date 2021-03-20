@@ -95,7 +95,7 @@ async def locks(event):
         await event.edit(f"⚡ `Yang Mulia Telah Mengunci {what} Untuk Obrolan Ini` ⚡")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Lord Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Yang Mulia Mempunyai Izin Melakukan Itu Disini ? 😿`\n**Kesalahan:** {str(e)}")
         return
 
 
