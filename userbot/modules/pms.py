@@ -230,9 +230,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`✞ Oke Pesan Anda Sudah Diterima Oleh Lord Saya ✞`")
+        return await apprvpm.edit("`Oke, Pesan Anda Sudah Diterima Oleh Pemilik Saya 😼`")
 
-    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `⛧ Pesan Anda Sudah Diterima ⛧`")
+    await apprvpm.edit(f"`𝙷𝚊𝚒 👋` [{name0}](tg://user?id={uid}) `𝙿𝚎𝚜𝚊𝚗 𝙰𝚗𝚍𝚊 𝚂𝚞𝚍𝚊𝚑 𝙳𝚒𝚝𝚎𝚛𝚒𝚖𝚊` ⚡")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -326,7 +326,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Lord Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`")
+        return await cust_msg.edit("**Mohon Maaf Yang Mulia, Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True`\n Silahkan Lakukan set var")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
@@ -356,7 +356,7 @@ async def add_pmsg(cust_msg):
         else:
             return await cust_msg.edit("`Mohon Balas Ke Pesan`")
 
-        await cust_msg.edit("`Pesan Berhasil Disimpan Ke Room Chat`")
+        await cust_msg.edit("⚡`Pesan Berhasil Disimpan Ke Room Chat`⚡")
 
         if BOTLOG:
             await cust_msg.client.send_message(
