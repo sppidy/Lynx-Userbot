@@ -18,6 +18,7 @@ from userbot import (
     LASTMSG,
     LOGS,
     PM_AUTO_BAN,
+    ALIVE_NAME,
 )
 from userbot.events import register
 
