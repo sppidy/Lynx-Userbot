@@ -89,7 +89,7 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "Lynx":
+    "lynx":
     "⚡𝘾𝙈𝘿⚡: `.Lynx`\
     \nUsage: Untuk alive bot.\
     \n\n`.sadboy`\
