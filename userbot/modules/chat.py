@@ -5,7 +5,7 @@
 """ Userbot module containing userid, chatid and log commands"""
 
 from asyncio import sleep
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, ALIVE_NAME
 from datetime import datetime
 from telethon import functions
 from emoji import emojize
@@ -33,9 +33,9 @@ async def _(event):
         r_msg = await event.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await event.edit("ID Grup: `{}`\nID Dari Pengguna: `{}`\nID Bot File API: `{}`".format(str(event.chat_id), str(r_msg.from_id), bot_api_file_id))
+            await event.edit("ID Grup: `{}`\nID Dari Pengguna : `{}`\nID Bot File API: `{}`".format(str(event.chat_id), str(r_msg.from_id), bot_api_file_id))
         else:
-            await event.edit("ID Grup: `{}`\nID Dari Pengguna: `{}`".format(str(event.chat_id), str(r_msg.from_id)))
+            await event.edit("ID Grup: `{}`\nID Dari Pengguna : `{}`".format(str(event.chat_id), str(r_msg.from_id)))
     else:
         await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
 
@@ -105,10 +105,10 @@ async def log(log_text):
     await log_text.delete()
 
 
-@register(outgoing=True, pattern="^.kickme$")
+@register(outgoing=True, pattern="^.exit$")
 async def kickme(leave):
     """ Basically it's .kickme command """
-    await leave.edit("`Lord Telah Meninggalkan Grup ツ`")
+    await leave.edit(f"`👑 Yang Mulia {ALIVE_NAME} Telah Meninggalkan Group...`")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 
@@ -121,7 +121,7 @@ async def unmute_chat(unm_e):
         await unm_e.edit('`Running on Non-SQL Mode!`')
         return
     unkread(str(unm_e.chat_id))
-    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan```")
+    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan Yang Mulia```")
     await sleep(2)
     await unm_e.delete()
 
@@ -136,7 +136,7 @@ async def mute_chat(mute_e):
         return
     await mute_e.edit(str(mute_e.chat_id))
     kread(str(mute_e.chat_id))
-    await mute_e.edit("`Ssshssh Lord Telah Membisukan Obrolan!`")
+    await mute_e.edit("`Ssshssh Yang Mulia Telah Membisukan Obrolan !`")
     await sleep(2)
     await mute_e.delete()
     if BOTLOG:
@@ -182,7 +182,7 @@ async def sedNinjaToggle(event):
         await event.delete()
     elif event.pattern_match.group(1) == "off":
         regexNinja = False
-        await event.edit("`Berhasil Menonaktifkan Mode Regez Ninja.`")
+        await event.edit("`Berhasil Menonaktifkan Mode Regex Ninja.`")
         await sleep(1)
         await event.delete()
 
@@ -221,13 +221,13 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.edit("`Grup/Channel Tidak Valid`")
+            await event.edit("`Group/Channel Tidak Valid`")
             return None
         except ChannelPrivateError:
-            await event.edit("`Ini Adalah Grup/Channel Privasi Atau Lord Dibanned Dari Sana`")
+            await event.edit("`Ini Adalah Group/Channel Privasi Atau Yang Mulia Telah Terbanned Dari Sana`")
             return None
         except ChannelPublicGroupNaError:
-            await event.edit("`Channel Atau Supergrup Tidak Ditemukan`")
+            await event.edit("`Channel Atau Supergroup Tidak Ditemukan`")
             return None
         except (TypeError, ValueError) as err:
             await event.edit(str(err))
@@ -425,26 +425,26 @@ async def _(event):
             await event.edit("`Berhasil Menambahkan Pengguna Ke Obrolan`")
 
 CMD_HELP.update({
-    "chat":
-    "`.getid`\
-\nUsage: Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
-\n\n`.getbot`\
-\nUsage: Dapatkan Bot dalam obrolan apa pun.\
-\n\n`.logit`\
-\nUsage: Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
-\n\n`.kickme`\
-\nUsagw: Keluar dari grup.\
-\n\n`.unmutechat`\
-\nUsage: Membuka obrolan yang dibisukan.\
-\n\n`.mutechat`\
-\nUsage: Memungkinkan Anda membisukan obrolan apa pun.\
-\n\n`.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
-\nUsage: Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
-\n\n`.regexninja` enable/disabled\
-\nUsage: Mengaktifkan/menonaktifkan modul ninja regex secara global.\
+    "Chat":
+    "⚡𝘾𝙈𝘿⚡: `.getid`\
+\n↳ : Dapatkan ID dari media Telegram mana pun, atau pengguna mana pun\
+\n\n⚡𝘾𝙈𝘿⚡: `.getbot`\
+\n↳ : Dapatkan Bot dalam obrolan apa pun.\
+\n\n⚡𝘾𝙈𝘿⚡: `.logit`\
+\n↳ : Meneruskan pesan yang telah Anda balas di grup log bot Anda.\
+\n\n⚡𝘾𝙈𝘿⚡: `.exit`\
+\n↳ : Keluar dari grup.\
+\n\n⚡𝘾𝙈𝘿⚡: `.unmutechat`\
+\n↳ : Membuka obrolan yang dibisukan.\
+\n\n⚡𝘾𝙈𝘿⚡: `.mutechat`\
+\n↳ : Memungkinkan Anda membisukan obrolan apa pun.\
+\n\n⚡𝘾𝙈𝘿⚡: `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
+\n↳ : Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional.\
+\n\n⚡𝘾𝙈𝘿⚡: `.regexninja` enable/disabled\
+\n↳ : Mengaktifkan/menonaktifkan modul ninja regex secara global.\
 \nModul Regex Ninja membantu menghapus pesan pemicu bot regex.\
-\n\n`.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
-\nUsage: Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
-\n\n`.invite` \
-\nUsage: Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
+\n\n⚡𝘾𝙈𝘿⚡: `.chatinfo [opsional: <reply/tag/chat id/invite link>]`\
+\n↳ : Mendapatkan info obrolan. Beberapa info mungkin dibatasi karena izin yang hilang..\
+\n\n⚡𝘾𝙈𝘿⚡: `.invite` \
+\n↳ : Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
 })
