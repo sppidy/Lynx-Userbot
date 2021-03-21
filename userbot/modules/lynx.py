@@ -51,7 +51,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("╭╮╱╱╭╮"
-                     "┃╰╮╭╯┃
+                     "┃╰╮╭╯┃"
                      "╰╮╰╯╭┻━┳╮╭╮"
                      "╱╰╮╭┫╭╮┃┃┃┃"
                      "╱╱┃┃┃╰╯┃╰╯┃"
