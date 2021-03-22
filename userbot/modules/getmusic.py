@@ -102,7 +102,7 @@ async def getmusicvideo(cat):
     for i in user_data:
         video_link = i.get_attribute("href")
         break
-    command = 'youtube_dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
+    command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
 
@@ -126,7 +126,7 @@ def getmusic(get, DEFAULT_AUDIO_QUALITY):
 
     video_link = "http://www.youtube.com/" + video_link
     command = (
-        "youtube_dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality " +
+        "youtube-dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality " +
         DEFAULT_AUDIO_QUALITY +
         " " +
         video_link)
@@ -142,7 +142,7 @@ async def getmusic(cat):
     for i in user_data:
         video_link = i.get_attribute("href")
         break
-    command = f'youtube_dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality "320k" {video_link}'
+    command = f'youtube-dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality "320k" {video_link}'
     os.system(command)
 
 
@@ -162,7 +162,7 @@ def getmusicvideo(cat):
             video_link = link.get("href")
             break
     video_link = "http://www.youtube.com/" + video_link
-    command = 'youtube_dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
+    command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
 
