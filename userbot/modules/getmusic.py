@@ -3,6 +3,7 @@
 # All rights reserved.
 # Alvin Gans
 # Yang Baca Bau Sawi
+# Oh Iyain Aja
 
 import asyncio
 import glob
@@ -52,7 +53,7 @@ async def _(event):
         query = reply.message
         await event.edit("`Sabar anjing lagi nyari lagu....`")
     else:
-        await event.edit("`Apa Yang Harus Saya Cari Lord?`")
+        await event.edit("`Apa Yang Harus Saya Cari Bangsad ?`")
         return
 
     getmusic(str(query), "320k")
@@ -65,7 +66,7 @@ async def _(event):
         if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
     ]
     thumb_image = img_filenames[0]
-    await event.edit("`Sedang Mengunggah Lagu Anda Lord, Mohon tunggu....`")
+    await event.edit("`Sedang Mengunggah Lagu Anda Yang Mulia, Mohon Tunggu...`")
     c_time = time.time()
     await event.client.send_file(
         event.chat_id,
@@ -101,7 +102,7 @@ async def getmusicvideo(cat):
     for i in user_data:
         video_link = i.get_attribute("href")
         break
-    command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
+    command = 'youtube_dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
 
@@ -125,7 +126,7 @@ def getmusic(get, DEFAULT_AUDIO_QUALITY):
 
     video_link = "http://www.youtube.com/" + video_link
     command = (
-        "youtube-dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality " +
+        "youtube_dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality " +
         DEFAULT_AUDIO_QUALITY +
         " " +
         video_link)
@@ -141,7 +142,7 @@ async def getmusic(cat):
     for i in user_data:
         video_link = i.get_attribute("href")
         break
-    command = f'youtube-dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality "320k" {video_link}'
+    command = f'youtube_dl --write-thumbnail --extract-audio --audio-format mp3 --audio-quality "320k" {video_link}'
     os.system(command)
 
 
@@ -161,7 +162,7 @@ def getmusicvideo(cat):
             video_link = link.get("href")
             break
     video_link = "http://www.youtube.com/" + video_link
-    command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
+    command = 'youtube_dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
     os.system(command)
 
 
@@ -173,12 +174,12 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Mohon Menunggu Lord, Sedang Mencari Musik Alay ヅ`")
+        await event.edit("`Mohon Menunggu Yang Mulia, Sedang Mencari Musik Anda.😼`")
     elif reply.message:
         query = reply.message
-        await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah Lagu Jamet.....ヅ`")
+        await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah Lagu Anda...😼`")
     else:
-        await event.edit("`Lord, Apa Yang Seharusnya Saya Temukan? ヅ`")
+        await event.edit("`Yang Mulia, Apa Yang Seharusnya Saya Temukan ? 😿`")
         return
 
     await getmusic(str(query))
@@ -197,7 +198,7 @@ async def _(event):
         if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
     ]
     thumb_image = img_filenames[0]
-    await event.edit("`Pengunggahan Berhasil Dilakukan ヅ`")
+    await event.edit("⚡ `Pengunggahan Berhasil Dilakukan` ⚡")
     c_time = time.time()
     await event.client.send_file(
         event.chat_id,
@@ -239,7 +240,7 @@ async def _(event):
     try:
         async with bot.conversation(chat) as conv:
             await asyncio.sleep(2)
-            await event.edit("`Memproses... Mohon Menunggu Lord`")
+            await event.edit("`Sedang Memproses... Mohon Tunggu Sebentar Yang Mulia.`")
             try:
                 msg = await conv.send_message(link)
                 response = await conv.get_response()
@@ -248,7 +249,7 @@ async def _(event):
             except YouBlockedUserError:
                 await event.reply("`Mohon Unblock @WooMaiBot Dan Coba Lagi`")
                 return
-            await event.edit("`Mengirim Musik Anda.....`")
+            await event.edit("`Mengirim Musik Anda...`")
             await asyncio.sleep(3)
             await bot.send_file(event.chat_id, respond)
         await event.client.delete_messages(
@@ -269,10 +270,10 @@ async def _(event):
     reply = await event.get_reply_message()
     if event.pattern_match.group(1):
         query = event.pattern_match.group(1)
-        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda....`")
+        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda...`")
     elif reply.message:
         query = reply.message
-        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda....`")
+        await event.edit("`Mohon Menunggu, Sedang Mencari Video Anda...`")
     else:
         await event.edit("`Apa Yang Harus Saya Temukan?`")
         return
@@ -281,7 +282,7 @@ async def _(event):
     if l:
         await event.edit("`Yaps.. Saya Menemukannya...`")
     else:
-        await event.edit(f"Maaf..! Saya Tidak Menemukan Apapun Pencarian, Mungkin HP Lord Kentang. `{query}`")
+        await event.edit(f"Maaf..! Saya Tidak Menemukan Apapun Pencarian, Mungkin HP Anda Kentang. `{query}`")
     loa = l[0]
     metadata = extractMetadata(createParser(loa))
     duration = 0
@@ -500,16 +501,16 @@ async def upload_track(track_location, message):
 
 CMD_HELP.update(
     {
-        "getmusic": ">`.net <Artis - Judul Lagu>`"
-        "\nUsage: Download Musik Dari @WooHaiBot"
-        "\n\n>`.net now`"
-        "\nUsage: Download LastFM scrobble."
-        "\n\n>`.vsong <Artis - Judul Lagu>`"
-        "\nUsage: Menemukan dan mengunggah video clip."
-        "\n\n>`.smd <Artis - Judul Lagu>`"
-        "\nUsage: Download musik dari Spotify"
-        "\n\n>`.deez (spotify/link deezer)`"
-        "\nUsage: Download musik dari deezer."
-        "\n*Format : `FLAC`, `MP3_320`, `MP3_256`, `MP3_128`."
+        "getmusic": "⚡𝘾𝙈𝘿⚡: `.net <Artis - Judul Lagu>`"
+        "\n↳ : Download Musik Dari @WooHaiBot"
+        "\n\n⚡𝘾𝙈𝘿⚡: `.net now`"
+        "\n↳ : Download LastFM scrobble."
+        "\n\n⚡𝘾𝙈𝘿⚡: `.vsong <Artis - Judul Lagu>`"
+        "\n↳ : Menemukan dan mengunggah video clip."
+        "\n\n⚡𝘾𝙈𝘿⚡: `.smd <Artis - Judul Lagu>`"
+        "\n↳ : Download musik dari Spotify"
+        "\n\n⚡𝘾𝙈𝘿⚡: `.deez (spotify/link deezer)`"
+        "\n↳ : Download musik dari deezer."
+        "\n**Format :** `FLAC`, `MP3_320`, `MP3_256`, `MP3_128`."
     }
 )
