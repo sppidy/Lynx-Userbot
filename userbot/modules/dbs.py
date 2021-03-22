@@ -27,7 +27,7 @@ async def amireallydbs(dbs):
     else:
         db = "Databases functioning normally!"
     await dbs.edit(""
-                   f"**User:** `{DEFAULTUSER}` \n"
+                   f"**User :** `{DEFAULTUSER}` \n"
                    f"**Status Database:** `{db}`\n"
-                   f"**404-Userbot:** `{BOT_VER}`"
+                   f"**Lynx-Userbot :** `{BOT_VER}`"
                    "")
