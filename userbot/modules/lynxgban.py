@@ -166,7 +166,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**🔥 𝐀𝐤𝐬𝐢 :** 🚫 𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 🚫"
+        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**🔥 𝐀𝐤𝐬𝐢 : **🚫 𝗚𝗹𝗼𝗯𝗮𝗹 𝘽𝙖𝙣𝙣𝙚𝙙 🚫"
     )
 
 
@@ -219,14 +219,9 @@ async def gunben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n0%▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n4%█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses...\n8%██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n20%█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n36%█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses...\n52%█████████████▒▒▒▒▒▒▒▒▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses.\n84%█████████████████████▒▒▒▒`")
-                await dark.edit(f"`Membatalkan Global Banned. Memproses..\n100%█████████████████████████`")
+                await dark.edit(f"`Membatalkan Global Banned. Sedang Memproses.`")
+                await dark.edit(f"`Membatalkan Global Banned. Sedang Memproses..`")
+                await dark.edit(f"`Membatalkan Global Banned. Sedang Memproses...`")
                 await dark.edit(f"`😼 Berhasil Membatalkan Global Banned 😼`")
             except BaseException:
                 b += 1
@@ -238,7 +233,7 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**😼 𝐀𝐤𝐬𝐢 :** `Membatalkan Global Banned`"
+        f"**⚡ 𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 :** `{ALIVE_NAME}`\n**👤 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 :** [{user.first_name}](tg://user?id={user.id})\n**😼 𝐀𝐤𝐬𝐢 : **`Membatalkan Global Banned`"
     )
 
 
