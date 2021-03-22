@@ -43,14 +43,14 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu Yang Mulia.`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Balas Ke Sticker Lord`")
+        await event.edit("`Mohon Maaf, Balas Ke Sticker Terlebih Dahulu Yang Mulia.`")
         return
     chat = "@stickers_to_image_bot"
-    await event.edit("`Mengubah Menjadi Gambar....`")
+    await event.edit("`Yang Mulia Sedang Mengubah Sticker Menjadi Gambar...`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -60,10 +60,10 @@ async def _(event):
             msg = await event.client.forward_messages(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.reply("Buka Blokir @stickers_to_image_bot Lalu Coba Lagi")
+            await event.reply("Mohon Maaf Yang Mulia, Buka Blokir @stickers_to_image_bot Lalu Coba Lagi.")
             return
         if response.text.startswith("I understand only stickers"):
-            await event.edit("`Maaf Lord, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi?`")
+            await event.edit("`Maaf Yang Mulia, Saya Tidak Bisa Mengubah Ini Menjadi Gambar, Periksa Kembali Apakah Itu Sticker Animasi ?`")
         else:
             response = conv.wait_event(
                 events.NewMessage(
@@ -80,7 +80,7 @@ async def _(event):
                 await event.client.send_message(event.chat_id, response.message, reply_to=reply_message.id)
                 await event.client.delete_message(event.chat_id, [msg.id, response.id])
             else:
-                await event.edit("`Coba Lagi`")
+                await event.edit("`Tolong Coba Lagi.`")
         await bot.send_read_acknowledge(conv.chat_id)
 
 
@@ -92,10 +92,10 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Maaf Lord, Ini Bukan Sticker`")
+        await sticker.edit("`Mohon Maaf Yang Mulia, Ini Bukanlah Sticker`")
         return False
 
-    await sticker.edit("`Berhasil Mengambil Sticker!`")
+    await sticker.edit("`Berhasil Mengambil Sticker Ini !`")
     image = io.BytesIO()
     await sticker.client.download_media(img, image)
     image.name = "sticker.png"
@@ -109,9 +109,9 @@ async def sticker_to_png(sticker):
 
 CMD_HELP.update(
     {
-        "stickers2": ">`.itos`"
-        "\nUsage: Balas ke sticker atau gambar .itos untuk mengambil sticker bukan ke pack "
-        "\n\n>`.get`"
-        "\nUsage: Balas ke sticker untuk mendapatkan file 'PNG' sticker."
-        "\n\n>`.stoi`"
-        "\nUsage: Balas Ke sticker untuk mendapatkan file 'PNG' sticker."})
+        "stickers2": "⚡𝘾𝙈𝘿⚡: `.itos`"
+        "\n↳ : Balas ke sticker atau gambar .itos untuk mengambil sticker bukan ke pack."
+        "\n\n⚡𝘾𝙈𝘿⚡: `.get`"
+        "\n↳ : Balas ke sticker untuk mendapatkan file 'PNG' sticker."
+        "\n\n⚡𝘾𝙈𝘿⚡: `.stoi`"
+        "\n↳ : Balas Ke sticker untuk mendapatkan file 'PNG' sticker."})
