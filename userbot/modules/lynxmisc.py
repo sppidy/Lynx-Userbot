@@ -143,7 +143,7 @@ async def _(event):
         for i in a:
             await event.reply(i.original.action.message)
     else:
-        await event.edit("Lord Anda memerlukan izin Admin untuk melakukan perintah ini")
+        await event.edit("Mohon Maaf Yang Mulia, Anda harus memerlukan izin Admin untuk melakukan perintah ini.")
         await asyncio.sleep(3)
         await event.delete()
 
@@ -444,7 +444,7 @@ async def potocmd(event):
                 await event.edit("`Nomer ID Yang Anda Masukkan Tidak Valid`")
                 return
         except BaseException:
-            await event.edit("`Lmao`")
+            await event.edit("`Lmao Hahh`")
             return
         if int(id) <= (len(photos)):
             send_photos = await event.client.download_media(photos[id - 1])
@@ -467,7 +467,9 @@ async def _(event):
         return
     chat = "@CheckRestrictionsBot"
     reply_message.sender
-    await event.edit("```Memproses....```")
+    await event.edit("```Sedang Memproses.```")
+    await event.edit("```Sedang Memproses..```")
+    await event.edit("```Sedang Memproses...```")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -487,7 +489,7 @@ async def _(event):
             await event.client.delete_message(chat, event.chat_id, response.message)
 
 
-@register(outgoing=True, pattern="^.clone(?: |$)(.*)")
+@register(outgoing=True, pattern="^.bunglon(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -541,7 +543,7 @@ async def _(event):
     await event.delete()
     await bot.send_message(
         event.chat_id,
-        "`Clone Berhasil Dilakukan ツ`",
+        "`Ssssttt, Anda Telah Berhasil Yang Mulia.`",
         reply_to=reply_message
     )
 
@@ -721,7 +723,7 @@ async def weebify(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Lord, Teks Apa Yang Harus Saya Weebify Kan?`")
+        await event.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Weebify Kan ?`")
         return
     string = ' '.join(args).lower()
     for normiecharacter in string:
@@ -768,7 +770,7 @@ async def thicc(bolded):
         get = await bolded.get_reply_message()
         args = get.text
     if not args:
-        await bolded.edit("`Lord, Teks Apa Yang Harus Saya Bold Kan?`")
+        await bolded.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Bold Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -807,7 +809,7 @@ medievalbold = [
     '𝖟']
 
 
-@register(outgoing=True, pattern="^.medibold(?: |$)(.*)")
+@register(outgoing=True, pattern="^.medbold(?: |$)(.*)")
 async def mediv(medievalx):
 
     args = medievalx.pattern_match.group(1)
@@ -815,7 +817,7 @@ async def mediv(medievalx):
         get = await medievalx.get_reply_message()
         args = get.text
     if not args:
-        await medievalx.edit("`Lord, Teks Apa Yang Harus Saya Medibold Kan?`")
+        await medievalx.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Medibold Kan ?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -862,7 +864,7 @@ async def doublex(doublestrucktx):
         get = await doublestrucktx.get_reply_message()
         args = get.text
     if not args:
-        await doublestrucktx.edit("`Lord, Teks Apa Yang Harus Saya Double Struck Kan?`")
+        await doublestrucktx.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Double Struck Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -909,7 +911,7 @@ async def cursive2(cursivebolded):
         get = await cursivebolded.get_reply_message()
         args = get.text
     if not args:
-        await cursivebolded.edit("`Lord, Teks Apa Yang Harus Saya Cursive Bold Kan?`")
+        await cursivebolded.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Cursive Bold Kan ?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -957,7 +959,7 @@ async def medival22(medivallite):
         get = await medivallite.get_reply_message()
         args = get.text
     if not args:
-        await medivallite.edit("`Lord, Teks Apa Yang Harus Saya Medival Kan?`")
+        await medivallite.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Medival Kan ?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -1004,7 +1006,7 @@ async def xcursive(cursivelite):
         get = await cursivelite.get_reply_message()
         args = get.text
     if not args:
-        await cursivelite.edit("`Lord, Teks Apa Yang Harus Saya Cursive Kan?`")
+        await cursivelite.edit("`Mohon Maaf, Teks Apa Yang Harus Saya Cursive Kan ?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -1014,7 +1016,7 @@ async def xcursive(cursivelite):
     await cursivelite.edit(string)
 
 
-@register(outgoing=True, pattern="^.rclone(?: |$)(.*)")
+@register(outgoing=True, pattern="^.rbunglon(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1024,40 +1026,40 @@ async def _(event):
     await bot(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=n)))
     await bot(functions.account.UpdateProfileRequest(about=bio))
     await bot(functions.account.UpdateProfileRequest(first_name=name))
-    await event.edit("`Berhasil Mengembalikan Akun Anda ツ`")
+    await event.edit(f"`👑 Yang Mulia {ALIVE_NAME} Telah Mengembalikan Akun-Nya.`")
 
 CMD_HELP.update({
-    "lordmisc":
-    "`.app`\
-\nUsage: ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
-\n\n`.undlt`\
-\nUsage: urungkan pesan yang dihapus tetapi Anda harus menjadi admin.\
-\n\n`.calc`\
-\nUsage: `.calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
-\n\n`.remove`\
-\nUsage: gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
-\n\n`.xcd`\
-\nUsage: Ketik xcd <query>.ps:Aku Sangat Bosan:v\
-\n\n`.grab` <count>\
-\nUsage: Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
-\n\n`.rnupload` filename.extenstion\
-\nUsage: Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
-\n\n`.clone` @username Dan '.rclone' Untuk Mengembalikan\
-\nUsage: Clone Akun Orang Tapi Username Tidak Di Clone\
-\n\n`.res`\
-\nUsage: Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
-\n\n`.watch` <movie/tv>\
-\nUsage: Mengetahui Detail Tentang Film.\
-\n\n`.weeb` <text>\
-\nUsage:Teks Weebify\
-\n\nKetik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medibold <Teks>`,`.doublestruck <Teks>`)\
-\nUsage: Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
-\n\n`.randompp`\
-\nUsage: Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
-\n\n`.glitch` Balas Ke Media\
-\nUsage: Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Gif Dan Level Glitch 1 - 8.\
+    "lynxmisc":
+    "⚡𝘾𝙈𝘿⚡: `.app`\
+\n↳ : ketik `.app namaapp` Dan Dapatkan Detail Informasi App.\
+\n\n⚡𝘾𝙈𝘿⚡: `.undlt`\
+\n↳ : urungkan pesan yang dihapus tetapi Anda harus menjadi admin.\
+\n\n⚡𝘾𝙈𝘿⚡: `.calc`\
+\n↳ : `.calc <term1><operator><term2>\nUntuk eg .calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
+\n\n⚡𝘾𝙈𝘿⚡: `.remove`\
+\n↳ : gunakan di grup .remove d atau y atau m atau w atau o atau q atau r.\n(d=AkunTerhapus y=userstatsempty m=userstatsmonth w=userstatsweek o=userstatsoffline q=userstatsonline r=userstatsrecently).\
+\n\n⚡𝘾𝙈𝘿⚡: `.xcd`\
+\n↳ : Ketik xcd <query>.ps:Aku Sangat Bosan:v\
+\n\n⚡𝘾𝙈𝘿⚡: `.grab` <count>\
+\n↳ : Balas Ke Pesan Pengguna Ketik `.grab` Atau `.grab <count>` Untuk Mengambil Foto Profil.\
+\n\n⚡𝘾𝙈𝘿⚡: `.rnupload` filename.extenstion\
+\n↳ : Balas Ke Sticker Dan Ketik .rnupload xyz.jpg\
+\n\n⚡𝘾𝙈𝘿⚡: `.bunglon` @username Dan '.rbunglon' Untuk Mengembalikan\
+\n↳ : Clone Akun Orang Tapi Username Tidak Di Clone\
+\n\n⚡𝘾𝙈𝘿⚡: `.res`\
+\n↳ : Ketik Username Akun,Channel,Group Atau Bot Bersama .res Dan Check Batasan\
+\n\n⚡𝘾𝙈𝘿⚡: `.watch` <movie/tv>\
+\n↳ : Mengetahui Detail Tentang Film.\
+\n\n⚡𝘾𝙈𝘿⚡: `.weeb` <text>\
+\n↳ : Teks Weebify.\
+\n\n⚡𝘾𝙈𝘿⚡: Ketik (`.bold <Teks>`,`.cur <Teks>`,`.curbold <Teks>`,`.medi <Teks>`,`.medbold <Teks>`,`.doublestruck <Teks>`)\
+\n↳ : Buat Teks <Bold,Cursive,Cursivebold,Medival,Medivalbold,Gayishbold>\
+\n\n⚡𝘾𝙈𝘿⚡: `.randompp`\
+\n↳ : Otomatis Mengganti Foto Profile Mu Untuk Stop ini Ketik .restart.\
+\n\n⚡𝘾𝙈𝘿⚡: `.glitch` Balas Ke Media\
+\n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Gif Dan Level Glitch 1 - 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2\
-\n\n`.glitchs` Balas Ke Media\
-\nUsage: Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
+\n\n⚡𝘾𝙈𝘿⚡: `.glitchs` Balas Ke Media\
+\n↳ : Memberikan Glitch (Gif , Stickers , Gambar, Video) Ke Sticker Dan Level Glitch 1 to 8.\
 Jika Tidak Memberikan Level Otomatis Default Ke Level 2."
 })
