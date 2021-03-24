@@ -160,7 +160,8 @@ def getmusicvideo(cat):
             break
     video_link = "http://www.youtube.com/" + video_link
     command = 'youtube-dl -f "[filesize<50M]" --merge-output-format mp4 ' + video_link
-    os.system(command)
+    os.system('bin/echo command',
+              shell=True)
 
 
 @register(outgoing=True, pattern=r"^\.musik (.*)")
@@ -212,9 +213,9 @@ async def _(event):
         ),
     )
     await event.delete()
-    os.system("rm -rf *.mp3")
+    os.system('rm -rf *.mp3')
     os.remove(thumb_image)
-    subprocess.check_output("rm -rf *.mp3", shell=True)
+    subprocess.check_output('rm -rf *.mp3', shell=True)
 
 
 @register(outgoing=True, pattern=r"^\.net (?:(now)|(.*) - (.*))")
