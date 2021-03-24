@@ -633,7 +633,7 @@ CMD_HELP.update(
     {
         "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`"
         "\n↳ : Does an image search on Google and shows 5 images.",
-        "currency": ⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`"
+        "currency": "⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`"
         "\n↳ : Converts various currencies for you.",
         "carbon": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply]`"
         "\n↳ : Beautify your code using carbon.now.sh\n"
