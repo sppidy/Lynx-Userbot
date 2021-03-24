@@ -1,9 +1,6 @@
 # Copyright (C) 2020 Aidil Aryanto.
 # DeeezLoad Ported from UniBorg by AnggaR96s
 # All rights reserved.
-# Alvin Gans
-# Yang Baca Bau Sawi
-# Oh Iyain Aja
 
 import asyncio
 import glob
