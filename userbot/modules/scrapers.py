@@ -1,9 +1,8 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
-"""Userbot module containing various scrapers."""
 
 import asyncio
 import json
@@ -16,14 +15,13 @@ from re import findall
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
 
-import wikipedia
 from bs4 import BeautifulSoup
 from emoji import get_emoji_regexp
-from google_trans_new import LANGUAGES, google_translator
+from googletrans import LANGUAGES, Translator
 from gtts import gTTS
 from gtts.lang import tts_langs
 from requests import get
-from search_engine_parser import YahooSearch as GoogleSearch
+from search_engine_parser import GoogleSearch
 from telethon.tl.types import DocumentAttributeAudio
 from urbandict import define
 from wikipedia import summary
@@ -53,9 +51,8 @@ from userbot.events import register
 from userbot.utils import chrome, googleimagesdownload, progress
 
 CARBONLANG = "auto"
-TTS_LANG = "id"
-TRT_LANG = "id"
-WIKI_LANG = "id"
+TTS_LANG = "en"
+TRT_LANG = "en"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
@@ -67,7 +64,6 @@ async def setlang(prog):
 
 @register(outgoing=True, pattern=r"^\.carbon")
 async def carbon_api(e):
-    """A Wrapper for carbon.now.sh"""
     await e.edit("`Processing...`")
     CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
     global CARBONLANG
@@ -114,7 +110,6 @@ async def carbon_api(e):
 
 @register(outgoing=True, pattern=r"^\.img (.*)")
 async def img_sampler(event):
-    """For .img command, search and return images matching the query."""
     await event.edit("`Processing...`")
     query = event.pattern_match.group(1)
     lim = findall(r"lim=\d+", query)
@@ -134,13 +129,8 @@ async def img_sampler(event):
         "no_directory": "no_directory",
     }
 
-    # if the query contains some special characters, googleimagesdownload errors out
-    # this is a temporary workaround for it (maybe permanent)
-    try:
-        paths = response.download(arguments)
-    except Exception as e:
-        return await event.edit(f"`Error: {e}`")
-
+    # passing the arguments to the function
+    paths = response.download(arguments)
     lst = paths[0][query]
     await event.client.send_file(
         await event.client.get_input_entity(event.chat_id), lst
@@ -180,7 +170,6 @@ async def moni(event):
 
 @register(outgoing=True, pattern=r"^\.google (.*)")
 async def gsearch(q_event):
-    """For .google command, do a Google search."""
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
     try:
@@ -212,17 +201,8 @@ async def gsearch(q_event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.wklang (.*)")
-async def setlang(wklang):
-    global WIKI_LANG
-    WIKI_LANG = wklang.pattern_match.group(1)
-    wikipedia.set_lang(f"{WIKI_LANG}")
-    await wklang.edit(f"Language for wikipedia set to {WIKI_LANG}")
-
-
 @register(outgoing=True, pattern=r"^\.wiki (.*)")
 async def wiki(wiki_q):
-    """For .wiki command, fetch content from Wikipedia."""
     match = wiki_q.pattern_match.group(1)
     try:
         summary(match)
@@ -232,8 +212,9 @@ async def wiki(wiki_q):
         return await wiki_q.edit(f"Page not found.\n\n{pageerror}")
     result = summary(match)
     if len(result) >= 4096:
-        with open("output.txt", "w+") as file:
-            file.write(result)
+        file = open("output.txt", "w+")
+        file.write(result)
+        file.close()
         await wiki_q.client.send_file(
             wiki_q.chat_id,
             "output.txt",
@@ -251,7 +232,6 @@ async def wiki(wiki_q):
 
 @register(outgoing=True, pattern=r"^\.ud (.*)")
 async def urban_dict(ud_e):
-    """For .ud command, fetch content from Urban Dictionary."""
     await ud_e.edit("Processing...")
     query = ud_e.pattern_match.group(1)
     try:
@@ -265,16 +245,17 @@ async def urban_dict(ud_e):
     if int(meanlen) >= 0:
         if int(meanlen) >= 4096:
             await ud_e.edit("`Output too large, sending as file.`")
-            with open("output.txt", "w+") as file:
-                file.write(
-                    "Text: "
-                    + query
-                    + "\n\nMeaning: "
-                    + mean[0]["def"]
-                    + "\n\n"
-                    + "Example: \n"
-                    + mean[0]["example"]
-                )
+            file = open("output.txt", "w+")
+            file.write(
+                "Text: "
+                + query
+                + "\n\nMeaning: "
+                + mean[0]["def"]
+                + "\n\n"
+                + "Example: \n"
+                + mean[0]["example"]
+            )
+            file.close()
             await ud_e.client.send_file(
                 ud_e.chat_id,
                 "output.txt",
@@ -303,7 +284,6 @@ async def urban_dict(ud_e):
 
 @register(outgoing=True, pattern=r"^\.tts(?: |$)([\s\S]*)")
 async def text_to_speech(query):
-    """For .tts command, a wrapper for Google Text-to-Speech."""
     textx = await query.get_reply_message()
     message = query.pattern_match.group(1)
     if message:
@@ -439,41 +419,35 @@ async def imdb(e):
 
 @register(outgoing=True, pattern=r"^\.trt(?: |$)([\s\S]*)")
 async def translateme(trans):
-    """ For .trt command, translate the given text using Google Translate. """
-
-    if trans.is_reply and not trans.pattern_match.group(1):
-        message = await trans.get_reply_message()
-        message = str(message.message)
+    translator = Translator()
+    textx = await trans.get_reply_message()
+    message = trans.pattern_match.group(1)
+    if message:
+        pass
+    elif textx:
+        message = textx.text
     else:
-        message = str(trans.pattern_match.group(1))
+        return await trans.edit("`Give a text or reply to a message to translate!`")
 
-    if not message:
-        return await trans.edit(
-            "**Give some text or reply to a message to translate!**"
-        )
-
-    await trans.edit("**Processing...**")
-    translator = google_translator()
     try:
-        reply_text = translator.translate(deEmojify(message), lang_tgt=TRT_LANG)
+        reply_text = translator.translate(deEmojify(message), dest=TRT_LANG)
     except ValueError:
-        return await trans.edit(
-            "**Invalid language selected, use **`.lang tts <language code>`**.**"
-        )
+        return await trans.edit("Invalid destination language.")
 
-    try:
-        source_lan = translator.detect(deEmojify(message))[1].title()
-    except BaseException:
-        source_lan = "(Google didn't provide this info)"
-
-    reply_text = f"From: **{source_lan}**\nTo: **{LANGUAGES.get(TRT_LANG).title()}**\n\n{reply_text}"
+    source_lan = LANGUAGES[f"{reply_text.src.lower()}"]
+    transl_lan = LANGUAGES[f"{reply_text.dest.lower()}"]
+    reply_text = f"From **{source_lan.title()}**\nTo **{transl_lan.title()}:**\n\n{reply_text.text}"
 
     await trans.edit(reply_text)
+    if BOTLOG:
+        await trans.client.send_message(
+            BOTLOG_CHATID,
+            f"Translated some {source_lan.title()} stuff to {transl_lan.title()} just now.",
+        )
 
 
 @register(pattern=r"^\.lang (trt|tts) (.*)", outgoing=True)
 async def lang(value):
-    """For .lang command, change the default langauge of userbot scrapers."""
     util = value.pattern_match.group(1).lower()
     if util == "trt":
         scraper = "Translator"
@@ -506,7 +480,6 @@ async def lang(value):
 
 @register(outgoing=True, pattern=r"^\.yt (.*)")
 async def yt_search(video_q):
-    """For .yt command, do a YouTube search from Telegram."""
     query = video_q.pattern_match.group(1)
     if not query:
         await video_q.edit("`Enter query to search`")
@@ -523,15 +496,14 @@ async def yt_search(video_q):
     await video_q.edit(output, link_preview=False)
 
 
-@register(outgoing=True, pattern=r"^\.rip(audio|video) (.*)")
+@register(outgoing=True, pattern=r"\.(aud|vid) (.*)")
 async def download_video(v_url):
-    """For .rip command, download media from YouTube and many other sites."""
     url = v_url.pattern_match.group(2)
     type = v_url.pattern_match.group(1).lower()
 
     await v_url.edit("`Preparing to download...`")
 
-    if type == "audio":
+    if type == "aud":
         opts = {
             "format": "bestaudio",
             "addmetadata": True,
@@ -554,7 +526,7 @@ async def download_video(v_url):
         video = False
         song = True
 
-    elif type == "video":
+    elif type == "vid":
         opts = {
             "format": "best",
             "addmetadata": True,
@@ -633,13 +605,11 @@ async def download_video(v_url):
 
 
 def deEmojify(inputString):
-    """Remove emojis and other non-safe characters from string"""
     return get_emoji_regexp().sub("", inputString)
 
 
-@register(outgoing=True, pattern=r"^.wolfram (.*)")
+@register(outgoing=True, pattern=r"^\.wolfram (.*)")
 async def wolfram(wvent):
-    """ Wolfram Alpha API """
     if WOLFRAM_ID is None:
         await wvent.edit(
             "Please set your WOLFRAM_ID first !\n"
@@ -662,27 +632,24 @@ async def wolfram(wvent):
 CMD_HELP.update(
     {
         "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`"
-        "\n↳ : Does an image search on Google and upload to Telegram.",
-        "currency": "⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`"
+        "\n↳ : Does an image search on Google and shows 5 images.",
+        "currency": ⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`"
         "\n↳ : Converts various currencies for you.",
         "carbon": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply]`"
         "\n↳ : Beautify your code using carbon.now.sh\n"
-        "Use .crblang <text> to set language for your code.",
+        "Use `.crblang` <text> to set language for your code.",
         "google": "⚡𝘾𝙈𝘿⚡: `.google <query>`" "\n↳ : Does a search on Google.",
-        "wiki": "⚡𝘾𝙈𝘿⚡: `.wiki <query>`"
-        "\n↳ : Does a search on Wikipedia.\n"
-        "⚡𝘾𝙈𝘿⚡: `.wklang` <language code> (Default is Indonesian)"
-        "\n↳ : Set language for wikipedia.",
+        "wiki": "⚡𝘾𝙈𝘿⚡: `.wiki <query>`" "\n↳ : Does a search on Wikipedia.",
         "ud": "⚡𝘾𝙈𝘿⚡: `.ud <query>`" "\n↳ : Does a search on Urban Dictionary.",
         "tts": "⚡𝘾𝙈𝘿⚡: `.tts <text> [or reply]`"
         "\n↳ : Translates text to speech for the language which is set."
-        "\nUse >`.lang tts <language code>` to set language for tts. (Default is Indonesian.)",
+        "\nUse >`.lang tts <language code>` to set language for tts. (Default is English.)",
         "trt": "⚡𝘾𝙈𝘿⚡: `.trt <text> [or reply]`"
         "\n↳ : Translates text to the language which is set."
-        "\nUse >`.lang trt <language code>` to set language for trt. (Default is Indonesian)",
-        "yt": "⚡𝘾𝙈𝘿⚡: `.yt <text>`" "\n↳ : Does a YouTube search.",
-        "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`" "\nUsage: Shows movie info and other stuff.",
-        "rip": "⚡𝘾𝙈𝘿⚡: `.ripaudio <url> or ripvideo <url>`"
+        "\nUse >`.lang trt <language code>` to set language for trt. (Default is English)",
+        "yt": "⚡𝘾𝙈𝘿⚡: `.yt <text>`" "\nUsage: Does a YouTube search.",
+        "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`" "\n↳ : Shows movie info and other stuff.",
+        "rip": "⚡𝘾𝙈𝘿⚡: `.aud <url> or vid <url>`"
         "\n↳ : Download videos and songs from YouTube "
         "(and [many other sites](https://ytdl-org.github.io/youtube-dl/supportedsites.html)).",
         "wolfram": "⚡𝘾𝙈𝘿⚡: `.wolfram` <query>"
