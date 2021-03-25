@@ -377,11 +377,12 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.aliveu")
-async def amireallyaliveuser(username):
+@register(outgoing=True, pattern="^.aliveu")
+async def amireallyaliveuser(username): 
+    """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = ".aliveu [new user without brackets] nor can it be empty"
-    if message != ".aliveu" and message[7:8] == " ":
+    output = ".aliveu [new username] tidak boleh kosong"
+    if not (message == ".aliveu" and message[7:8] != " ":
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
@@ -389,7 +390,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@register(outgoing=True, pattern=r"^\.resetsalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -400,18 +401,24 @@ CMD_HELP.update({
     "system":
     "⚡𝘾𝙈𝘿⚡: `.sysd`"\
 "\n↳ : Shows system information using neofetch."
-"\n\n⚡𝘾𝙈𝘿⚡: `.botver`"
-"\n↳ : Shows the userbot version."
-"\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
-"\n↳ : Does a search of pip modules(s)."
-"\n\n⚡𝘾𝙈𝘿⚡: `.alive`"
-"\n↳ : Type .alive or .on to see whether your bot is working or not."
-"\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
-"\n↳ : Changes the 'user' in alive to the text you want."
-"\n\n⚡𝘾𝙈𝘿⚡: `.resetalive`"
-"\n↳ : Resets the user to default."
 "\n\n⚡𝘾𝙈𝘿⚡: `.db`"
 "\n↳ : Shows database related info."
 "\n\n⚡𝘾𝙈𝘿⚡: `.spc`"
 "\n↳ : Show system specification."
+})
+CMD_HELP.update({
+    "alive":
+    "⚡𝘾𝙈𝘿⚡: `.alive` or `.on`"
+"\n↳ : To see whether your bot is working or not."
+"\n\n⚡𝘾𝙈𝘿⚡: `.aliveu` <text>"
+"\n↳ : Changes the 'user' in alive to the text you want."
+"\n\n⚡𝘾𝙈𝘿⚡: `.restalive`"
+"\n↳ : Resets the user to default."
+})
+CMD_HELP.update({
+    "botversion":
+    "⚡𝘾𝙈𝘿⚡: `.botver`"
+"\n↳ : Shows the userbot version."
+"\n\n⚡𝘾𝙈𝘿⚡: `.pip` <module(s)>"
+"\n↳ : Does a search of pip modules(s)."
 })
