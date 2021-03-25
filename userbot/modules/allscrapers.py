@@ -1431,8 +1431,8 @@ CMD_HELP.update(
         "\n↳ : Create a paste or a shortened url using dogbin",
         "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply> "
         "\n↳ : Create a paste or a shortened url using dogbin",
-        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> or reply to any image (Warning: does not work on stickers.)\"
-        "\n↳ : Removes the background of images, using remove.bg API.",
+        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)"
+        "\n↳ : Manghapus latar belakang gambar.",
         "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>"
         "\n↳ : Reply to an image or sticker to extract text from it.",   
         "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url> "
