@@ -1436,8 +1436,8 @@ CMD_HELP.update(
         "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>"
         "\n↳ : Reply to an image or sticker to extract text from it.",   
         "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url> "
-        "\n↳ : Reply to a link or paste a URL to generate a direct download link.",
-        "Supported Urls: `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`"
+        "\n↳ : Reply to a link or paste a URL to generate a direct download link."
+        "\nSupported Urls: `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`",
         "rcode": "⚡𝘾𝙈𝘿⚡: `.makeqr <content>`"
         "\n↳ : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content.",
         "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"      
