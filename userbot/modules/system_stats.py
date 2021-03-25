@@ -382,7 +382,7 @@ async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
     output = ".aliveu [new username] tidak boleh kosong"
-    if not (message == ".aliveu" and message[7:8] != " ":
+    if not (message == ".aliveu" and message[7:8] != " "):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
