@@ -13,5 +13,3 @@ WORKDIR /root/userbot
 RUN pip3 install -r https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/requirements.txt
 
 CMD ["python3","-m","userbot"]
-CMD ["bash"]
-CMD ["/bin/bash"]
