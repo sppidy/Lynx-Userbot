@@ -10,21 +10,24 @@ import os
 import re
 import shutil
 import time
+import qrcode
+import barcode
+import asyncurban
+import emoji
+
 from asyncio import sleep
+from barcode.writer import ImageWriter
 from re import findall
 from re import match
 from os import popen
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
 from random import choice
-
+from requests import get, post, exceptions
 from humanize import naturalsize
-import qrcode
-import barcode
-import asyncurban
 
-from barcode.writer import ImageWriter
-import emoji
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from bs4 import BeautifulSoup
 from emoji import get_emoji_regexp
@@ -32,8 +35,9 @@ from googletrans import LANGUAGES, Translator
 from gtts import gTTS
 from gtts.lang import tts_langs
 from requests import get
-from search_engine_parser import GoogleSearch
+from search_engine_parser import YahooSearch as GoogleSearch
 from telethon.tl.types import DocumentAttributeAudio
+from telethon.tl.types import MessageMediaPhoto
 from urbandict import define
 from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
@@ -57,14 +61,56 @@ from userbot import (
     IMG_LIMIT,
     TEMP_DOWNLOAD_DIRECTORY,
     WOLFRAM_ID,
+    CHROME_DRIVER,
+    GOOGLE_CHROME_BIN,
+    LOGS,
+    OCR_SPACE_API_KEY,
+    REM_BG_API_KEY,
+    bot
 )
+
 from userbot.events import register
-from userbot.utils import chrome, googleimagesdownload, progress
+from userbot.utils import chrome, googleimagesdownload, progress, options
 
 CARBONLANG = "auto"
 TTS_LANG = "en"
 TRT_LANG = "en"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
+
+
+async def ocr_space_file(filename,
+                         overlay=False,
+                         api_key=OCR_SPACE_API_KEY,
+                         language='eng'):
+    """ OCR.space API request with local file.
+        Python3.5 - not tested on 2.7
+    :param filename: Your file path & name.
+    :param overlay: Is OCR.space overlay required in your response.
+                    Defaults to False.
+    :param api_key: OCR.space API key.
+                    Defaults to 'helloworld'.
+    :param language: Language code to be used in OCR.
+                    List of available language codes can be found on https://ocr.space/OCRAPI
+                    Defaults to 'eng'.
+    :return: Result in JSON format.
+    """
+
+    payload = {
+        'isOverlayRequired': overlay,
+        'apikey': api_key,
+        'language': language,
+    }
+    with open(filename, 'rb') as f:
+        r = requests.post(
+            'https://api.ocr.space/parse/image',
+            files={filename: f},
+            data=payload,
+        )
+    return r.json()
+
+
+DOGBIN_URL = "https://del.dog/"
+NEKOBIN_URL = "https://nekobin.com/"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
@@ -645,6 +691,30 @@ async def wolfram(wvent):
 #Lynx-Userbot !!WARNING!! GPL-3.0 License
 
 
+@register(pattern=r".ocr (.*)", outgoing=True)
+async def ocr(event):
+    if not OCR_SPACE_API_KEY:
+        return await event.edit(
+            "`Error: OCR.Space API key is missing! Add it to environment variables or config.env.`"
+        )
+    await event.edit("`Reading...`")
+    if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
+    lang_code = event.pattern_match.group(1)
+    downloaded_file_name = await bot.download_media(
+        await event.get_reply_message(), TEMP_DOWNLOAD_DIRECTORY)
+    test_file = await ocr_space_file(filename=downloaded_file_name,
+                                     language=lang_code)
+    try:
+        ParsedText = test_file["ParsedResults"][0]["ParsedText"]
+    except BaseException:
+        await event.edit("`Couldn't read it.`\n`I guess I need new glasses.`")
+    else:
+        await event.edit(f"`Here's what I could read from it:`\n\n{ParsedText}"
+                         )
+    os.remove(downloaded_file_name)
+
+
 @register(pattern="^.ss (.*)", outgoing=True)
 async def capture(url):
     """ For .ss command, capture a website's screenshot and send the photo. """
@@ -799,7 +869,534 @@ async def get_dogbin_content(dog_url):
         )
 
 
+@register(outgoing=True, pattern=r"^\.paste(?: |$)([\s\S]*)")
+async def paste(pstl):
+    dogbin_final_url = ""
+    match = pstl.pattern_match.group(1).strip()
+    reply_id = pstl.reply_to_msg_id
 
+    if not match and not reply_id:
+        return await pstl.edit("`Elon Musk said I cannot paste void.`")
+
+    if match:
+        message = match
+    elif reply_id:
+        message = await pstl.get_reply_message()
+        if message.media:
+            downloaded_file_name = await pstl.client.download_media(
+                message,
+                TEMP_DOWNLOAD_DIRECTORY,
+            )
+            m_list = None
+            with open(downloaded_file_name, "rb") as fd:
+                m_list = fd.readlines()
+            message = ""
+            for m in m_list:
+                message += m.decode("UTF-8")
+            os.remove(downloaded_file_name)
+        else:
+            message = message.message
+
+    # Dogbin
+    await pstl.edit("`Pasting text . . .`")
+    resp = post(DOGBIN_URL + "documents", data=message.encode("utf-8"))
+
+    if resp.status_code == 200:
+        response = resp.json()
+        key = response["key"]
+        dogbin_final_url = DOGBIN_URL + key
+
+        if response["isUrl"]:
+            reply_text = (
+                "`Pasted successfully!`\n\n"
+                f"[Shortened URL]({dogbin_final_url})\n\n"
+                "`Original(non-shortened) URLs`\n"
+                f"[Dogbin URL]({DOGBIN_URL}v/{key})\n"
+                f"[View RAW]({DOGBIN_URL}raw/{key})"
+            )
+        else:
+            reply_text = (
+                "`Pasted successfully!`\n\n"
+                f"[Dogbin URL]({dogbin_final_url})\n"
+                f"[View RAW]({DOGBIN_URL}raw/{key})"
+            )
+    else:
+        reply_text = "`Failed to reach Dogbin`"
+
+    await pstl.edit(reply_text)
+    if BOTLOG:
+        await pstl.client.send_message(
+            BOTLOG_CHATID,
+            "Paste query was executed successfully",
+        )
+
+
+@register(outgoing=True, pattern="^.rbg(?: |$)(.*)")
+async def kbg(remob):
+    """ For .rbg command, Remove Image Background. """
+    if REM_BG_API_KEY is None:
+        await remob.edit(
+            "`Error: Remove.BG API key missing! Add it to environment vars or config.env.`"
+        )
+        return
+    input_str = remob.pattern_match.group(1)
+    message_id = remob.message.id
+    if remob.reply_to_msg_id:
+        message_id = remob.reply_to_msg_id
+        reply_message = await remob.get_reply_message()
+        await remob.edit("`Processing..`")
+        try:
+            if isinstance(
+                    reply_message.media, MessageMediaPhoto
+            ) or "image" in reply_message.media.document.mime_type.split('/'):
+                downloaded_file_name = await remob.client.download_media(
+                    reply_message, TEMP_DOWNLOAD_DIRECTORY)
+                await remob.edit("`Removing background from this image..`")
+                output_file_name = await ReTrieveFile(downloaded_file_name)
+                os.remove(downloaded_file_name)
+            else:
+                await remob.edit("`How do I remove the background from this ?`"
+                                 )
+        except Exception as e:
+            await remob.edit(str(e))
+            return
+    elif input_str:
+        await remob.edit(
+            f"`Removing background from online image hosted at`\n{input_str}")
+        output_file_name = await ReTrieveURL(input_str)
+    else:
+        await remob.edit("`I need something to remove the background from.`")
+        return
+    contentType = output_file_name.headers.get("content-type")
+    if "image" in contentType:
+        with io.BytesIO(output_file_name.content) as remove_bg_image:
+            remove_bg_image.name = "removed_bg.png"
+            await remob.client.send_file(
+                remob.chat_id,
+                remove_bg_image,
+                caption="Background removed using remove.bg",
+                force_document=True,
+                reply_to=message_id)
+            await remob.delete()
+    else:
+        await remob.edit("**Error (Invalid API key, I guess ?)**\n`{}`".format(
+            output_file_name.content.decode("UTF-8")))
+
+
+
+@register(outgoing=True, pattern=r"^.direct(?: |$)([\s\S]*)")
+async def direct_link_generator(request):
+    """ direct links generator """
+    await request.edit("`Processing...`")
+    textx = await request.get_reply_message()
+    message = request.pattern_match.group(1)
+    if message:
+        pass
+    elif textx:
+        message = textx.text
+    else:
+        await request.edit("`Usage: .direct <url>`")
+        return
+    reply = ''
+    links = re.findall(r'\bhttps?://.*\.\S+', message)
+    if not links:
+        reply = "`No links found!`"
+        await request.edit(reply)
+    for link in links:
+        if 'drive.google.com' in link:
+            reply += gdrive(link)
+        elif 'zippyshare.com' in link:
+            reply += zippy_share(link)
+        elif 'yadi.sk' in link:
+            reply += yandex_disk(link)
+        elif 'cloud.mail.ru' in link:
+            reply += cm_ru(link)
+        elif 'mediafire.com' in link:
+            reply += mediafire(link)
+        elif 'sourceforge.net' in link:
+            reply += sourceforge(link)
+        elif 'osdn.net' in link:
+            reply += osdn(link)
+        elif 'github.com' in link:
+            reply += github(link)
+        elif 'androidfilehost.com' in link:
+            reply += androidfilehost(link)
+        else:
+            reply += re.findall(r"\bhttps?://(.*?[^/]+)",
+                                link)[0] + 'is not supported'
+    await request.edit(reply)
+
+
+def gdrive(url: str) -> str:
+    """ GDrive direct links generator """
+    drive = 'https://drive.google.com'
+    try:
+        link = re.findall(r'\bhttps?://drive\.google\.com\S+', url)[0]
+    except IndexError:
+        reply = "`No Google drive links found`\n"
+        return reply
+    file_id = ''
+    reply = ''
+    if link.find("view") != -1:
+        file_id = link.split('/')[-2]
+    elif link.find("open?id=") != -1:
+        file_id = link.split("open?id=")[1].strip()
+    elif link.find("uc?id=") != -1:
+        file_id = link.split("uc?id=")[1].strip()
+    url = f'{drive}/uc?export=download&id={file_id}'
+    download = requests.get(url, stream=True, allow_redirects=False)
+    cookies = download.cookies
+    try:
+        # In case of small file size, Google downloads directly
+        dl_url = download.headers["location"]
+        if 'accounts.google.com' in dl_url:  # non-public file
+            reply += '`Link is not public!`\n'
+            return reply
+        name = 'Direct Download Link'
+    except KeyError:
+        # In case of download warning page
+        page = BeautifulSoup(download.content, 'lxml')
+        export = drive + page.find('a', {'id': 'uc-download-link'}).get('href')
+        name = page.find('span', {'class': 'uc-name-size'}).text
+        response = requests.get(export,
+                                stream=True,
+                                allow_redirects=False,
+                                cookies=cookies)
+        dl_url = response.headers['location']
+        if 'accounts.google.com' in dl_url:
+            reply += 'Link is not public!'
+            return reply
+    reply += f'[{name}]({dl_url})\n'
+    return reply
+
+
+def zippy_share(url: str) -> str:
+    """ ZippyShare direct links generator
+    Based on https://github.com/LameLemon/ziggy"""
+    reply = ''
+    dl_url = ''
+    try:
+        link = re.findall(r'\bhttps?://.*zippyshare\.com\S+', url)[0]
+    except IndexError:
+        reply = "`No ZippyShare links found`\n"
+        return reply
+    session = requests.Session()
+    base_url = re.search('http.+.com', link).group()
+    response = session.get(link)
+    page_soup = BeautifulSoup(response.content, "lxml")
+    scripts = page_soup.find_all("script", {"type": "text/javascript"})
+    for script in scripts:
+        if "getElementById('dlbutton')" in script.text:
+            url_raw = re.search(r'= (?P<url>\".+\" \+ (?P<math>\(.+\)) .+);',
+                                script.text).group('url')
+            math = re.search(r'= (?P<url>\".+\" \+ (?P<math>\(.+\)) .+);',
+                             script.text).group('math')
+            dl_url = url_raw.replace(math, '"' + str(eval(math)) + '"')
+            break
+    dl_url = base_url + eval(dl_url)
+    name = urllib.parse.unquote(dl_url.split('/')[-1])
+    reply += f'[{name}]({dl_url})\n'
+    return reply
+
+
+def yandex_disk(url: str) -> str:
+    """ Yandex.Disk direct links generator
+    Based on https://github.com/wldhx/yadisk-direct"""
+    reply = ''
+    try:
+        link = re.findall(r'\bhttps?://.*yadi\.sk\S+', url)[0]
+    except IndexError:
+        reply = "`No Yandex.Disk links found`\n"
+        return reply
+    api = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key={}'
+    try:
+        dl_url = requests.get(api.format(link)).json()['href']
+        name = dl_url.split('filename=')[1].split('&disposition')[0]
+        reply += f'[{name}]({dl_url})\n'
+    except KeyError:
+        reply += '`Error: File not found / Download limit reached`\n'
+        return reply
+    return reply
+
+
+def cm_ru(url: str) -> str:
+    """ cloud.mail.ru direct links generator
+    Using https://github.com/JrMasterModelBuilder/cmrudl.py"""
+    reply = ''
+    try:
+        link = re.findall(r'\bhttps?://.*cloud\.mail\.ru\S+', url)[0]
+    except IndexError:
+        reply = "`No cloud.mail.ru links found`\n"
+        return reply
+    command = f'bin/cmrudl -s {link}'
+    result = popen(command).read()
+    result = result.splitlines()[-1]
+    try:
+        data = json.loads(result)
+    except json.decoder.JSONDecodeError:
+        reply += "`Error: Can't extract the link`\n"
+        return reply
+    dl_url = data['download']
+    name = data['file_name']
+    size = naturalsize(int(data['file_size']))
+    reply += f'[{name} ({size})]({dl_url})\n'
+    return reply
+
+
+def mediafire(url: str) -> str:
+    """ MediaFire direct links generator """
+    try:
+        link = re.findall(r'\bhttps?://.*mediafire\.com\S+', url)[0]
+    except IndexError:
+        reply = "`No MediaFire links found`\n"
+        return reply
+    reply = ''
+    page = BeautifulSoup(requests.get(link).content, 'lxml')
+    info = page.find('a', {'aria-label': 'Download file'})
+    dl_url = info.get('href')
+    size = re.findall(r'\(.*\)', info.text)[0]
+    name = page.find('div', {'class': 'filename'}).text
+    reply += f'[{name} {size}]({dl_url})\n'
+    return reply
+
+
+def sourceforge(url: str) -> str:
+    """ SourceForge direct links generator """
+    try:
+        link = re.findall(r'\bhttps?://.*sourceforge\.net\S+', url)[0]
+    except IndexError:
+        reply = "`No SourceForge links found`\n"
+        return reply
+    file_path = re.findall(r'files(.*)/download', link)[0]
+    reply = f"Mirrors for __{file_path.split('/')[-1]}__\n"
+    project = re.findall(r'projects?/(.*?)/files', link)[0]
+    mirrors = f'https://sourceforge.net/settings/mirror_choices?' \
+        f'projectname={project}&filename={file_path}'
+    page = BeautifulSoup(requests.get(mirrors).content, 'html.parser')
+    info = page.find('ul', {'id': 'mirrorList'}).findAll('li')
+    for mirror in info[1:]:
+        name = re.findall(r'\((.*)\)', mirror.text.strip())[0]
+        dl_url = f'https://{mirror["id"]}.dl.sourceforge.net/project/{project}/{file_path}'
+        reply += f'[{name}]({dl_url}) '
+    return reply
+
+
+def osdn(url: str) -> str:
+    """ OSDN direct links generator """
+    osdn_link = 'https://osdn.net'
+    try:
+        link = re.findall(r'\bhttps?://.*osdn\.net\S+', url)[0]
+    except IndexError:
+        reply = "`No OSDN links found`\n"
+        return reply
+    page = BeautifulSoup(
+        requests.get(link, allow_redirects=True).content, 'lxml')
+    info = page.find('a', {'class': 'mirror_link'})
+    link = urllib.parse.unquote(osdn_link + info['href'])
+    reply = f"Mirrors for __{link.split('/')[-1]}__\n"
+    mirrors = page.find('form', {'id': 'mirror-select-form'}).findAll('tr')
+    for data in mirrors[1:]:
+        mirror = data.find('input')['value']
+        name = re.findall(r'\((.*)\)', data.findAll('td')[-1].text.strip())[0]
+        dl_url = re.sub(r'm=(.*)&f', f'm={mirror}&f', link)
+        reply += f'[{name}]({dl_url}) '
+    return reply
+
+
+def github(url: str) -> str:
+    """ GitHub direct links generator """
+    try:
+        link = re.findall(r'\bhttps?://.*github\.com.*releases\S+', url)[0]
+    except IndexError:
+        reply = "`No GitHub Releases links found`\n"
+        return reply
+    reply = ''
+    dl_url = ''
+    download = requests.get(url, stream=True, allow_redirects=False)
+    try:
+        dl_url = download.headers["location"]
+    except KeyError:
+        reply += "`Error: Can't extract the link`\n"
+    name = link.split('/')[-1]
+    reply += f'[{name}]({dl_url}) '
+    return reply
+
+
+def androidfilehost(url: str) -> str:
+    """ AFH direct links generator """
+    try:
+        link = re.findall(r'\bhttps?://.*androidfilehost.*fid.*\S+', url)[0]
+    except IndexError:
+        reply = "`No AFH links found`\n"
+        return reply
+    fid = re.findall(r'\?fid=(.*)', link)[0]
+    session = requests.Session()
+    user_agent = useragent()
+    headers = {'user-agent': user_agent}
+    res = session.get(link, headers=headers, allow_redirects=True)
+    headers = {
+        'origin': 'https://androidfilehost.com',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'en-US,en;q=0.9',
+        'user-agent': user_agent,
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'x-mod-sbb-ctype': 'xhr',
+        'accept': '*/*',
+        'referer': f'https://androidfilehost.com/?fid={fid}',
+        'authority': 'androidfilehost.com',
+        'x-requested-with': 'XMLHttpRequest',
+    }
+    data = {
+        'submit': 'submit',
+        'action': 'getdownloadmirrors',
+        'fid': f'{fid}'
+    }
+    mirrors = None
+    reply = ''
+    error = "`Error: Can't find Mirrors for the link`\n"
+    try:
+        req = session.post(
+            'https://androidfilehost.com/libs/otf/mirrors.otf.php',
+            headers=headers,
+            data=data,
+            cookies=res.cookies)
+        mirrors = req.json()['MIRRORS']
+    except (json.decoder.JSONDecodeError, TypeError):
+        reply += error
+    if not mirrors:
+        reply += error
+        return reply
+    for item in mirrors:
+        name = item['name']
+        dl_url = item['url']
+        reply += f'[{name}]({dl_url}) '
+    return reply
+
+
+def useragent():
+    """
+    useragent random setter
+    """
+    useragents = BeautifulSoup(
+        requests.get(
+            'https://developers.whatismybrowser.com/'
+            'useragents/explore/operating_system_name/android/').content,
+        'lxml').findAll('td', {'class': 'useragent'})
+    user_agent = choice(useragents)
+    return user_agent.text
+
+
+@register(pattern=r"^.decode$", outgoing=True)
+async def parseqr(qr_e):
+    """ For .decode command, get QR Code/BarCode content from the replied photo. """
+    downloaded_file_name = await qr_e.client.download_media(
+        await qr_e.get_reply_message())
+    # parse the Official ZXing webpage to decode the QRCode
+    command_to_exec = [
+        "curl", "-X", "POST", "-F", "f=@" + downloaded_file_name + "",
+        "https://zxing.org/w/decode"
+    ]
+    process = await asyncio.create_subprocess_exec(
+        *command_to_exec,
+        # stdout must a pipe to be accessible as process.stdout
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    # Wait for the subprocess to finish
+    stdout, stderr = await process.communicate()
+    e_response = stderr.decode().strip()
+    t_response = stdout.decode().strip()
+    os.remove(downloaded_file_name)
+    if not t_response:
+        LOGS.info(e_response)
+        LOGS.info(t_response)
+        return await qr_e.edit("Failed to decode.")
+    soup = BeautifulSoup(t_response, "html.parser")
+    qr_contents = soup.find_all("pre")[0].text
+    await qr_e.edit(qr_contents)
+
+
+@register(pattern=r".barcode(?: |$)([\s\S]*)", outgoing=True)
+async def bq(event):
+    """ For .barcode command, genrate a barcode containing the given content. """
+    await event.edit("`Processing..`")
+    input_str = event.pattern_match.group(1)
+    message = "SYNTAX: `.barcode <long text to include>`"
+    reply_msg_id = event.message.id
+    if input_str:
+        message = input_str
+    elif event.reply_to_msg_id:
+        previous_message = await event.get_reply_message()
+        reply_msg_id = previous_message.id
+        if previous_message.media:
+            downloaded_file_name = await event.client.download_media(
+                previous_message)
+            m_list = None
+            with open(downloaded_file_name, "rb") as fd:
+                m_list = fd.readlines()
+            message = ""
+            for m in m_list:
+                message += m.decode("UTF-8") + "\r\n"
+            os.remove(downloaded_file_name)
+        else:
+            message = previous_message.message
+    else:
+        return event.edit("SYNTAX: `.barcode <long text to include>`")
+
+    bar_code_type = "code128"
+    try:
+        bar_code_mode_f = barcode.get(bar_code_type,
+                                      message,
+                                      writer=ImageWriter())
+        filename = bar_code_mode_f.save(bar_code_type)
+        await event.client.send_file(event.chat_id,
+                                     filename,
+                                     reply_to=reply_msg_id)
+        os.remove(filename)
+    except Exception as e:
+        return await event.edit(str(e))
+    await event.delete()
+
+
+@register(pattern=r".makeqr(?: |$)([\s\S]*)", outgoing=True)
+async def make_qr(makeqr):
+    """ For .makeqr command, make a QR Code containing the given content. """
+    input_str = makeqr.pattern_match.group(1)
+    message = "SYNTAX: `.makeqr <long text to include>`"
+    reply_msg_id = None
+    if input_str:
+        message = input_str
+    elif makeqr.reply_to_msg_id:
+        previous_message = await makeqr.get_reply_message()
+        reply_msg_id = previous_message.id
+        if previous_message.media:
+            downloaded_file_name = await makeqr.client.download_media(
+                previous_message)
+            m_list = None
+            with open(downloaded_file_name, "rb") as file:
+                m_list = file.readlines()
+            message = ""
+            for media in m_list:
+                message += media.decode("UTF-8") + "\r\n"
+            os.remove(downloaded_file_name)
+        else:
+            message = previous_message.message
+
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(message)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save("img_file.webp", "PNG")
+    await makeqr.client.send_file(makeqr.chat_id,
+                                  "img_file.webp",
+                                  reply_to=reply_msg_id)
+    os.remove("img_file.webp")
+    await makeqr.delete()
 
 
 CMD_HELP.update(
@@ -834,6 +1431,15 @@ CMD_HELP.update(
         "\n↳ : Create a paste or a shortened url using dogbin",
         "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply> "
         "\n↳ : Create a paste or a shortened url using dogbin",
-
+        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> or reply to any image (Warning: does not work on stickers.)\"
+        "\n↳ : Removes the background of images, using remove.bg API.",
+        "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>"
+        "\n↳ : Reply to an image or sticker to extract text from it.",   
+        "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url> "
+        "\n↳ : Reply to a link or paste a URL to generate a direct download link.",
+        "Supported Urls: `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`"
+        "rcode": "⚡𝘾𝙈𝘿⚡: `.makeqr <content>`"
+        "\n↳ : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content.",
+        "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"      
     }
 )
