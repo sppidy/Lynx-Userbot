@@ -12,8 +12,19 @@ import shutil
 import time
 from asyncio import sleep
 from re import findall
+from re import match
+from os import popen
 from urllib.error import HTTPError
 from urllib.parse import quote_plus
+from random import choice
+
+from humanize import naturalsize
+import qrcode
+import barcode
+import asyncurban
+
+from barcode.writer import ImageWriter
+import emoji
 
 from bs4 import BeautifulSoup
 from emoji import get_emoji_regexp
@@ -53,6 +64,7 @@ from userbot.utils import chrome, googleimagesdownload, progress
 CARBONLANG = "auto"
 TTS_LANG = "en"
 TRT_LANG = "en"
+TEMP_DOWNLOAD_DIRECTORY "/root/userbot/.bin"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
@@ -629,6 +641,167 @@ async def wolfram(wvent):
         )
 
 
+#Ported By Kenzo
+#Lynx-Userbot !!WARNING!! GPL-3.0 License
+
+
+@register(pattern="^.ss (.*)", outgoing=True)
+async def capture(url):
+    """ For .ss command, capture a website's screenshot and send the photo. """
+    await url.edit("`Processing...`")
+    chrome_options = await options()
+    chrome_options.add_argument("--test-type")
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.arguments.remove("--window-size=1920x1080")
+    driver = await chrome(chrome_options=chrome_options)
+    input_str = url.pattern_match.group(1)
+    link_match = match(r'\bhttps?://.*\.\S+', input_str)
+    if link_match:
+        link = link_match.group()
+    else:
+        return await url.edit("`I need a valid link to take screenshots from.`")
+    driver.get(link)
+    height = driver.execute_script(
+        "return Math.max(document.body.scrollHeight, document.body.offsetHeight, "
+        "document.documentElement.clientHeight, document.documentElement.scrollHeight, "
+        "document.documentElement.offsetHeight);")
+    width = driver.execute_script(
+        "return Math.max(document.body.scrollWidth, document.body.offsetWidth, "
+        "document.documentElement.clientWidth, document.documentElement.scrollWidth, "
+        "document.documentElement.offsetWidth);")
+    driver.set_window_size(width + 125, height + 125)
+    wait_for = height / 1000
+    await url.edit(
+        "`Generating screenshot of the page...`"
+        f"\n`Height of page = {height}px`"
+        f"\n`Width of page = {width}px`"
+        f"\n`Waiting ({int(wait_for)}s) for the page to load.`")
+    await sleep(int(wait_for))
+    im_png = driver.get_screenshot_as_png()
+    # saves screenshot of entire page
+    driver.quit()
+    message_id = url.message.id
+    if url.reply_to_msg_id:
+        message_id = url.reply_to_msg_id
+    with io.BytesIO(im_png) as out_file:
+        out_file.name = "screencapture.png"
+        await url.edit("`Uploading screenshot as file..`")
+        await url.client.send_file(url.chat_id,
+                                   out_file,
+                                   caption=input_str,
+                                   force_document=True,
+                                   reply_to=message_id)
+        await url.delete()
+
+
+@register(outgoing=True, pattern=r"^\.neko(?: |$)([\s\S]*)")
+async def neko(nekobin):
+    """For .paste command, pastes the text directly to dogbin."""
+    nekobin_final_url = ""
+    match = nekobin.pattern_match.group(1).strip()
+    reply_id = nekobin.reply_to_msg_id
+
+    if not match and not reply_id:
+        return await pstl.edit("`Cannot paste text.`")
+
+    if match:
+        message = match
+    elif reply_id:
+        message = await nekobin.get_reply_message()
+        if message.media:
+            downloaded_file_name = await nekobin.client.download_media(
+                message,
+                TEMP_DOWNLOAD_DIRECTORY,
+            )
+            m_list = None
+            with open(downloaded_file_name, "rb") as fd:
+                m_list = fd.readlines()
+            message = ""
+            for m in m_list:
+                message += m.decode("UTF-8")
+            os.remove(downloaded_file_name)
+        else:
+            message = message.text
+
+    # Nekobin
+    await nekobin.edit("`Pasting text . . .`")
+    resp = post(NEKOBIN_URL + "api/documents", json={"content": message})
+
+    if resp.status_code == 201:
+        response = resp.json()
+        key = response["result"]["key"]
+        nekobin_final_url = NEKOBIN_URL + key
+        reply_text = (
+            "`Pasted successfully!`\n\n"
+            f"[Nekobin URL]({nekobin_final_url})\n"
+            f"[View RAW]({NEKOBIN_URL}raw/{key})"
+        )
+    else:
+        reply_text = "`Failed to reach Nekobin`"
+
+    await nekobin.edit(reply_text)
+    if BOTLOG:
+        await nekobin.client.send_message(
+            BOTLOG_CHATID,
+            "Paste query was executed successfully",
+        )
+
+
+@register(outgoing=True, pattern=r"^\.getpaste(?: |$)(.*)")
+async def get_dogbin_content(dog_url):
+    textx = await dog_url.get_reply_message()
+    message = dog_url.pattern_match.group(1)
+    await dog_url.edit("`Getting dogbin content...`")
+
+    if textx:
+        message = str(textx.message)
+
+    format_normal = f"{DOGBIN_URL}"
+    format_view = f"{DOGBIN_URL}v/"
+
+    if message.startswith(format_view):
+        message = message[len(format_view):]
+    elif message.startswith(format_normal):
+        message = message[len(format_normal):]
+    elif message.startswith("del.dog/"):
+        message = message[len("del.dog/"):]
+    else:
+        return await dog_url.edit("`Is that even a dogbin url?`")
+
+    resp = get(f"{DOGBIN_URL}raw/{message}")
+
+    try:
+        resp.raise_for_status()
+    except exceptions.HTTPError as HTTPErr:
+        await dog_url.edit(
+            "Request returned an unsuccessful status code.\n\n" + str(HTTPErr)
+        )
+        return
+    except exceptions.Timeout as TimeoutErr:
+        await dog_url.edit("Request timed out." + str(TimeoutErr))
+        return
+    except exceptions.TooManyRedirects as RedirectsErr:
+        await dog_url.edit(
+            "Request exceeded the configured number of maximum redirections."
+            + str(RedirectsErr)
+        )
+        return
+
+    reply_text = (
+        "`Fetched dogbin URL content successfully!`"
+        "\n\n`Content:` " + resp.text)
+
+    await dog_url.edit(reply_text)
+    if BOTLOG:
+        await dog_url.client.send_message(
+            BOTLOG_CHATID,
+            "Get dogbin content query was executed successfully",
+        )
+
+
+
+
+
 CMD_HELP.update(
     {
         "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`"
@@ -647,12 +820,20 @@ CMD_HELP.update(
         "trt": "⚡𝘾𝙈𝘿⚡: `.trt <text> [or reply]`"
         "\n↳ : Translates text to the language which is set."
         "\nUse >`.lang trt <language code>` to set language for trt. (Default is English)",
-        "yt": "⚡𝘾𝙈𝘿⚡: `.yt <text>`" "\nUsage: Does a YouTube search.",
+        "youtube": "⚡𝘾𝙈𝘿⚡: `.yt <text>`" "\nUsage: Does a YouTube search.",
         "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`" "\n↳ : Shows movie info and other stuff.",
         "rip": "⚡𝘾𝙈𝘿⚡: `.aud <url> or vid <url>`"
         "\n↳ : Download videos and songs from YouTube "
         "(and [many other sites](https://ytdl-org.github.io/youtube-dl/supportedsites.html)).",
         "wolfram": "⚡𝘾𝙈𝘿⚡: `.wolfram` <query>"
         "\n↳ : Get answers to questions using WolframAlpha Spoken Results API.",
+        "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`"
+        "\n↳ : Takes a screenshot of a website and sends the screenshot."
+        "\nExample of a valid URL : `https://www.google.com`",
+        "nekobin": "⚡𝘾𝙈𝘿⚡: `.neko` <text/reply> "
+        "\n↳ : Create a paste or a shortened url using dogbin",
+        "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply> "
+        "\n↳ : Create a paste or a shortened url using dogbin",
+
     }
 )
