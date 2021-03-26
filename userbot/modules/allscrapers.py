@@ -982,6 +982,34 @@ async def kbg(remob):
         await remob.edit("**Error (Invalid API key, I guess ?)**\n`{}`".format(
             output_file_name.content.decode("UTF-8")))
 
+# this method will call the API, and return in the appropriate format
+# with the name provided.
+async def ReTrieveFile(input_file_name):
+    headers = {
+        "X-API-Key": REM_BG_API_KEY,
+    }
+    files = {
+        "image_file": (input_file_name, open(input_file_name, "rb")),
+    }
+    r = requests.post("https://api.remove.bg/v1.0/removebg",
+                      headers=headers,
+                      files=files,
+                      allow_redirects=True,
+                      stream=True)
+    return r
+
+
+async def ReTrieveURL(input_url):
+    headers = {
+        "X-API-Key": REM_BG_API_KEY,
+    }
+    data = {"image_url": input_url}
+    r = requests.post("https://api.remove.bg/v1.0/removebg",
+                      headers=headers,
+                      data=data,
+                      allow_redirects=True,
+                      stream=True)
+    return r
 
 
 @register(outgoing=True, pattern=r"^.direct(?: |$)([\s\S]*)")
