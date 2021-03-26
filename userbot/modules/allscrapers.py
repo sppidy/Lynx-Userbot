@@ -14,6 +14,7 @@ import qrcode
 import barcode
 import asyncurban
 import emoji
+import requests
 
 from asyncio import sleep
 from barcode.writer import ImageWriter
