@@ -1,4 +1,4 @@
-# © Copy Right 2021 Lynx-Userbot 
+# © Copyright 2021 Lynx-Userbot LLC Company.
 # GNU 3.0-License 
 # Ported by @TeamSecret_Kz (KENZO)
 # WARNING !!
