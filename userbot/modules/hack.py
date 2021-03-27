@@ -90,6 +90,12 @@ async def _(event):
     MSG += f"Believe try to download` 🙂\n\n{ME}"
     await xx.edit(MSG)
 
+    if not disable_edited:
+                bot.add_event_handler(wrapper, events.MessageEdited(**args))
+            bot.add_event_handler(wrapper, events.NewMessage(**args))
+            return wrapper
+        return decorator
+
     CMD_HELP.update(
         {
             "hack": "⚡𝘾𝙈𝘿⚡: `.hack`\
