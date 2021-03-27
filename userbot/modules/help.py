@@ -5,12 +5,24 @@
 #
 """ Userbot help command """
 
+import psutil
+import sys
+import platform
 import asyncio
-from userbot import CMD_HELP
+from asyncio import create_subprocess_exec as asyncrunapp
+from userbot import CMD_HELP, ALIVE_NAME, bot
 from userbot.events import register
+from sys import version_info
+from telethon import version
+from platform import uname
+from shutil import which
 
 modules = CMD_HELP
 
+# Ported by KENZO (Lynx-Userbot)
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
 async def help(event):
@@ -28,9 +40,9 @@ async def help(event):
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t|  "
-        await event.edit("**❉ Daftar Perintah Untuk\n⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ :\n\n**"
-                         f"⛧{string}⛧"
-                         "\n☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤☤")
-        await event.reply(f"\n**Ketik Contoh** `.help afk` **Untuk Informasi Perintah**")
+        await event.edit("**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡**\n**Mᴀɪɴ Mᴇɴᴜ :**/n"
+                         f"╰►|{string} ◄─\n"
+                         f"◑» Bᴏᴛ ᴏꜰ {DEFAULTUSER}/n◑» Mᴏᴅᴜʟᴇꜱ : `(len{modules}` ")
+        await event.reply(f"\n**Contoh** : Ketik `.help afk` Untuk Informasi Pengunaan./nAtau Bisa Juga Ketik `.helpme` Untuk Main Menu Yang Lain-Nya.")
         await asyncio.sleep(1000)
         await event.delete()
