@@ -420,7 +420,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}"f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"        "\n◎› **Mᴏᴅᴜʟᴇꜱ :** `{}`\n               \n◎› **Mᴇɴᴜ Bᴏᴛ :** \n".format(
+                    text="{}"f"\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"        "◎› **Mᴏᴅᴜʟᴇꜱ :** `{}`\n◎› **Mᴇɴᴜ Bᴏᴛ :** \n".format(
                         "** ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ **",
                         len(dugmeler),
                     ),
