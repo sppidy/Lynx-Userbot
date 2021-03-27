@@ -1,5 +1,5 @@
 # © Copyright 2021 Lynx-Userbot LLC Company.
-# GNU 3.0-License 
+# GPL-3.0 License From Github
 # Ported by @TeamSecret_Kz (KENZO)
 # WARNING !!
 # Credits by @TeamUltroid, Kraken, Sawan.
