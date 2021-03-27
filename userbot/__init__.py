@@ -28,7 +28,7 @@ from telethon.sessions import StringSession
 
 redis_db = None
 
-load_dotenv("sample_config.env")
+load_dotenv("config.env")
 
 StartTime = time.time()
 
