@@ -1,11 +1,14 @@
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
+from asyncio import create_subprocess_shell as asyncsubshell
+from asyncio import subprocess as asyncsub
+from time import gmtime, strftime
 import asyncio
 import random
 
 @register(outngoing=True, pattern='^.hack(?: |$)(.*)')
-async def _(event):
+async def hack(event):
     animation_interval = 0.7
     animation_ttl = range(0, 11)
     xx = await eor(event, "Installing..")
@@ -90,11 +93,6 @@ async def _(event):
     MSG += f"Believe try to download` 🙂\n\n{ME}"
     await xx.edit(MSG)
 
-    if not disable_edited:
-                bot.add_event_handler(wrapper, events.MessageEdited(**args))
-            bot.add_event_handler(wrapper, events.NewMessage(**args))
-            return wrapper
-        return decorator
 
     CMD_HELP.update(
         {
