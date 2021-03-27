@@ -11,7 +11,6 @@ import time
 import re
 import redis
 
-from redis import RedisSession
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
