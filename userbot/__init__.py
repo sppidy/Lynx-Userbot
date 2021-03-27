@@ -397,7 +397,8 @@ with bot:
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
             api_id=API_KEY,
-            api_hash=API_HASH).start(
+            api_hash=API_HASH
+            alive_name=ALIVE_NAME).start(
             bot_token=BOT_TOKEN)
 
         dugmeler = CMD_HELP
@@ -420,7 +421,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text=f"{}\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n         \n**◉ Mᴏᴅᴜʟᴇꜱ :** `{}`\n               \n**◉ Mᴇɴᴜ Bᴏᴛ :** \n".format(
+                    text=f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**"\n        \n\n"{}**◉ Mᴏᴅᴜʟᴇꜱ :** `{}`\n               \n**◉ Mᴇɴᴜ Bᴏᴛ :** \n".format(
                         "** ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ **",
                         len(dugmeler),
                     ),
