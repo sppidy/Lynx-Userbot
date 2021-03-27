@@ -138,7 +138,6 @@ if REDIS_URI and REDIS_PASSWORD:
             "Make sure you have the correct Redis endpoint and password "
             "and your machine can make connections."
         )
-client.database = redis_db
 
 # Chrome Driver and Headless Google Chrome Binaries
 CHROME_DRIVER = os.environ.get("CHROME_DRIVER") or "/usr/bin/chromedriver"
