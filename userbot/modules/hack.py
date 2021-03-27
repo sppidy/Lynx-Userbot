@@ -1,14 +1,15 @@
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
-from asyncio import create_subprocess_shell as asyncsubshell
-from asyncio import subprocess as asyncsub
-from time import gmtime, strftime
+from random import getrandbits, randint
+from re import sub
+
+import requests
 import asyncio
 import random
 
 @register(outgoing=True, pattern='^.hack(?: |$)(.*)')
-async def hack(event):
+async def _(event):
     animation_interval = 0.7
     animation_ttl = range(0, 11)
     xx = await eor(event, "Installing..")
@@ -94,8 +95,7 @@ async def hack(event):
     await xx.edit(MSG)
 
 
-    CMD_HELP.update(
-        {
-            "hack": "⚡𝘾𝙈𝘿⚡: `.hk`\
-             \n↳ : Untuk hacking via Termux."
+CMD_HELP.update({
+        "hack": "⚡𝘾𝙈𝘿⚡: `.hk`\"
+        "\n↳ : Untuk hacking via Termux."
 })
