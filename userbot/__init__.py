@@ -397,8 +397,7 @@ with bot:
         tgbot = TelegramClient(
             "TG_BOT_TOKEN",
             api_id=API_KEY,
-            api_hash=API_HASH
-            alive_name=ALIVE_NAME).start(
+            api_hash=API_HASH).start(
             bot_token=BOT_TOKEN)
 
         dugmeler = CMD_HELP
