@@ -27,11 +27,11 @@ async def hack(event):
         "`Target files Uploading...\n\nDirecting To Remote  server to hack..`"]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await xx.edit(animation_chars[i % 11])
+        await event.edit(animation_chars[i % 11])
     await asyncio.sleep(2)
     animation_interval = 0.6
     animation_ttl = range(0,14)
-    await xx.edit("Connecting nd getting combined token from my.telegram.org ")
+    await event.edit("Connecting nd getting combined token from my.telegram.org ")
     await asyncio.sleep(1)
     animation_chars = [
         "`root@anon:~#` ",
