@@ -5,7 +5,6 @@
 #
 """ Userbot help command """
 
-import psutil
 import sys
 import platform
 import asyncio
@@ -15,7 +14,6 @@ from userbot.events import register
 from sys import version_info
 from telethon import version
 from platform import uname
-from shutil import which
 
 modules = CMD_HELP
 
