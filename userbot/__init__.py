@@ -349,6 +349,16 @@ ISAFK = False
 AFKREASON = None
 ZALG_LIST = {}
 
+#Import Userbot - Ported by KENZO
+from userbot import (
+    ALIVE_NAME
+)
+
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
+
+
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
@@ -372,10 +382,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⥶ ᴘʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
+                    "⥶ Pʀᴇᴠ", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "ɴᴇxᴛ ⥸", data="{}_next({})".format(prefix, modulo_page)
+                    "Nᴇxᴛ ⥸", data="{}_next({})".format(prefix, modulo_page)
                 )
             )
         ]
@@ -410,8 +420,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**⚙️⟩ Jumlah Modul Yang Tersedia:** `{}`\n               \n**⚙️⟩ Daftar Modul Lynx-Userbot:** \n".format(
-                        "**😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼**",
+                    text="{}\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n         \n**◉ Mᴏᴅᴜʟᴇꜱ :** `{}`\n               \n**◉ Mᴇɴᴜ Bᴏᴛ :** \n".format(
+                        "** ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ **",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -419,13 +429,13 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan 😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼",
+                    "Bantuan ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "😼 ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ 😼",
+                    " ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ",
                     text="""**Anda Bisa Membuat ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
