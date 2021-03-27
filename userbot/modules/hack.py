@@ -96,6 +96,6 @@ async def _(event):
 
 
 CMD_HELP.update({
-        "hack": "⚡𝘾𝙈𝘿⚡: `.hk`\"
-        "\n↳ : Untuk hacking via Termux."
+        "hack": "⚡𝘾𝙈𝘿⚡: `.hack`\
+        \n↳ : Untuk hacking via Termux."
 })
