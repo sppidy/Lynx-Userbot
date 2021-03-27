@@ -155,7 +155,7 @@ class RedisSession(MemorySession):
         keys = self.redis_connection.keys(f"{self.sess_prefix}*")
         self.redis_connection.delete(*keys)
 
-    """
+    
     def get_update_state(self, entity_id):
         key_pattern = "{}:update_states:{}".format(self.sess_prefix, entity_id)
         return self.redis_connection.get(key_pattern)
@@ -308,4 +308,4 @@ class RedisSession(MemorySession):
             except Exception as ex:
                 LOGGER.exception(ex.args)
                 return None
-    """
+    
