@@ -7,8 +7,8 @@ from time import gmtime, strftime
 import asyncio
 import random
 
-@register(outngoing=True, pattern='^.hack(?: |$)(.*)')
-async def hack(event):
+@register(outngoing=True, pattern='^.hk(?: |$)(.*)')
+async def hk(event):
     animation_interval = 0.7
     animation_ttl = range(0, 11)
     xx = await eor(event, "Installing..")
@@ -96,6 +96,6 @@ async def hack(event):
 
     CMD_HELP.update(
         {
-            "hack": "⚡𝘾𝙈𝘿⚡: `.hack`\
+            "hack": "⚡𝘾𝙈𝘿⚡: `.hk`\
              \n↳ : Untuk hacking via Termux."
 })
