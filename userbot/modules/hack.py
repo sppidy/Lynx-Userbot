@@ -7,8 +7,8 @@ from time import gmtime, strftime
 import asyncio
 import random
 
-@register(outngoing=True, pattern='^.hk(?: |$)(.*)')
-async def hk(event):
+@register(outgoing=True, pattern='^.hack(?: |$)(.*)')
+async def hack(event):
     animation_interval = 0.7
     animation_ttl = range(0, 11)
     xx = await eor(event, "Installing..")
