@@ -109,6 +109,14 @@
       "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
       "required": false
     },
+    "REDIS_URI": {
+            "description": "Redis endpoint URL, from redislabs.com",
+            "value": ""
+    },
+    "REDIS_PASSWORD": {
+            "description": "Redis endpoint password, from redislabs.com",
+            "value": ""
+    },
     "ANTI_SPAMBOT": {
       "description": "Kicks spambots from groups after they join. [Requires admin powers in groups to kick.]",
       "value": "False"
