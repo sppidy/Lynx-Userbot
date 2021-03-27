@@ -24,7 +24,7 @@ from requests import get
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
 
-load_dotenv("config.env")
+load_dotenv("sample_config.env")
 
 
 StartTime = time.time()
