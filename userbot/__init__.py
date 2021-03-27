@@ -18,7 +18,7 @@ from math import ceil
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
-from redis import StrictRedis
+from redis import StrictRedis, REDIS_URI, REDIS_PASSWORD
 from dotenv import load_dotenv
 from requests import get
 from telethon.sync import TelegramClient, custom, events
