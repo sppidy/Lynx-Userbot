@@ -13,7 +13,7 @@ from time import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
-from userbot.events import register, sleep, time
+from userbot.events import register
 from userbot import CMD_HELP, bot
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
