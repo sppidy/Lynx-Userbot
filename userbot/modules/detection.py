@@ -38,12 +38,12 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
-            await event.edit("__Connecting to server telegram.__")
-            await event.edit("__Connecting to server telegram..__")
-            await event.edit("__Connecting to server telegram...__")
-            await event.edit("__Connecting to server telegram.__")
-            await event.edit("__Connecting to server telegram..__")
-            await event.edit("__Connecting to server telegram...__")
+    event = await event.edit("__Connecting to server telegram.__")
+    event = await event.edit("__Connecting to server telegram..__")
+    event = await event.edit("__Connecting to server telegram...__")
+    event = await event.edit("__Connecting to server telegram.__")
+    event = await event.edit("__Connecting to server telegram..__")
+    event = await event.edit("__Connecting to server telegram...__")
     async with bot.conversation(chat) as conv:
         try:
             await conv.send_message(f"{uid}")
