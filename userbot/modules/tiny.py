@@ -1,21 +1,18 @@
-# Copyright © 2021 Lynx-Userbot (LLC Company)
-# GPL-3.0 License (General Public License) From Github Corporation.
-# Port By LiuAlvinas/Alvin For Lynx-Userbot From Ultroid, Thanks
+# Port By LiuAlvinas/Alvin For Lord Userbot From Ultroid, Thanks
 # Based Plugins
 # Fixed By ManusiaRakitann/Koala
 # Dont Remove
 
-# Alvin Bau Sawi
 
+# Alvin Ganteng
 
 from PIL import Image
-import os
 import cv2
+import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-
-# Port For Lynx-Userbot
+# Ngapain Kesini Ajg Hus
 
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
@@ -24,7 +21,7 @@ async def ultiny(event):
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker`")
         return
-    xx = await event.edit("`Sedang Memproses Tiny...`")
+    xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
     im1 = Image.open("LordUserbot/lorduserbot.png")
     if ik.endswith(".tgs"):
@@ -90,11 +87,9 @@ async def ultiny(event):
     os.remove(file)
     os.remove(ik)
 
-
-# Port Lord Alvin/liualvinas
-# Lynx - Userbot
+# Port By Alvin Ganteng/liualvinas
+# Lord - Userbot
 
 CMD_HELP.update({
   "tiny": "⚡𝘾𝙈𝘿⚡: `.tiny`\
-    \n↳ : Untuk Memperkecil Sticker."
-})
+    \n↳ : Untuk Memperkecil Sticker."})
