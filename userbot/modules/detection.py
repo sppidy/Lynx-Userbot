@@ -9,7 +9,7 @@ import asyncio
 import random
 import requests
 
-from event import sleep
+from time import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
