@@ -5,17 +5,12 @@
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
 import time
-import asyncio
-import random
-import requests
 
-from time import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from telethon.tl.types import Channel, Chat, User
+from telethon.tl.types import User
 from userbot.events import register
 from userbot import CMD_HELP, bot
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 #Ported by KENZO @TeamSecret_Kz
@@ -43,17 +38,18 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
-    event = await event.sleep(5)
+    event = await event.edit("`Currently Doing Account Detection...`")
     event = await event.edit("__Connecting to server telegram.__")
-    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram..__")
-    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram...__")
-    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram.__")
-    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram..__")
-    event = await event.sleep(1)
+    event = await event.edit("__Connecting to server telegram...__")
+    event = await event.edit("__Connecting to server telegram.__")
+    event = await event.edit("__Connecting to server telegram..__")
+    event = await event.edit("__Connecting to server telegram...__")
+    event = await event.edit("__Connecting to server telegram.__")
+    event = await event.edit("__Connecting to server telegram..__")
     event = await event.edit("__Connecting to server telegram...__")
     async with bot.conversation(chat) as conv:
         try:
