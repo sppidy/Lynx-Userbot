@@ -5,11 +5,15 @@
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
 import time
-from time import sleep
+import asyncio
+import random
+import requests
+
+from event import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
-from userbot.events import register
+from userbot.events import register, sleep, time
 from userbot import CMD_HELP, bot
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
