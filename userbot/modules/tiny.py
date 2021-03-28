@@ -5,17 +5,14 @@
 # Fixed By ManusiaRakitann/Koala
 # Dont Remove
 
-
 # Alvin Bau Sawi
 
 from PIL import Image
-import cv2
 import os
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
 # Wkwkwk
-
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
 async def ultiny(event):
