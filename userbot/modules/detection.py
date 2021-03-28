@@ -5,7 +5,7 @@
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
 import time
-form time import sleep
+from time import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
