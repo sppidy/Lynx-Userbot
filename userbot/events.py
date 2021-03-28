@@ -150,6 +150,10 @@ def register(**args):
     return decorator
 
 
+        def redis(**args):
+           REDIS_URI = redis.args('REDIS_URI', None)
+           REDIS_PASSWORD = redis.args('REDIS_PASSWORD', None)
+
         if REDIS_URI and REDIS_PASSWORD:
              try:
            REDIS_HOST = REDIS_URI.split(':')[0]
