@@ -148,25 +148,3 @@ def register(**args):
         bot.add_event_handler(wrapper, events.NewMessage(**args))
         return wrapper
     return decorator
-
-
-        def redis(**args):
-           REDIS_URI = redis.args('REDIS_URI', None)
-           REDIS_PASSWORD = redis.args('REDIS_PASSWORD', None)
-
-        if REDIS_URI and REDIS_PASSWORD:
-             try:
-           REDIS_HOST = REDIS_URI.split(':')[0]
-           REDIS_PORT = REDIS_URI.split(':')[1]
-           redis_connection = redis.Redis(
-           host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD
-        )
-           redis_connection.ping()
-        except Exception as e:
-           LOGGER.exception(e)
-           print()
-           LOGGER.error(
-           "Make sure you have the correct Redis endpoint and password "
-           "and your machine can make connections."
-        )
-
