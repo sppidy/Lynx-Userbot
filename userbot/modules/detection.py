@@ -4,14 +4,19 @@
 # Based On Plugins
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
+import time
+
+from telethon.tl.custom import Dialog
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.tl.types import Channel, Chat, User
+from userbot.events import register
+from userbot import CMD_HELP, bot
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP, bot
-from userbot.events import register
 
 
 @register(outgoing=True, pattern=r"^\.detect(?: |$)(.*)")
-async def _(event):
+async def detect(event):
     if event.fwd_from:
         return
     input_str = "".join(event.text.split(maxsplit=1)[1:])
