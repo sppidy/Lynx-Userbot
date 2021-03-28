@@ -38,7 +38,6 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
-    event = await event.edit("`Currently Doing Account Detection...`")
     event = await event.edit("__Connecting to server telegram.__")
     event = await event.edit("__Connecting to server telegram..__")
     event = await event.edit("__Connecting to server telegram...__")
