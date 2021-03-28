@@ -7,8 +7,9 @@
 
 # Alvin Bau Sawi
 
-from PIL import Image
+import asyncio
 import os
+from PIL import Image
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
