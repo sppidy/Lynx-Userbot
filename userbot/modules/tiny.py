@@ -7,16 +7,19 @@
 
 # Alvin Bau Sawi
 
+
+from PIL import Image
 import os
 import cv2
-from PIL import Image
 from userbot.events import register
 from userbot import CMD_HELP, bot
 
-# Wkwkwk
+
+# Port For Lynx-Userbot
+
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
-async def tiny(event):
+async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker`")
@@ -87,7 +90,8 @@ async def tiny(event):
     os.remove(file)
     os.remove(ik)
 
-# Port By Alvin Ganteng/liualvinas
+
+# Port Lord Alvin/liualvinas
 # Lynx - Userbot
 
 CMD_HELP.update({
