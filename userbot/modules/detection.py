@@ -1,11 +1,11 @@
-# Copyright © 2021 Lynx-Userbot General Public License (WARNING)
-# GPL-3.0 License From Github
+# Copyright © 2021 Lynx-Userbot (LLC Company (WARNING))
+# GPL-3.0 License From Github (General Public License)
 # Ported From Cat Userbot For Lynx-Userbot By Alvin/LiuAlvinas.
 # Based On Plugins
 # Credits by Alvin/Liualvinas & Cat Userbot.
 
 import time
-
+form time import sleep
 from telethon.tl.custom import Dialog
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import Channel, Chat, User
@@ -38,11 +38,17 @@ async def detect(event):
         uid = reply_message.sender_id
     chat = "@tgscanrobot"
     event = await event.edit("`Currently Doing Account Detection...`")
+    event = await event.sleep(5)
     event = await event.edit("__Connecting to server telegram.__")
+    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram..__")
+    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram...__")
+    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram.__")
+    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram..__")
+    event = await event.sleep(1)
     event = await event.edit("__Connecting to server telegram...__")
     async with bot.conversation(chat) as conv:
         try:
