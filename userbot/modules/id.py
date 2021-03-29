@@ -8,7 +8,7 @@ from userbot.events import register
 async def image_maker(event):
     replied_user = await event.get_reply_message()
     await event.client.download_profile_photo(
-        replied_user.from_id, file="user.png", download_big=True
+        replied_user.from_id, file = "user.png", download_big = True
     )
     user_photo = Image.open("user.png")
     id_template = Image.open("userbot/resources/FrameID.png")
@@ -21,8 +21,8 @@ async def image_maker(event):
     draw.text(
         position,
         replied_user.sender.first_name.replace("\u2060", ""),
-        fill=color,
-        font=font,
+        fill = color,
+        font = font,
     )
     id_template.save("user_id.png")
     await event.edit("`Membuat ID Card..`")
@@ -30,9 +30,9 @@ async def image_maker(event):
         event.chat_id,
         "Generated User ID",
         reply_to=event.message.reply_to_msg_id,
-        file="user_id.png",
-        force_document=False,
-        silent=True,
+        file = "user_id.png",
+        force_document = False,
+        silent = True,
     )
     await event.delete()
 
