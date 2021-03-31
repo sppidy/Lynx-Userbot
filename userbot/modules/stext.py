@@ -13,8 +13,7 @@ import textwrap
 
 
 from PIL import Image, ImageDraw, ImageFont
-
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
