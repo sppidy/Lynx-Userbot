@@ -25,6 +25,7 @@ async def hack(event):
     await event.edit("Installing....")
     await asyncio.sleep(5)
     await event.edit("`Installing Files To Hacked Private Server...`")
+    await asyncio.sleep(3)
     await event.edit("`Target Selected.`")
     await asyncio.sleep(5)
     await event.edit("`Installing... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `")
