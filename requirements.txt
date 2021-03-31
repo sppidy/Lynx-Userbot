@@ -3,6 +3,7 @@ aiohttp
 aiofiles
 aria2p
 async_generator
+beautifulsoup4
 cowpy
 psutil
 wget
