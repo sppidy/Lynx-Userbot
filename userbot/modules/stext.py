@@ -18,8 +18,8 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.rgb (.*)")
-async def sticklet(event):
+@register(outgoing=True, pattern=r"^\.stext (.*)")
+async def stext(event):
     sticktext = event.pattern_match.group(1)
 
     if not sticktext:
@@ -61,7 +61,7 @@ async def sticklet(event):
 
 
 CMD_HELP.update({
-    'sticktext':
+    'stext':
     "⚡𝘾𝙈𝘿⚡: `.stext` <text>"
     "\nUsage: Mengubah Teks/Kata-Kata, Menjadi Stiker Anda."
 })
