@@ -9,6 +9,7 @@ import math
 import os
 import requests
 import asyncio
+import redis
 
 from userbot import (
     HEROKU_APP_NAME,
