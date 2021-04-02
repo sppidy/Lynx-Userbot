@@ -38,7 +38,7 @@ async def igsaver(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Yang Mulia, Mohon Balas Ke Link Instagram`")
+        await event.edit("`Yang Mulia, Mohon Reply Ke Link Instagram Ya..`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
@@ -47,9 +47,9 @@ async def igsaver(event):
     chat = "@SaveAsBot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("`Sedang Memproses....`")
+        await event.edit("`Sedang Memproses...`")
         return
-    await event.edit("`Sedanv Memproses.....`")
+    await event.edit("`Sedang Memproses...`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -80,4 +80,4 @@ async def igsaver(event):
 # Alvin Gansssssss Mksh Sma Sma
 # Alvin Gans
 CMD_HELP.update({"instagram": "⚡𝘾𝙈𝘿⚡: `.igsaver`"
-                 "\n↳ : Download Postingan di Instagram, Silahkan Salin Link Postingan Instagram Yang Ingin Anda Download, Lalu Ketik `.igsaver`"})
+                 "\n↳ : Download Postingan di Instagram, Silahkan Salin Link Postingan Instagram Yang Ingin Anda Download Terus Kirim Link, Lalu Reply dan Ketik `.igsaver`"})
