@@ -79,5 +79,5 @@ async def igsaver(event):
 # By Lord - Userbot
 # Alvin Gansssssss Mksh Sma Sma
 # Alvin Gans
-CMD_HELP.update({"instagram": "⚡𝘾𝙈𝘿⚡: `.igsaver`"
+CMD_HELP.update({"instasaver": "⚡𝘾𝙈𝘿⚡: `.igsaver`"
                  "\n↳ : Download Postingan di Instagram, Silahkan Salin Link Postingan Instagram Yang Ingin Anda Download Terus Kirim Link, Lalu Reply dan Ketik `.igsaver`"})
