@@ -339,6 +339,8 @@ async def amireallyalive(alive):
     await alive.edit("🐈𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡")
     await alive.edit("⚡")
     await asyncio.sleep(3)
+    await alive.edit("😼")
+    await asyncio.sleep(3)
     output = (
         f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
         f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
@@ -417,7 +419,8 @@ CMD_HELP.update({
 "\n\n⚡𝘾𝙈𝘿⚡: `.restalive`"
 "\n↳ : Resets the user to default."
 })
-CMD_HELP.update({
+CMD_HELP.update(
+{
     "botversion":
     "⚡𝘾𝙈𝘿⚡: `.botver`"
 "\n↳ : Shows the userbot version."
