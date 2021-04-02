@@ -1,6 +1,8 @@
 # System Stats Lynx-Userbot
 
 import asyncio
+import redis
+
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from platform import python_version, uname
@@ -14,7 +16,7 @@ import time
 from datetime import datetime
 import psutil
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LYNX_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, bot
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LYNX_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, INSTAGRAM_ALIVE, bot
 from userbot.events import register
 
 
@@ -294,7 +296,7 @@ async def amireallyalive(alive):
 
 
 @register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
-async def amireallyalive(alive):
+async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await alive.edit("__Connecting to server.__")
@@ -359,8 +361,7 @@ async def amireallyalive(alive):
         f"├◈ **Don't forget to support our** \n"
         f"│    **userbot, how to press below.** \n"
         f"╰╼════════════════════╾╯ \n"
-        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | \n"
-        f"| [ＫΞＮＺＯ](t.me/SyndicateTwenty4)  | [𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](instagram.com/si_axeell)  | ")
+        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) |" f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE})  | ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
