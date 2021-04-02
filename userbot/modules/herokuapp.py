@@ -180,17 +180,18 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                "💻 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐬𝐢 𝐊𝐮𝐨𝐭𝐚 𝐀𝐧𝐝𝐚. \n"
-                "▱▱▱▱▱▱▱▱▱▱▱▱▱▱ \n"
-                "📱 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐚𝐧 𝐊𝐮𝐨𝐭𝐚 𝐀𝐧𝐝𝐚 : \n"
-                f"⏳ {AppHours} Jam - {AppMinutes} Menit. \n"
-                f"✍️ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {AppPercentage}% \n"
-                "▱▱▱▱▱▱▱▱▱▱▱▱▱▱ \n"
-                "📱 𝐒𝐢𝐬𝐚 𝐊𝐮𝐨𝐭𝐚 𝐁𝐮𝐥𝐚𝐧 𝐈𝐧𝐢 : \n"
-                f"⏳ {hours} Jam - {minutes} Menit. \n"
-                f"✍️ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {percentage}% Lagi. \n"
-                "▱▱▱▱▱▱▱▱▱▱▱▱▱▱ \n"
-                f"👤 : {ALIVE_NAME} \n"
+                "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
+                "│      ⇱ ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⇲ \n"
+                "╭┈─╼━━━━━━━━━━━━━━━╾─┈╮ \n"
+                "│📱◈ 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐚𝐧 𝐊𝐮𝐨𝐭𝐚 𝐀𝐧𝐝𝐚 : \n"
+                f"│⏳◈ {AppHours} Jam - {AppMinutes} Menit. \n"
+                f"│⚡◈ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {AppPercentage}% \n"
+                "╰┈───────────────────┈╮ \n"
+                "│📱◈ 𝐒𝐢𝐬𝐚 𝐊𝐮𝐨𝐭𝐚 𝐁𝐮𝐥𝐚𝐧 𝐈𝐧𝐢 : \n"
+                f"│⏳◈ {hours} Jam - {minutes} Menit. \n"
+                f"│⚡◈ 𝐏𝐞𝐫𝐬𝐞𝐧𝐭𝐚𝐬𝐞 : {percentage}% Lagi. \n"
+                "╰┈───────────────────┈╯ \n"
+                f"• Oᴡɴᴇʀ  : {ALIVE_NAME} \n"
             )
             await asyncio.sleep(20)
             await event.delete()
@@ -219,7 +220,7 @@ async def _(dyno):
 
 
 CMD_HELP.update({"herokuapp": "⚡𝘾𝙈𝘿⚡: `.kuota`"
-                 "\n↳ : Check Dyno Heroku"
+                 "\n↳ : Check Quota Dyno Heroku"
                  "\n\n⚡𝘾𝙈𝘿⚡: `.set var <NEW VAR> <VALUE>`"
                  "\n↳ : Tambahkan Variabel Baru Atau Memperbarui Variabel"
                  "\nSetelah Menyetel Variabel Tersebut, Lynx-Userbot Akan Di Restart."
