@@ -1,3 +1,24 @@
+# Copyright (C) 2020 Adek Maulana.
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
 import asyncio
 import errno
 import json
@@ -168,8 +189,8 @@ async def decrypt_file(megadl, file_path, temp_file_path, hex_key, hex_raw_key):
 
 CMD_HELP.update(
     {
-        "mega": ">`.mega <MEGA.nz link>`"
-        "\nUsage: Reply to a MEGA.nz link or paste your MEGA.nz link to "
+        "mega": "⚡𝘾𝙈𝘿⚡: >`.mega <MEGA.nz link>`"
+        "\n↳ : Reply to a MEGA.nz link or paste your MEGA.nz link to "
         "download the file into your userbot server."
     }
 )
