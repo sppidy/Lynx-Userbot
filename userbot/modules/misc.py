@@ -92,13 +92,9 @@ async def killdabot(event):
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     await e.edit(
-        "Here's something for you to read:\n"
-        "\n[Lynx-Userbot Repo](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/README.md)"
+        "Here's Something for You to Read :\n"
+        "\n[⚡Lynx-Userbot⚡ Repo](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/README.md)")
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
-        "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
-        "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
-        "\n[Video Tutorial - 576p](https://mega.nz/#!ErwCESbJ!1ZvYAKdTEfb6y1FnqqiLhHH9vZg4UB2QZNYL9fbQ9vs)"
-        "\n[Video Tutorial - 1080p](https://mega.nz/#!x3JVhYwR!u7Uj0nvD8_CyyARrdKrFqlZEBFTnSVEiqts36HBMr-o)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
 
@@ -120,7 +116,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "❃ **ʀᴇᴘᴏ    :** [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/KENZO-404/Lynx-Userbot/)\n❃ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/SyndicateTwenty4)"
+        "❃ **ʀᴇᴘᴏ    :** [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/KENZO-404/Lynx-Userbot/)\n❃ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/AxelAlexiusL)"
     )
 
 
