@@ -1,3 +1,10 @@
+# Copyright (C) 2019 The Raphielscape Company LLC.
+#
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+# you may not use this file except in compliance with the License.
+#
+# Port From UniBorg to Lynx-Userbot by KENZO
+
 
 import random
 import requests
@@ -100,8 +107,8 @@ async def quote_search(event):
 
 CMD_HELP.update({
     "quotly":
-    "`.q`\
-\nUsage: Membuat pesan mu menjadi sticker.\
-\n\n`.xquote`\
-\nUsage: membuat pesan mu menjadi sticker."
+    "⚡𝘾𝙈𝘿⚡: `.q`\
+\n↳ : Mengubah Pesan Menjadi sticker.\
+\n\n⚡𝘾𝙈𝘿⚡: `.xquote`\
+\n↳ : Mengubah Pesan Menjadi sticker."
 })
