@@ -95,4 +95,4 @@ colour
 scipy
 wordcloud
 opencv-python
-pendulum
+
