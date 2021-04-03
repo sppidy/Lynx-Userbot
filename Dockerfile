@@ -4,7 +4,7 @@ FROM liualvinas24/docker:groovy
 #
 # LORD
 #
-RUN git clone -b Lynx-Userbot https://github.com/KENZO-404/Lynx-Userbot /root/LynxUserbot
+RUN git clone -b Lynx-Userbot https://github.com/KENZO-404/Lynx-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
