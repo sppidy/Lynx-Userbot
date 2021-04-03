@@ -302,7 +302,6 @@ async def redis(alive):
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server...__")
-    await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server.__")
     await alive.edit("__Connecting to server..__")
     await alive.edit("__Connecting to server...__")
@@ -361,7 +360,7 @@ async def redis(alive):
         f"├◈ **Don't forget to support our** \n"
         f"│    **userbot, how to press below.** \n"
         f"╰╼════════════════════╾╯ \n"
-        f"| [⚡𝙍𝙚𝙥𝙤⚡](https://github.com/KENZO-404/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) |" f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE})  | ")
+        f"| [𝗥𝗲𝗽𝗼](https://github.com/KENZO-404/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | " f"[𝗠𝘆 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE}) | ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
