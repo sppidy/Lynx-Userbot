@@ -204,6 +204,9 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO") or "https://telegra.ph/file/f3c656862a017f945c0bc.png"
 
+# Link Instagram for CMD Alive 
+INSTAGRAM_ALIVE = os.environ.get("INSTAGRAM_ALIVE", None)
+
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
 DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
