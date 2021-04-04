@@ -1,5 +1,5 @@
 # LORD USERBOT
-FROM liualvinas24/docker:groovy
+FROM liualvinas24/lord-docker:Lord
 
 #
 # LORD
