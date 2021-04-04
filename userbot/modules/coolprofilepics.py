@@ -14,7 +14,7 @@ import asyncio
 
 
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 
 COLLECTION_STRING = [
     "epic-fantasy-wallpaper",
@@ -81,6 +81,6 @@ async def main(event):
         os.system("rm -rf donottouch.jpg")
         await asyncio.sleep(3600)  # Edit this to your required needs
 
- CMD_HELP.update({
-         "randompp": "⚡𝘾𝙈𝘿⚡: `.pprandom`"
-         "\n↳ : Mengubah Photo Profile Anda Secara Random."})
+CMD_HELP.update({
+        "randompp": "\n\n⚡𝘾𝙈𝘿⚡: `.pprandom`"
+        "\n↳ : Mengubah Photo Profile Anda Secara Random."})
