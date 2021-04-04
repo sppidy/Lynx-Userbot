@@ -161,6 +161,7 @@ async def gben(userbot):
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
+    chat = await userbot.get_chat()
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
