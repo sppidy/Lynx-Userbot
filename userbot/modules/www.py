@@ -189,10 +189,10 @@ async def pingme(pong):
     await pong.edit(f"**🤴 Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
 
 
- CMD_HELP.update({
-         "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
-          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
-          \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
-          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
-          \n\n⚡𝘾𝙈𝘿⚡: `.pong`\
-          \n↳ : Sama Seperti Perintah Ping."})
+CMD_HELP.update({
+        "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
+         \n↳ : Untuk Menunjukkan Ping Bot Anda.\
+         \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
+         \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
+         \n\n⚡𝘾𝙈𝘿⚡: `.pong`\
+         \n↳ : Sama Seperti Perintah Ping."})
