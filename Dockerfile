@@ -1,5 +1,5 @@
 # LORD USERBOT
-FROM liualvinas24/docker:groovy
+FROM koala21/kampangbot:buster
 
 #
 # LORD
