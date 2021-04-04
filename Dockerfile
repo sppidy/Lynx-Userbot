@@ -1,5 +1,5 @@
 # LORD USERBOT
-FROM kenzo404/lynx-userbot:Lord
+FROM liualvinas24/docker:groovy
 
 #
 # LORD
