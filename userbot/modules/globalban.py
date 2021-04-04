@@ -3,7 +3,7 @@
 # Lord Userbot
 
 from telethon.events import ChatAction
-from userbot import ALIVE_NAME, CMD_HELP, bot
+from userbot import ALIVE_NAME, CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
@@ -48,6 +48,7 @@ async def get_user_from_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
+
 # Ported For Lord-Userbot by liualvinas/Alvin
 
 
@@ -73,7 +74,7 @@ async def handler(tele):
                                 tele.chat_id, guser.id, view_messages=False
                             )
                             await tele.reply(
-                                f"**Lord, Pengguna Gban Telah Bergabung** \n"
+                                f"**Yang Mulia, Pengguna Gban Telah Bergabung** \n"
                                 f"**Pengguna**: [{guser.id}](tg://user?id={guser.id})\n"
                                 f"**Aksi**  : `Banned`"
                             )
@@ -83,6 +84,7 @@ async def handler(tele):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
+    chat = await userbot.get_chat()
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -145,6 +147,16 @@ async def gben(userbot):
     return await dark.edit(
         f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned`"
     )
+
+        if BOTLOG:
+             await userbot.client.send_message(
+                     BOTLOG_CHATID, "#GBAN\n"
+                                   f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+                                   f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+                                    "**⊙ Aksi :** `Global Banned`\n"
+                                   f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
+    )
+
 
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
@@ -209,6 +221,17 @@ async def gunben(userbot):
     return await dark.edit(
         f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Membatalkan Global Banned`"
     )
+
+        if BOTLOG:
+             await userbot.client.send_message(
+                     BOTLOG_CHATID, "#UNGBAN\n"
+                                   f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+                                   f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+                                    "**⊙ Aksi :** `Membatalkan Global Banned`\n"
+                                   f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
+    )
+
+
 
 
 CMD_HELP.update({
