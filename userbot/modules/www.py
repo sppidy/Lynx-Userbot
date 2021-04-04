@@ -7,6 +7,10 @@
 """ Userbot module containing commands related to the \
     Information Superhighway (yes, Internet). """
 
+import asyncio
+import time
+import redis
+
 from datetime import datetime
 
 from speedtest import Speedtest
@@ -43,7 +47,7 @@ async def get_readable_time(seconds: int) -> str:
 
 
 @register(outgoing=True, pattern="^.sping$")
-async def pingme(pong):
+async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -67,7 +71,7 @@ async def pingme(pong):
 
 
 @register(outgoing=True, pattern="^.lping$")
-async def pingme(pong):
+async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -82,7 +86,7 @@ async def pingme(pong):
 
 
 @register(outgoing=True, pattern="^.xping$")
-async def pingme(pong):
+async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -105,7 +109,7 @@ async def pingme(pong):
 
 
 @register(outgoing=True, pattern="^.ping$")
-async def pingme(pong):
+async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
@@ -118,16 +122,19 @@ async def pingme(pong):
     await pong.edit("__Connecting to data center.__")
     await pong.edit("__Connecting to data center..__")
     await pong.edit("__Connecting to data center...__")
+    await pong.edit("⚡")
+    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**╭─━━━━━━━━━━━─╮** \n"
-                    f"**  ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
-                    f"**╰─━━━━━━━━━━━─╯** \n"
-                    f"☫ - **ꜱɪɢɴᴀʟ   :** "
+    await pong.edit(f"**╭─━━━━━━━━━━━━━━━─╮** \n"
+                    f"**       ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡** \n"
+                    f"**╭─━━━━━━━━━━━━━━━─╯** \n"
+                    f"**│⊙  Sɪɢɴᴀʟ   :** "
                     f"`%sms` \n"
-                    f"☫ - **ᴜᴘᴛɪᴍᴇ  :** "
+                    f"**│⊙  Uᴘᴛɪᴍᴇ  :** "
                     f"`{uptime}` \n"
-                    f"☫ - **ᴏᴡɴᴇʀㅤ:** `{ALIVE_NAME}`" % (duration))
+                    f"**│⊙  Oᴡɴᴇʀ   :** `{ALIVE_NAME}`"
+                    f"**╰━━━━━━━━━━━━━━━━━╯**" % (duration))
 
 
 @register(outgoing=True, pattern="^.speed$")
@@ -143,7 +150,7 @@ async def speedtst(spd):
     result = test.results.dict()
 
     await spd.edit("**Kecepatan Jaringan:\n**"
-                   "✧ **Dimulai Pada:** "
+                   "✧ **Dimulai Pada :** "
                    f"`{result['timestamp']}` \n"
                    f" **━━━━━━━━━━━━━━━━━**\n\n"
                    "✧ **Download:** "
@@ -174,16 +181,18 @@ def speed_convert(size):
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
-    await pong.edit("`Connecting to server.....⛧`")
+    await pong.edit("⚡")
+    await asyncio.sleep(1)
+    await pong.edit("😼")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("🤴 **ꜱɪɢɴᴀʟ ʙᴀɢɪɴᴅᴀ**\n`%sms`" % (duration))
+    await pong.edit(f"**🤴 Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
 
-CMD_HELP.update(
-    {"ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
-    \n↳ : Untuk menunjukkan ping bot.\
-    \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
-    \n↳ : Untuk menunjukkan kecepatan jaringan.\
-    \n\n⚡𝘾𝙈𝘿⚡: `.pong`\
-    \n↳ : Sama seperti perintah ping."
-     })
+
+ CMD_HELP.update({
+         "ping": "⚡𝘾𝙈𝘿⚡: `.ping` | `.lping` | `.xping` | `.sping`\
+          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
+          \n\n⚡𝘾𝙈𝘿⚡: `.speed`\
+          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
+          \n\n⚡𝘾𝙈𝘿⚡: `.pong`\
+          \n↳ : Sama Seperti Perintah Ping."})
