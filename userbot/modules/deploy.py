@@ -40,7 +40,7 @@ async def _(event):
             "State changed from up to starting...",    
             "Stopping all processes with **SIGTERM**",
             "Process exited with `status 143`",
-            "Starting process with command\n`[''python3'' ''-m'' ''userbot'']`",
+            "Starting process with command\n`[''python3'',''-m'',''userbot'']`",
             "State changed from starting to up...",
             "telethon.network.mtprotosender -\nINFO - Connecting to 91.108.56.170:443/TcpFull...",
             "telethon.network.mtprotosender -\nINFO - Connection to 91.108.56.170:443/TcpFull complete!",
