@@ -4,7 +4,6 @@
 # WARNING !! Don't Delete This Tag if u Kang it This File.
 # Credits by @SyndicateTwenty4 (Axel)
 
-import redis
 import asyncio
 
 from telethon import events
