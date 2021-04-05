@@ -2,12 +2,14 @@
 # Based On Plugins
 # Lord Userbot
 
+import asyncio
+from os import remove
+
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName, PeerChat
-from telethon.errors.rpcerrorlist import MessageTooLongError, UserIdInvalidError
 
 
 async def get_full_user(event):
@@ -156,8 +158,7 @@ async def gben(userbot):
             "**⊙ Aksi :** `Global Banned`\n"
             f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)\n",
               )
-    except BaseException:
-        return
+    
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
@@ -230,9 +231,7 @@ async def gunben(userbot):
             "**⊙ Aksi :** `Membatalkan Global Banned`\n"
             f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
               )
-     except BaseException:
-         return
-
+     
 
 CMD_HELP.update({
     "gban": "\
