@@ -85,7 +85,6 @@ async def handler(tele):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
-    chat = await userbot.get_chat()
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -149,17 +148,19 @@ async def gben(userbot):
         f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned`")
 
     if BOTLOG:
-        await userbot.client.send_message(
-                BOTLOG_CHATID, "#GBAN\n"
-                               f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
-                               f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
-                               "**⊙ Aksi :** `Global Banned`\n"
-                               f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)\n",)
-
+        await dc.client.send_message(
+            BOTLOG_CHATID, 
+            "#GBAN\n"
+            f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+            f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+            "**⊙ Aksi :** `Global Banned`\n"
+            f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)\n",
+              )
+    except BaseException:
+        return
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
-    chat = await userbot.get_chat()
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -221,13 +222,16 @@ async def gunben(userbot):
         f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Membatalkan Global Banned`")
 
     if BOTLOG:
-        await userbot.client.send_message(
-                BOTLOG_CHATID, "#UNGBAN\n"
-                               f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
-                               f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
-                               "**⊙ Aksi :** `Membatalkan Global Banned`\n"
-                               f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",)
-
+        await dc.client.send_message(
+            BOTLOG_CHATID, 
+            "#UNGBAN\n"
+            f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+            f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+            "**⊙ Aksi :** `Membatalkan Global Banned`\n"
+            f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
+              )
+     except BaseException:
+         return
 
 
 CMD_HELP.update({
