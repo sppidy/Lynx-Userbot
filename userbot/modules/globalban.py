@@ -6,7 +6,8 @@ from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
-from telethon.tl.types import MessageEntityMentionName
+from telethon.tl.types import MessageEntityMentionName, PeerChat
+from telethon.errors.rpcerrorlist import MessageTooLongError, UserIdInvalidError
 
 
 async def get_full_user(event):
@@ -145,18 +146,15 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned`"
-    )
+        f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned`")
 
-        if BOTLOG:
-             await userbot.client.send_message(
-                     BOTLOG_CHATID, "#GBAN\n"
-                                   f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
-                                   f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
-                                    "**⊙ Aksi :** `Global Banned`\n"
-                                   f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
-    )
-
+    if BOTLOG:
+        await userbot.client.send_message(
+                BOTLOG_CHATID, "#GBAN\n"
+                               f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+                               f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+                               "**⊙ Aksi :** `Global Banned`\n"
+                               f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)\n",)
 
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
@@ -220,18 +218,15 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Membatalkan Global Banned`"
-    )
+        f"**⊙ Perintah :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Membatalkan Global Banned`")
 
-        if BOTLOG:
-             await userbot.client.send_message(
-                     BOTLOG_CHATID, "#UNGBAN\n"
-                                   f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
-                                   f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
-                                    "**⊙ Aksi :** `Membatalkan Global Banned`\n"
-                                   f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
-    )
-
+    if BOTLOG:
+        await userbot.client.send_message(
+                BOTLOG_CHATID, "#UNGBAN\n"
+                               f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+                               f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
+                               "**⊙ Aksi :** `Membatalkan Global Banned`\n"
+                               f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",)
 
 
 
