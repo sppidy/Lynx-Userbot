@@ -151,7 +151,7 @@ async def gben(userbot):
 
     if BOTLOG:
         await dc.client.send_message(
-            BOTLOG_CHATID, 
+            BOTLOG_CHATID,
             "#GBAN\n"
             f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
             f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
@@ -224,14 +224,13 @@ async def gunben(userbot):
 
     if BOTLOG:
         await dc.client.send_message(
-            BOTLOG_CHATID, 
+            BOTLOG_CHATID,
             "#UNGBAN\n"
-            f"**⊙ Perintah :** `{ALIVE_NAME}`\n"
+            f"**⊙ Perintah :** {ALIVE_NAME}\n"
             f"**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n"
-            "**⊙ Aksi :** `Membatalkan Global Banned`\n"
-            f"**⊙ Group :** {userbot.chat.tittle}(`{userbot.chat_id}`)",
+            "**⊙ Aksi :** Membatalkan Global Banned\n"
+            f"**⊙ Group :** {userbot.chat.tittle}({userbot.chat_id})",
               )
-     
 
 CMD_HELP.update({
     "gban": "\
