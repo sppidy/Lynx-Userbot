@@ -210,7 +210,6 @@ CMD_HELP.update(
     \n\n⚡𝘾𝙈𝘿⚡ : `.youtbv link`\
     \n↳ : Downloads the video from the given link(Suports the all sites which support youtube-dl)\
     \n\n⚡𝘾𝙈𝘿⚡ : `.youtbs query`/`.youtbs count query`\
-    \n↳ : Fetches youtube search results with views and duration with required no of count results by default it fetches 10 results\n
-    "
+    \n↳ : Fetches youtube search results with views and duration with required no of count results by default it fetches 10 results."
     }
 )
