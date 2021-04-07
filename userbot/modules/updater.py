@@ -188,7 +188,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Sudah Versi Terbaru**\n')
+            f`**\n⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Sudah Versi Terbaru**`\n)
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
@@ -233,10 +233,10 @@ async def upstream(event):
 
 CMD_HELP.update({
     'update':
-    ".update"
+    "⚡𝘾𝙈𝘿⚡: `.update`"
     "\n↳ : Untuk Melihat Pembaruan Terbaru ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update now`"
-    "\nUsage: Memperbarui 404-Userbot."
+    "\n↳ : Memperbarui Lynx-Userbot."
     "\n\n⚡𝘾𝙈𝘿⚡: `.update deploy`"
-    "\n↳ : Memperbarui ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Dengan Cara Deploy Ulang."
+    "\n↳ : Memperbarui 𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏 Dengan Cara Men-Deploy Ulang."
 })
