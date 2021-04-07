@@ -1,3 +1,10 @@
+# © Copyright 2021 Lynx-Userbot LLC Company.
+# GPL-3.0 License From Github
+# Ported for Lynx-Userbot by @TeamSecret_Kz (KENZO)
+# WARNING !! Don't Remove this hashtag if u kang it.
+# Credits : @Catuserbot and @SyndicateTwenty4
+
+
 import asyncio
 import os
 import re
