@@ -5,7 +5,6 @@
 #
 """Userbot module for keeping control who PM you."""
 
-from userbot.modules.sql_helper.pm_permit_sql as pm_permit_sql
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
