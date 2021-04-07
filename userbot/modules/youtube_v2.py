@@ -4,7 +4,7 @@
 # WARNING !! Don't Remove this hashtag if u kang it.
 # Credits : @Catuserbot and @SyndicateTwenty4
 
-import ytsearch
+import funtions
 import progress
 import asyncio
 import os
@@ -12,6 +12,7 @@ import re
 import time
 from datetime import datetime
 from pathlib import Path
+from youtubesearchpython import VideosSearch
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio
