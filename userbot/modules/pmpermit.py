@@ -41,17 +41,16 @@ LASTMSG = {}
 # ========================= CONSTANTS ============================
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else "**ʜᴇʏ ʏᴏᴜ ɴɪɢɢᴇ !\nYOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS AND REGARDED AS A CRIME`" 
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else "Karena Saya Akan Otomatis Memblokir\nAnda, Tunggu Sampai {DEFAULTUSER} \nMenerima Pesan Anda, Terimakasih.\n" 
 DEF_UNAPPROVED_MSG = (
     "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈 ❗\n"
-    f"Karena Saya Akan Otomatis Memblokir\nAnda, Tunggu Sampai {DEFAULTUSER} \nMenerima Pesan Anda, Terimakasih.\n"
+    f"{CUSTOM_MIDDLE_PMP}\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "┣[○› `PESAN OTOMATIS`\n"
-    f"┣[○› `BY @LynxUserbot`\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱"
-    f"{CUSTOM_MIDDLE_PMP}\n")
+    f"┣[○› `BY` @LynxUserbot\n"
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱")
 # =================================================================
 
 
@@ -80,10 +79,8 @@ async def permitpm(event):
         getmsg = gvarstatus("unapproved_msg")
         if getmsg is not None:
             UNAPPROVED_MSG = getmsg
-            WARN_PIC = getmsg
         else:
             UNAPPROVED_MSG = DEF_UNAPPROVED_MSG
-            WARN_PIC = PM_PERMIT_PIC
         # This part basically is a sanity check
         # If the message that sent before is Unapproved Message
         # then stop sending it again to prevent FloodHit
@@ -94,7 +91,7 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, WARN_PIC
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
                     ):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
