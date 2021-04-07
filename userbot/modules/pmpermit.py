@@ -406,18 +406,6 @@ async def add_pmsg(cust_msg):
 
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1345333945,1448477501,1655132525)))
-async def hehehe(event):
-    if event.fwd_from:
-        return
-    chat = await event.get_chat()
-    if event.is_private:
-        if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
-            await borg.send_message(chat, "**This User Is AXEL ! So Auto Approved, he is best known as @TeamSecret_Kz !!!!**")
-           
-
-
 CMD_HELP.update(
     {
         "pmpermit": "⚡𝘾𝙈𝘿⚡: >`.setuju | .ok`"
