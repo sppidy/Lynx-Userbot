@@ -86,7 +86,6 @@ CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT", None)
 # Pm Permit Img
 PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
 
-
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
