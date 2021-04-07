@@ -41,11 +41,8 @@ LASTMSG = {}
 # ========================= CONSTANTS ============================
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else "**ʜᴇʏ ʏᴏᴜ ɴɪɢɢᴇ ! YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS AND REGARDED AS A CRIME`" 
-
-
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT_TEXT) if CUSTOM_PMPERMIT_TEXT else "**ʜᴇʏ ʏᴏᴜ ɴɪɢɢᴇ !\nYOU HAVE TRESPASSED TO MY MASTERS INBOX** \n`THIS IS AND REGARDED AS A CRIME`" 
 DEF_UNAPPROVED_MSG = (
-    f"{WARN_PIC}\n"
     "ㅤ“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞.”\n"
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "❗𝘿𝙄𝙇𝘼𝙍𝘼𝙉𝙂 𝙈𝙀𝙇𝘼𝙆𝙐𝙆𝘼𝙉 𝙎𝙋𝘼𝙈 ❗\n"
@@ -53,8 +50,8 @@ DEF_UNAPPROVED_MSG = (
     "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n"
     "┣[○› `PESAN OTOMATIS`\n"
     f"┣[○› `BY @LynxUserbot`\n"
-    f"{CUSTOM_MIDDLE_PMP}\n\n"
-    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱")
+    "▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱"
+    f"{CUSTOM_MIDDLE_PMP}\n")
 # =================================================================
 
 
@@ -96,7 +93,7 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, WARN_PIC
                     ):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}")
@@ -119,6 +116,7 @@ async def permitpm(event):
                 try:
                     del COUNT_PM[event.chat_id]
                     del LASTMSG[event.chat_id]
+                    del WARN_PIC[event.chat_id]
                 except KeyError:
                     if BOTLOG:
                         await event.client.send_message(
