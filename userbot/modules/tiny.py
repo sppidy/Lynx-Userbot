@@ -16,7 +16,7 @@ from userbot import CMD_HELP, bot
 
 
 @register(outgoing=True, pattern="^.tiny(?: |$)(.*)", disable_errors=True)
-async def ultiny(event):
+async def _(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
         await event.edit("`Mohon Balas Ke Sticker`")
