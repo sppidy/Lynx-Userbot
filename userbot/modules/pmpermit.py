@@ -96,9 +96,9 @@ async def permitpm(event):
                         event.chat_id, from_user="me", search=UNAPPROVED_MSG, file=WARN_PIC
                     ):
                         await message.delete()
-                    await event.reply(UNAPPROVED_MSG file=WARN_PIC)
+                    await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
             else:
-                await event.reply(UNAPPROVED_MSG)
+                await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -116,7 +116,6 @@ async def permitpm(event):
                 try:
                     del COUNT_PM[event.chat_id]
                     del LASTMSG[event.chat_id]
-                    del WARN_PIC[event.chat_id]
                 except KeyError:
                     if BOTLOG:
                         await event.client.send_message(
