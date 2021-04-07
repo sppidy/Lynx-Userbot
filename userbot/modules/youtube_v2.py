@@ -30,7 +30,7 @@ from userbot.events import register
 from userbot.utils import progress, funtions
 
 
-@register(outgoing=True, pattern=r"^\.(?:youtba|youtbv)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:yta|ytv)\s?(.)?")
 async def download_video(v_url):
     """ For .ytdl command, download media from YouTube and many other sites. """
     url = v_url.pattern_match.group(2)
@@ -173,7 +173,7 @@ async def download_video(v_url):
     await v_url.delete()
 
 
-@register(outgoing=True, pattern="^.youtbs")
+@register(outgoing=True, pattern="^.yts")
 async def yt_search(event):
     if event.fwd_from:
         return
@@ -204,12 +204,12 @@ async def yt_search(event):
 
 CMD_HELP.update(
     {
-       "youtube_v2": 
-       "⚡𝘾𝙈𝘿⚡ : `.youtba link`\
+       "ytdl": 
+       "⚡𝘾𝙈𝘿⚡ : `.yta link`\
     \n↳ : Downloads the audio from the given link(Suports the all sites which support youtube-dl)\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.youtbv link`\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.ytv link`\
     \n↳ : Downloads the video from the given link(Suports the all sites which support youtube-dl)\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.youtbs query`/`.youtbs count query`\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.yts query`/`.youtbs count query`\
     \n↳ : Fetches youtube search results with views and duration with required no of count results by default it fetches 10 results."
     }
 )
