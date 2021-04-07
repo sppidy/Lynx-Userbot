@@ -404,7 +404,7 @@ async def add_pmsg(cust_msg):
 
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1343556834,536157487,554048138)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1345333945,1448477501,1655132525)))
 async def hehehe(event):
     if event.fwd_from:
         return
