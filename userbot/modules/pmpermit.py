@@ -5,6 +5,10 @@
 #
 """Userbot module for keeping control who PM you."""
 
+import os
+import time
+import asyncio
+import io
 from sqlalchemy.exc import IntegrityError
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
@@ -91,7 +95,7 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", WARN_PIC, search=UNAPPROVED_MSG
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
                     ):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}")
@@ -114,7 +118,6 @@ async def permitpm(event):
                 try:
                     del COUNT_PM[event.chat_id]
                     del LASTMSG[event.chat_id]
-                    del WARN_PIC[event.chat_id]
                 except KeyError:
                     if BOTLOG:
                         await event.client.send_message(
