@@ -33,6 +33,9 @@ if PM_PERMIT_PIC is None:
 else:
   WARN_PIC = PM_PERMIT_PIC
 
+COUNT_PM = {}
+LASTMSG = {}
+
 # ========================= CONSTANTS ============================
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -95,7 +98,7 @@ async def permitpm(event):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}")
             else:
-                await event.reply(f"{UNAPPROVED_MSG}, ")
+                await event.reply(f"{UNAPPROVED_MSG}")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
@@ -113,6 +116,7 @@ async def permitpm(event):
                 try:
                     del COUNT_PM[event.chat_id]
                     del LASTMSG[event.chat_id]
+                    del WARNS_PIC[event.chat_id]
                 except KeyError:
                     if BOTLOG:
                         await event.client.send_message(
