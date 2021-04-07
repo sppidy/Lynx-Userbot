@@ -79,8 +79,10 @@ async def permitpm(event):
         getmsg = gvarstatus("unapproved_msg")
         if getmsg is not None:
             UNAPPROVED_MSG = getmsg
+            WARN_PIC = getmsg
         else:
             UNAPPROVED_MSG = DEF_UNAPPROVED_MSG
+            WARN_PIC = PM_PERMIT_PIC
         # This part basically is a sanity check
         # If the message that sent before is Unapproved Message
         # then stop sending it again to prevent FloodHit
@@ -91,12 +93,12 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, file=WARN_PIC
                     ):
                         await message.delete()
-                    await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
+                    await event.reply(UNAPPROVED_MSG file=WARN_PIC)
             else:
-                await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
+                await event.reply(UNAPPROVED_MSG)
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
