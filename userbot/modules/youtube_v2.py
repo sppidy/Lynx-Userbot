@@ -4,8 +4,6 @@
 # WARNING !! Don't Remove this hashtag if u kang it.
 # Credits : @Catuserbot and @SyndicateTwenty4
 
-import funtions
-import progress
 import asyncio
 import os
 import re
@@ -29,7 +27,7 @@ from youtube_dl.utils import (
 )
 from userbot import CMD_HELP, bot
 from userbot.events import register
-from userbot.utils import progress
+from userbot.utils import progress, funtions
 
 
 @register(outgoing=True, pattern=r"^\.(?:youtba|youtbv)\s?(.)?")
