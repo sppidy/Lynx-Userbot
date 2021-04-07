@@ -49,6 +49,11 @@
       "description": "If you need verbosity on the console logging",
       "value": "False"
     },
+    "CUSTOM_PMPERMIT_TEXT": {
+      "description": "Enter Custom Middle Pm Permit To Show When Some One PM You.",
+      "value": "",
+      "required": false
+    },
     "QUOTES_API_TOKEN": {
       "description": "Dapatkan Token Dari http://antiddos.systems",
       "required": false
