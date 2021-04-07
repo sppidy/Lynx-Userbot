@@ -27,7 +27,7 @@ from youtube_dl.utils import (
 )
 from userbot import CMD_HELP, bot
 from userbot.events import register
-from . import hmention, progress, ytsearch
+from userbot import hmention, progress, ytsearch
 
 
 @register(outgoing=True, pattern=r"^\.(?:youtba|youtbv)\s?(.)?")
