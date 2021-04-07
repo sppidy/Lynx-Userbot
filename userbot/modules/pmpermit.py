@@ -31,7 +31,7 @@ from userbot.events import register
 
 PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
 if PM_PERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/55d415bf1278bed5784ff.gif"
+  WARN_PIC = "https://telegra.ph/file/49ce66ba7e0fa0ce99210.png"
 else:
   WARN_PIC = PM_PERMIT_PIC
 
@@ -96,9 +96,9 @@ async def permitpm(event):
                         event.chat_id, from_user="me", search=UNAPPROVED_MSG, file=WARN_PIC
                     ):
                         await message.delete()
-                    await event.reply(f"`{WARN_PIC}`{UNAPPROVED_MSG}")
+                    await event.reply(f"`{WARN_PIC}`\n\n{UNAPPROVED_MSG}")
             else:
-                await event.reply(f"`{WARN_PIC}`{UNAPPROVED_MSG}")
+                await event.reply(f"`{WARN_PIC}`\n\n{UNAPPROVED_MSG}")
             LASTMSG.update({event.chat_id: event.text})
             if notifsoff:
                 await event.client.send_read_acknowledge(event.chat_id)
