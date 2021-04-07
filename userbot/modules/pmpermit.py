@@ -94,7 +94,7 @@ async def permitpm(event):
                 # Send the Unapproved Message again
                 if event.text != prevmsg:
                     async for message in event.client.iter_messages(
-                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, search=WARN_PIC
+                        event.chat_id, from_user="me", search=UNAPPROVED_MSG, WARN_PIC
                     ):
                         await message.delete()
                     await event.reply(f"{UNAPPROVED_MSG}\{WARN_PIC}")
