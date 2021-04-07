@@ -31,7 +31,7 @@ from userbot.events import register
 
 PM_PERMIT_PIC = os.environ.get("PM_PERMIT_PIC", None)
 if PM_PERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/9a569876d5dc1b84523d0.gif"
+  WARN_PIC = "https://telegra.ph/file/55d415bf1278bed5784ff.gif"
 else:
   WARN_PIC = PM_PERMIT_PIC
 
