@@ -95,3 +95,4 @@ colour
 scipy
 wordcloud
 opencv-python
+faker
