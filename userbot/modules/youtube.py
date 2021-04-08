@@ -4,24 +4,45 @@
 # WARNING !! Don't Remove this hashtag if u kang it.
 # Credits : @Catuserbot and @SyndicateTwenty4
 
-import json
 import asyncio
+import json
 import os
 import re
+import shutil
 import time
+import qrcode
+import barcode
+import asyncurban
+import emoji
+import requests
 
+from asyncio import sleep
+from barcode.writer import ImageWriter
 from re import findall
 from re import match
 from os import popen
-
-from datetime import datetime
-from pathlib import Path
+from urllib.error import HTTPError
+from urllib.parse import quote_plus
+from random import choice
 from requests import get, post, exceptions
+from humanize import naturalsize
 
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+from bs4 import BeautifulSoup
+from emoji import get_emoji_regexp
+from googletrans import LANGUAGES, Translator
+from gtts import gTTS
+from gtts.lang import tts_langs
+from requests import get
+from search_engine_parser import YahooSearch as GoogleSearch
 from telethon.tl.types import DocumentAttributeAudio
+from telethon.tl.types import MessageMediaPhoto
+from urbandict import define
+from wikipedia import summary
+from wikipedia.exceptions import DisambiguationError, PageError
 from youtube_dl import YoutubeDL
-from youtube_search import YoutubeSearch
 from youtube_dl.utils import (
     ContentTooShortError,
     DownloadError,
@@ -32,10 +53,25 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
+from youtube_search import YoutubeSearch
 
-from userbot import CMD_HELP, bot
+from userbot import (
+    BOTLOG,
+    BOTLOG_CHATID,
+    CMD_HELP,
+    IMG_LIMIT,
+    TEMP_DOWNLOAD_DIRECTORY,
+    WOLFRAM_ID,
+    CHROME_DRIVER,
+    GOOGLE_CHROME_BIN,
+    LOGS,
+    OCR_SPACE_API_KEY,
+    REM_BG_API_KEY,
+    bot
+)
+
 from userbot.events import register
-from userbot.utils import progress
+from userbot.utils import chrome, googleimagesdownload, progress, options
 
 
 @register(outgoing=True, pattern=r"\.(ytaud|ytvid) (.*)")
