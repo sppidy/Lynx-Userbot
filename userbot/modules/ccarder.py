@@ -7,6 +7,7 @@
 import asyncio
 import os
 import datetime
+import platform
 
 from asyncio import create_subprocess_exec as asyncrunapp
 from faker import Faker
@@ -15,7 +16,7 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from userbot.utils import edit_or_reply
+from asyncio import create_subprocess_exec as asyncrunapp
 from userbot import CMD_HELP, bot
 from userbot.events import register
 
