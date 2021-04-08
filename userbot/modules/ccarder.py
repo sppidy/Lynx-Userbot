@@ -171,7 +171,7 @@ CMD_HELP.update({
 \n↳ : Checks the status of probided key.\
 \n\n⚡𝘾𝙈𝘿⚡: `.vbv` <query>\
 \n↳ : Checks the vbv status of given card.\
-\n\n⚡𝘾𝙈𝘿⚡: `.bin` <query>\ 
+\n\n⚡𝘾𝙈𝘿⚡: `.bin` <query>\
 \n↳ : Checks that the given bin is valid or not.\
 \n\n⚡𝘾𝙈𝘿⚡: `.ccbin` <bin>\
 \n↳ : Generates CC from the given bin."
