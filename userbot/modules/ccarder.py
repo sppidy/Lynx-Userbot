@@ -23,7 +23,7 @@ from userbot.events import register
 
 # Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.gencc(?: |$)(.*)")
-async def _(lynxevent):
+async def gencc(lynxevent):
     if lynxevent.fwd_from:
         return
     lynxcc = Faker()
@@ -36,7 +36,7 @@ async def _(lynxevent):
 
 # Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.bin(?: |$)(.*)")
-async def _(event):
+async def bin(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
@@ -57,7 +57,7 @@ async def _(event):
 
 # Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.vbv(?: |$)(.*)")
-async def _(event):
+async def vbv(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
@@ -78,7 +78,7 @@ async def _(event):
   
 # Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.key(?: |$)(.*)")
-async def _(event):
+async def key(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
@@ -99,7 +99,7 @@ async def _(event):
 
 # Ported for Lynx-Userbot  
 @register(outgoing=True, pattern=r"^\.iban(?: |$)(.*)")
-async def _(event):
+async def iban(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
@@ -120,7 +120,7 @@ async def _(event):
 
 # Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.ccheck(?: |$)(.*)")
-async def _(event):
+async def ccheck(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
@@ -141,7 +141,7 @@ async def _(event):
      
 # Ported for Lynx-Userbot             
 @register(outgoing=True, pattern=r"^\.ccbin(?: |$)(.*)")
-async def _(event):
+async def ccbin(event):
     if event.fwd_from:
         return 
     lynx_input = event.pattern_match.group(1)
