@@ -4,12 +4,19 @@
 # WARNING !! Don't Remove this hashtag if u kang it.
 # Credits : @Catuserbot and @SyndicateTwenty4
 
+import json
 import asyncio
 import os
 import re
 import time
+
+from re import findall
+from re import match
+from os import popen
+
 from datetime import datetime
 from pathlib import Path
+from requests import get, post, exceptions
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio
