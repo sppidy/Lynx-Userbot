@@ -74,14 +74,14 @@ from userbot.events import register
 from userbot.utils import chrome, googleimagesdownload, progress, options
 
 
-@register(outgoing=True, pattern=r"\.(ytaud|ytvid) (.*)")
+@register(outgoing=True, pattern=r"\.(aud|vid) (.*)")
  async def download_video(v_url):
      url = v_url.pattern_match.group(2)
      type = v_url.pattern_match.group(1).lower()
 
      await v_url.edit("`Preparing to download...`")
 
-     if type == "ytaud":
+     if type == "aud":
          opts = {
              "format": "bestaudio",
              "addmetadata": True,
@@ -104,7 +104,7 @@ from userbot.utils import chrome, googleimagesdownload, progress, options
          video = False
          song = True
 
-     elif type == "ytvid":
+     elif type == "vid":
          opts = {
              "format": "best",
              "addmetadata": True,
@@ -204,11 +204,11 @@ async def yt_search(video_q):
 CMD_HELP.update(
     {
        "youtube": 
-       "⚡𝘾𝙈𝘿⚡ : `.ytaud <link yt>`\
+       "⚡𝘾𝙈𝘿⚡ : `.aud <link yt>`\
     \n↳ : Downloads the AUDIO from the given link\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.ytvid <link yt>`\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.vid <link yt>`\
     \n↳ : Downloads the VIDEO from the given link\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.ytsearch <search>\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.ytsearch <search>`\
     \n↳ : Does a Youtube Search."
     }
 )
