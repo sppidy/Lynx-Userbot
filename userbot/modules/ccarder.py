@@ -6,8 +6,10 @@
 
 import asyncio
 import os
-from faker import Faker
 import datetime
+
+from asyncio import create_subprocess_exec as asyncrunapp
+from faker import Faker
 from telethon import functions, types, events
 from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
