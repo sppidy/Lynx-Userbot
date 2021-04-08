@@ -161,19 +161,18 @@ async def _(event):
 
 # Ported for Lynx-Userbot    
 CMD_HELP.update({
-    "ccarder": "\
-    ⚡𝘾𝙈𝘿⚡: `.gencc`\
-   \n↳ : Generates Fake CC.\
+    "ccarder": "⚡𝘾𝙈𝘿⚡: `.gencc`\
+\n↳ : Generates Fake CC.\
 \n\n⚡𝘾𝙈𝘿⚡: `.ccheck` <query>\
-   \n↳ : Checks That The Given CC is Live or Not.\
+\n↳ : Checks That The Given CC is Live or Not.\
 \n\n⚡𝘾𝙈𝘿⚡: `.iban` <query>\
-   \n↳ : Checks That The Given IBAN ID is Live or Not.\
+\n↳ : Checks That The Given IBAN ID is Live or Not.\
 \n\n⚡𝘾𝙈𝘿⚡: `.key` <query>\
-   \n↳ : Checks the status of probided key.\
+\n↳ : Checks the status of probided key.\
 \n\n⚡𝘾𝙈𝘿⚡: `.vbv` <query>\
-   \n↳ : Checks the vbv status of given card.\
+\n↳ : Checks the vbv status of given card.\
 \n\n⚡𝘾𝙈𝘿⚡: `.bin` <query>\ 
-   \n↳ : Checks that the given bin is valid or not.\
+\n↳ : Checks that the given bin is valid or not.\
 \n\n⚡𝘾𝙈𝘿⚡: `.ccbin` <bin>\
-   \n↳ : Generates CC from the given bin."
+\n↳ : Generates CC from the given bin."
 })
