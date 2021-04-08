@@ -160,7 +160,7 @@ async def _(event):
 
 
 # Ported for Lynx-Userbot    
-CMD_HELP.update:({
+CMD_HELP.update({
     "ccarder": "\
     ⚡𝘾𝙈𝘿⚡: `.gencc`\
    \n↳ : Generates Fake CC.\
