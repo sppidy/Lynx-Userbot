@@ -10,11 +10,11 @@ import re
 import time
 from datetime import datetime
 from pathlib import Path
-from youtubesearchpython import VideosSearch
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
+from youtube_search import YoutubeSearch
 from youtube_dl.utils import (
     ContentTooShortError,
     DownloadError,
@@ -25,12 +25,13 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
+
 from userbot import CMD_HELP, bot
 from userbot.events import register
-from userbot.utils import progress, funtions
+from userbot.utils import progress
 
 
-@register(outgoing=True, pattern=r"^\.(?:yta|ytv)\s?(.)?")
+@register(outgoing=True, pattern=r"\.(ytaud|ytvid) (.*)")
 async def download_video(v_url):
     """ For .ytdl command, download media from YouTube and many other sites. """
     url = v_url.pattern_match.group(2)
@@ -44,7 +45,7 @@ async def download_video(v_url):
     ytype = v_url.pattern_match.group(1).lower()
     v_url = await edit_or_reply(v_url, "`Preparing to download...`")
     reply_to_id = await reply_id(v_url)
-    if ytype == "a":
+    if ytype == "ytaud":
         opts = {
             "format": "bestaudio",
             "addmetadata": True,
@@ -66,7 +67,7 @@ async def download_video(v_url):
         }
         video = False
         song = True
-    elif ytype == "v":
+    elif ytype == "ytvid":
         opts = {
             "format": "best",
             "addmetadata": True,
@@ -173,43 +174,33 @@ async def download_video(v_url):
     await v_url.delete()
 
 
-@register(outgoing=True, pattern="^.yts")
-async def yt_search(event):
-    if event.fwd_from:
-        return
-    if event.is_reply and not event.pattern_match.group(2):
-        query = await event.get_reply_message()
-        query = str(query.message)
-    else:
-        query = str(event.pattern_match.group(2))
+@register(outgoing=True, pattern=r"^\.ytsearch (.*)")
+async def yt_search(video_q):
+    query = video_q.pattern_match.group(1)
     if not query:
-        return await edit_delete(
-            event, "`Reply to a message or pass a query to search!`"
-        )
-    video_q = await edit_or_reply(event, "`Searching...`")
-    if event.pattern_match.group(1) != "":
-        lim = int(event.pattern_match.group(1))
-        if lim <= 0:
-            lim = int(10)
-    else:
-        lim = int(10)
+        await video_q.edit("`Enter query to search`")
+    await video_q.edit("`Processing...`")
     try:
-        full_response = await ytsearch(query, limit=lim)
-    except Exception as e:
-        return await edit_delete(video_q, str(e), time=10, parse_mode=parse_pre)
-    reply_text = f"**•  Search Query:**\n`{query}`\n\n**•  Results:**\n{full_response}"
-    await edit_or_reply(video_q, reply_text)
+        results = json.loads(YoutubeSearch(query, max_results=7).to_json())
+    except KeyError:
+        return await video_q.edit(
+            "`Youtube Search gone retard.\nCan't search this query!`"
+        )
+    output = f"**Search Query:**\n`{query}`\n\n**Results:**\n\n"
+    for i in results["videos"]:
+        output += f"● `{i['title']}`\nhttps://www.youtube.com{i['url_suffix']}\n\n"
+    await video_q.edit(output, link_preview=False)
 
 
 
 CMD_HELP.update(
     {
-       "ytdl": 
-       "⚡𝘾𝙈𝘿⚡ : `.yta link`\
-    \n↳ : Downloads the audio from the given link(Suports the all sites which support youtube-dl)\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.ytv link`\
-    \n↳ : Downloads the video from the given link(Suports the all sites which support youtube-dl)\
-    \n\n⚡𝘾𝙈𝘿⚡ : `.yts query`/`.youtbs count query`\
-    \n↳ : Fetches youtube search results with views and duration with required no of count results by default it fetches 10 results."
+       "youtube": 
+       "⚡𝘾𝙈𝘿⚡ : `.ytaud <link yt>`\
+    \n↳ : Downloads the AUDIO from the given link\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.ytvid <link yt>`\
+    \n↳ : Downloads the VIDEO from the given link\
+    \n\n⚡𝘾𝙈𝘿⚡ : `.ytsearch <search>\
+    \n↳ : Does a Youtube Search."
     }
 )
