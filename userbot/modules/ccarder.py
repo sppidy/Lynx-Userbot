@@ -1,4 +1,8 @@
-
+# © Copyright 2021 Lynx-Userbot LLC Company. (Axel Alexius Latukolan)
+# GPL-3.0 License (General Public License) From Github
+# WARNING !! Don't Delete This Hashtag if u Kang it !!
+# Ported for Lynx-Userbot by @SyndicateTwenty4 (axel)
+# Credits : @Vader and @TeamSecret_Kz (Kenzo)
 
 import asyncio
 import os
@@ -14,6 +18,7 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
+# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.gencc(?: |$)(.*)")
 async def _(lynxevent):
     if hellevent.fwd_from:
@@ -26,6 +31,7 @@ async def _(lynxevent):
     await edit_or_reply(lynxevent, f"__**👤 NAME :- **__\n`{lynxname}`\n\n__**🏡 ADDRESS :- **__\n`{lynxadre}`\n\n__**💸 CARD :- **__\n`{lynxcard}`")
     
 
+# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.bin(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -46,6 +52,7 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
+# Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.vbv(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -64,8 +71,9 @@ async def _(event):
           else: 
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
-    
-    
+  
+  
+# Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.key(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -85,7 +93,8 @@ async def _(event):
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
  
-  
+
+# Ported for Lynx-Userbot  
 @register(outgoing=True, pattern=r"^\.iban(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -105,7 +114,8 @@ async def _(event):
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
 
-    
+
+# Ported for Lynx-Userbot    
 @register(outgoing=True, pattern=r"^\.ccheck(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -124,8 +134,9 @@ async def _(event):
           else: 
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
-             
-             
+        
+     
+# Ported for Lynx-Userbot             
 @register(outgoing=True, pattern=r"^\.ccbin(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
@@ -145,7 +156,8 @@ async def _(event):
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
 
-    
+
+# Ported for Lynx-Userbot    
 CMD_HELP.update:({
     "ccarder": "\
     ⚡𝘾𝙈𝘿⚡: `.gencc`\
