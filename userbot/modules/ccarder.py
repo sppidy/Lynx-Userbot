@@ -24,7 +24,7 @@ from userbot.events import register
 # Ported for Lynx-Userbot
 @register(outgoing=True, pattern=r"^\.gencc(?: |$)(.*)")
 async def _(lynxevent):
-    if hellevent.fwd_from:
+    if lynxevent.fwd_from:
         return
     lynxcc = Faker()
     lynxname = lynxcc.name()
