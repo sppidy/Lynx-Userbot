@@ -1494,7 +1494,7 @@ CMD_HELP.update(
 CMD_HELP.update(
     {     
         "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`\
-         \n↳ : Takes a screenshot of a website and sends the screenshot.
+         \n↳ : Takes a screenshot of a website and sends the screenshot.\
          \n**Example of a valid URL** : `https://www.google.com`"
     }
 )      
