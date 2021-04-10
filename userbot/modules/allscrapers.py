@@ -1430,41 +1430,44 @@ async def make_qr(makeqr):
 
 CMD_HELP.update(
     {
-        "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`"
-        "\n↳ : Does an image search on Google and shows 5 images.",
-        "currency": "⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`"
-        "\n↳ : Converts various currencies for you.",
-        "carbon": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply]`"
-        "\n↳ : Beautify your code using carbon.now.sh\n"
-        "Use `.crblang` <text> to set language for your code.",
-        "google": "⚡𝘾𝙈𝘿⚡: `.google <query>`" "\n↳ : Does a search on Google.",
-        "wiki": "⚡𝘾𝙈𝘿⚡: `.wiki <query>`" "\n↳ : Does a search on Wikipedia.",
-        "ud": "⚡𝘾𝙈𝘿⚡: `.ud <query>`" "\n↳ : Does a search on Urban Dictionary.",
-        "tts": "⚡𝘾𝙈𝘿⚡: `.tts <text> [or reply]`"
-        "\n↳ : Translates text to speech for the language which is set."
-        "\nUse >`.lang tts <language code>` to set language for tts. (Default is English.)",
-        "trt": "⚡𝘾𝙈𝘿⚡: `.trt <text> [or reply]`"
-        "\n↳ : Translates text to the language which is set."
-        "\nUse >`.lang trt <language code>` to set language for trt. (Default is English)",
-        "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`" "\n↳ : Shows movie info and other stuff.",
-        "wolfram": "⚡𝘾𝙈𝘿⚡: `.wolfram` <query>"
-        "\n↳ : Get answers to questions using WolframAlpha Spoken Results API.",
-        "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`"
-        "\n↳ : Takes a screenshot of a website and sends the screenshot."
-        "\nExample of a valid URL : `https://www.google.com`",
-        "nekobin": "⚡𝘾𝙈𝘿⚡: `.neko` <text/reply> "
-        "\n↳ : Create a paste or a shortened url using dogbin",
-        "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply> "
-        "\n↳ : Create a paste or a shortened url using dogbin",
-        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)"
-        "\n↳ : Manghapus latar belakang gambar.",
-        "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>"
-        "\n↳ : Reply to an image or sticker to extract text from it.",   
-        "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url> "
-        "\n↳ : Reply to a link or paste a URL to generate a direct download link."
-        "\nSupported Urls: `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`",
-        "rcode": "⚡𝘾𝙈𝘿⚡: `.makeqr <content>`"
-        "\n↳ : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content.",
+        "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`
+         \n↳ : Does an image search on Google and shows 5 images.",
+        "currency": "⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`
+         \n↳ : Converts various currencies for you.",
+        "carbon2": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply messages]`
+         \n↳ : Beautify your code using carbon.now.sh
+         \n**How to Use** > `.crblang` <text> to set language for your code.",
+        "google": "⚡𝘾𝙈𝘿⚡: `.google <query>`
+         \n↳ : Does a search on Google.",
+        "wiki": "⚡𝘾𝙈𝘿⚡: `.wiki <query>`
+         \n↳ : Does a search on Wikipedia.",
+        "ud": "⚡𝘾𝙈𝘿⚡: `.ud <query>`
+         \n↳ : Does a search on Urban Dictionary.",
+        "tts": "⚡𝘾𝙈𝘿⚡: `.tts <text> [or reply]`
+         \n↳ : Translates text to speech for the language which is set.
+         \n**How to Use** > `.lang tts <language code>` to set language for tts. (Default is English.)",
+        "trt": "⚡𝘾𝙈𝘿⚡: `.trt <text> [or reply]`
+         \n↳ : Translates text to the language which is set.
+         \n**How to Use** > `.lang trt <language code>` to set language for trt. (Default is English)",
+        "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`
+         \n↳ : Shows movie info and other stuff.",
+        "wolfram": "⚡𝘾𝙈𝘿⚡: `.wolfram` <query>
+         \n↳ : Get answers to questions using WolframAlpha Spoken Results API.",
+        "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`
+         \n↳ : Takes a screenshot of a website and sends the screenshot.
+         \nExample of a valid URL : `https://www.google.com`",
+        "nekobin": "⚡𝘾𝙈𝘿⚡: `.neko` <text/reply>
+         \n↳ : Create a paste or a shortened url using dogbin",
+        "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply>
+         \n↳ : Create a paste or a shortened url using dogbin",
+        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)
+         \n↳ : Manghapus latar belakang gambar.",
+        "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>
+         \n↳ : Reply to an image or sticker to extract text from it.",   
+        "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url>
+         \n↳ : Reply to a link or paste a URL to generate a direct download link.\n**Supported Urls** : `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`",
+        "rcode": "⚡𝘾𝙈𝘿⚡: `.makeqr <content>`
+         \n↳ : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content.",
         "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"      
     }
 )
