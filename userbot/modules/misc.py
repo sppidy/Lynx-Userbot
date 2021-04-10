@@ -14,7 +14,7 @@ import sys
 import os
 import io
 import sys
-from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from userbot import ALIVE_NAME, UPSTREAM_REPO_URL, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 from userbot.utils import time_formatter
 import urllib
@@ -118,10 +118,11 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭─━━━━━━━━━━━━━─╮\n"
         "                  ʀᴇᴘᴏ\n"
-        "    [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡](https://github.com/KENZO-404/Lynx-Userbot)\n"
+        "    [⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡]({UPSTREAM_REPO_URL})\n"
         "╭─━━━━━━━━━━━━━─╯\n"
         "│⊙ **ᴏᴡɴᴇʀ :** [ᴀxᴇʟ](t.me/AxelAlexiusL)\n"
         "╰━━━━━━━━━━━━━━━╯"
+        "  𝗟𝗶𝗰𝗲𝗻𝘀𝗲 : [GPL-3.0 License](https://github.com/KENZO-404/Lynx-Userbot/blob/Lynx-Userbot/LICENSE)"
     )
 
 
