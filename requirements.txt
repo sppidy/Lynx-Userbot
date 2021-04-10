@@ -29,6 +29,7 @@ heroku3>=3.4.0
 httplib2>=0.18.0
 humanize 
 lxml
+lyrics_extractor
 oauth2client
 Pillow>=6.0.0
 fontTools
