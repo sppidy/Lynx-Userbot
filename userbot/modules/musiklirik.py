@@ -45,9 +45,9 @@ async def download_video(event):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await event.edit("`Tidak dapat menemukan musik...`")
+        return await event.edit("`Tidak Dapat Menemukan Musik...`")
     type = "audio"
-    await event.edit(f"`Persiapan mendownload {url}...`")
+    await event.edit(f"`Persiapan Mendownload {url}...`")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -105,14 +105,14 @@ async def download_video(event):
     else:
         thumb = None
     upteload = """
-Sebentar Lagi Musik Anda Sudah Selesai...
-Song Name - {}
-By - {}
+Connected to server...
+• {}
+• By - {}
 """.format(
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"╭┈──────────────────┈ \n➥ MUSIC - {rip_data['title']}\n➥ BY - {rip_data['uploader']}\n╭┈──────────────────┈╯\n➥ [ᴋᴇɴᴢᴏ](t.me/TeamSecret_Kz) | [ᴀxᴇʟ ᴀ.ʟ](t.me/AxelAlexiusL)\n╰┈────────────────┈─➤"
+    CAPT = f"╭┈────────────────┈\n➥ {rip_data['title']}\n➥ By - {rip_data['uploader']}\n╭┈────────────────┈╯\n➥          [ᴋᴇɴᴢᴏ](t.me/TeamSecret_Kz) | [ᴀxᴇʟ ᴀ.ʟ](t.me/AxelAlexiusL)\n╰┈────────────────┈➤"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
