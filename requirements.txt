@@ -97,3 +97,4 @@ scipy
 wordcloud
 opencv-python
 faker
+pendulum
