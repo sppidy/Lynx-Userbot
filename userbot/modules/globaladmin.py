@@ -116,7 +116,7 @@ async def gkick(e):
         return await eod(xx, "`Reply to some msg or add their id.`", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ultroid_bot.uid:
+    if userid == lynx_bot.uid:
         return await eod(xx, "`I can't gkick myself.`", time=3)
     if user.id == 1448477501:
         return await eod(xx, "`I can't gkick my Developers.`", time=3)
@@ -153,7 +153,7 @@ async def _(e):
         return await eod(xx, "`Reply to some msg or add their id.`", tome=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ultroid_bot.uid:
+    if userid == lynx_bot.uid:
         return await eod(xx, "`I can't gmute myself.`", time=3)
     if user.id == 1448477501:
         return await eod(xx, "`I can't gmute my Developers.`", time=3)
