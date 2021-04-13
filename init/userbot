@@ -12,4 +12,3 @@ ExecStart=bash ./start.sh
 ProtectSystem=full
 Restart=on-failure
 # Other Restart options: or always, on-abort, etc
-
