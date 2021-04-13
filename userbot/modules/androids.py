@@ -1,6 +1,6 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+# Copyright (C) 2020 The Raphielscape Company LLC.
 #
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 #
 
@@ -16,24 +16,44 @@ from requests import get
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
-from userbot.utils.tools import human_to_bytes, humanbytes, md5, time_formatter
+from userbot.utils import chrome, human_to_bytes, humanbytes, md5, time_formatter
 
 GITHUB = "https://github.com"
 
 
 @register(outgoing=True, pattern=r"^\.magisk$")
 async def magisk(request):
+    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk_files/"
     magisk_dict = {
-        "Stable": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/stable.json",
-        "Beta": "https://raw.githubusercontent.com/topjohnwu/magisk_files/master/beta.json",
+        "⦁ **Stable**":
+        magisk_repo + "master/stable.json",
+        "⦁ **Beta**":
+        magisk_repo + "master/beta.json",
+        "⦁ **Canary**":
+        magisk_repo + "canary/canary.json"
     }
-    releases = "Latest Magisk Releases:\n"
+    releases = "**Latest Magisk Release**\n\n"
     for name, release_url in magisk_dict.items():
         data = get(release_url).json()
+        if "canary" in release_url:
+            data['app']['link'] = (
+                magisk_repo +
+                "canary/" + data['app']['link']
+            )
+            data['magisk']['link'] = (
+                magisk_repo +
+                "canary/" + data['magisk']['link']
+            )
+            data['uninstaller']['link'] = (
+                magisk_repo +
+                "canary/" + data['uninstaller']['link']
+            )
+
         releases += (
             f'{name}: [ZIP v{data["magisk"]["version"]}]({data["magisk"]["link"]}) | '
             f'[APK v{data["app"]["version"]}]({data["app"]["link"]}) | '
-            f'[Uninstaller]({data["uninstaller"]["link"]})\n')
+            f'[Uninstaller]({data["uninstaller"]["link"]})\n'
+        )
     await request.edit(releases)
 
 
@@ -89,8 +109,7 @@ async def codename_info(request):
             "certified-android-devices/master/by_brand.json"
         ).text
     )
-    devices_lower = {k.lower(): v for k, v in data.items()
-                     }  # Lower brand names in JSON
+    devices_lower = {k.lower(): v for k, v in data.items()}  # Lower brand names in JSON
     devices = devices_lower.get(brand)
     results = [
         i
@@ -152,7 +171,7 @@ async def download_api(dl):
     download = driver.find_elements_by_class_name("download__btn")[i]
     download.click()
     await dl.edit("`Starting download...`")
-    file_size = human_to_bytes(download.text.split(None, 3)[-1].strip("()"))
+    file_size = human_to_bytes(download.text.split(None, 2)[-1].strip("()"))
     display_message = None
     complete = False
     start = time.time()
@@ -227,11 +246,11 @@ async def devices_specifications(request):
         return
     all_brands = (
         BeautifulSoup(
-            get("https://www.devicespecifications.com/en/brand-more").content,
-            "lxml") .find(
-            "div",
-            {
-                "class": "brand-listing-container-news"}) .findAll("a"))
+            get("https://www.devicespecifications.com/en/brand-more").content, "lxml"
+        )
+        .find("div", {"class": "brand-listing-container-news"})
+        .findAll("a")
+    )
     brand_page_url = None
     try:
         brand_page_url = [
@@ -301,19 +320,23 @@ async def twrp(request):
     await request.edit(reply)
 
 
-CMD_HELP.update(
-    {
-        "android": "⚡𝘾𝙈𝘿⚡: >`.magisk`"
-        "\n Get latest Magisk releases"
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.device <codename>`"
-        "\n↳ : Get info about android device codename or model."
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.codename <brand> <device>`"
-        "\n↳ : Search for android device codename."
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.pixeldl` **<download.pixelexperience.org>**"
-        "\n↳ : Download pixel experience ROM into your userbot server."
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.specs <brand> <device>`"
-        "\n↳ : Get device specifications info."
-        "\n\n⚡𝘾𝙈𝘿⚡: >`.twrp <codename>`"
-        "\n↳ : Get latest twrp download for android device."
-    }
-)
+CMD_HELP.update({
+    "androids":
+    "⚡𝘾𝙈𝘿⚡: `.magisk`\
+\n↳ : Get latest Magisk releases\
+\n\n⚡𝘾𝙈𝘿⚡: `.device <codename>`\
+\n↳ : Get info about android device codename or model.\
+\n\n⚡𝘾𝙈𝘿⚡: `.codename <brand> <device>`\
+\n↳ : Search for android device codename.\
+\n\n⚡𝘾𝙈𝘿⚡: `.pixeldl` **<download.pixelexperience.org>**\
+\n↳ : Download pixel experience ROM into your userbot server.\
+\n\n⚡𝘾𝙈𝘿⚡: `.spec <brand> <device>`\
+\n↳ : Get device specifications info.\
+\n\n⚡𝘾𝙈𝘿⚡: `.twrp <codename>`\
+\n↳ : Get latest twrp download for android device.\
+\n\n⚡𝘾𝙈𝘿⚡: `.gpsetup` <Try this in botlog group only>\
+\n↳ : Setup auth for Google Photos.\
+\n\n⚡𝘾𝙈𝘿⚡: `.gp` Reply to photo or video.\
+\n↳ : Upload photo or video to Google.\
+\n\nYou need G_PHOTOS_CLIENT_ID and G_PHOTOS_CLIENT_SECRET.\nGet it from [here](https://j.mp/39lWQQm)"
+})
