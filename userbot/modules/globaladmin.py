@@ -3,6 +3,7 @@
 import asyncio
 from os import remove
 
+from telethon import events
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
