@@ -1,4 +1,4 @@
-name: Python Package using Conda
+name: KENZO-4040
 
 on: [push]
 
