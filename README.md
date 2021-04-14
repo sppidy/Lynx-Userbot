@@ -18,11 +18,12 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls?q=is:closed)
+![Python Version](https://img.shields.io/badge/Python-3.9.4-red)
 
 <p align="center">
 <a href="https://github.com/KENZO-404/Lynx-Userbot/commits/Lynx-Userbot"> <img src="https://img.shields.io/github/last-commit/KENZO-404/Lynx-Userbot?color=brightgreen&logo=github&logoColor=green&style=for-the-badge" /></a>
-<a href="https://hub.docker.com/r/kenzo404/lynx-userbot"> <img src="https://img.shields.io/docker/image-size/kenzo404/lynx-userbot/Buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
-<a href="https://hub.docker.com/r/kenzo404/lynx-userbot/tags"> <img src="https://img.shields.io/docker/v/kenzo404/lynx-userbot/Buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
+<a href="https://hub.docker.com/r/kenzo404/lynxuser"> <img src="https://img.shields.io/docker/image-size/kenzo404/lynxuser/Buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
+<a href="https://hub.docker.com/r/kenzo404/lynxuser/tags"> <img src="https://img.shields.io/docker/v/kenzo404/lynxuser/Buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
 <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=brightgreen&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 
