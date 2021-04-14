@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   PEP8:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
