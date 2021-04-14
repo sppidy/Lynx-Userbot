@@ -18,7 +18,13 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls?q=is:closed)
-[![Pre-Release](https://img.shields.io/github/v/release/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://telegra.ph/Lynx-Userbot-03-19)
+
+<p align="center">
+<a href="https://github.com/KENZO-404/Lynx-Userbot/commits/Lynx-Userbot"> <img src="https://img.shields.io/github/last-commit/KENZO-404/Lynx-Userbot?color=brightgreen&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://hub.docker.com/r/kenzo404/lynx-userbot"> <img src="https://img.shields.io/docker/image-size/kenzo404/lynx-userbot/Buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
+<a href="https://hub.docker.com/r/kenzo404/lynx-userbot/tags"> <img src="https://img.shields.io/docker/v/kenzo404/lynx-userbot/Buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
+<a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=brightgreen&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
+</p>
 
 ## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
@@ -33,11 +39,11 @@ This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various U
 
 ### 🛠️ How To Get a STRING SESSION ?
 
+**Generate String Using Replit⤵️**
+
 <a href="https://replit.com/@KENZO404/Lynx-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
-
-The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
-
+**Generate String Using Terminal⤵️**
 ```
     STRING SESSION via TERMUX _>
 
@@ -57,10 +63,12 @@ The Trick is to go to our Support Group, Then Type #String [Click Here](https://
 📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
 
 ```
+The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
+Or Click below ⤵️
 
 ## Group Support 😼
 
-   <a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+<a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
 
 ## <p align="center">DEPLOY ⚡Lynx-Userbot⚡</p>
