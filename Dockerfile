@@ -1,4 +1,4 @@
-# Docker Tag Images, Using Python Slim Buster.
+# Using Python Slim Buster.
 FROM kenzo404/lynxuser:Buster
 # ===========================================
 #               Lynx - Userbot
