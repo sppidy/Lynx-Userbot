@@ -24,7 +24,7 @@ jobs:
           autoflake --in-place --recursive --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports .
 
       # Commit Changes
-      - uses: KENZO-404/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'pylint: auto fixes'
           commit_options: '--no-verify --signoff'
