@@ -5,6 +5,7 @@ aria2p
 async_generator
 beautifulsoup4>=4.9.3
 cowpy>=1.1.0
+fontTools
 psutil
 wget
 telegraph
@@ -33,7 +34,7 @@ lxml
 lyrics_extractor
 oauth2client
 Pillow>=8.2.0
-fontTools
+pip>=21.0.1
 psycopg2
 psycopg2-binary
 pybase64>=1.1.4
