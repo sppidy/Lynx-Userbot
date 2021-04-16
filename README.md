@@ -28,7 +28,7 @@
 
 
 <p align="left">
-    <a href="https://github.com/KENZO-404/Lynx-Userbot/actions?query=workflow%main.yml" > <img src="https://img.shields.io/github/workflow/status/KENZO-404/Lynx-Userbot/CI/Lynx-Userbot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
+    <a href="https://github.com/KENZO-404/Lynx-Userbot/actions?query=workflow%main.yml" > <img src="https://img.shields.io/github/workflow/status/KENZO-404/Lynx-Userbot/CI/Lynx-Userbot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="main.yml" /></a>
 <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.4-aqua?style=for-the-badge&logo=appveyor"/>
 </p>
 
