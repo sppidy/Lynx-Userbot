@@ -18,10 +18,11 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://GitHub.com/KENZO-404/Lynx-Userbot/graphs/contributors/)
 [![PR Open](https://img.shields.io/github/issues-pr/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls)
 [![PR Closed](https://img.shields.io/github/issues-pr-closed/KENZO-404/Lynx-Userbot?&style=plastic&logo=github)](https://github.com/KENZO-404/Lynx-Userbot/pulls?q=is:closed)
-
-<p align="center">
-<a href="https://github.com/KENZO-404/Lynx-Userbot/commits/Lynx-Userbot"><img src="https://img.shields.io/github/last-commit/KENZO-404/Lynx-Userbot?color=white&logo=github&logoColor=aqua&style=for-the-badge" /></a>
-<a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
+<p align="justify">
+<a href="https://github.com/KENZO-404/Lynx-Userbot/commits/Lynx-Userbot"><img src="https://img.shields.io/github/last-commit/KENZO-404/Lynx-Userbot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
+<a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
+</p>
+<p align="justify">
 <a href="https://github.com/KENZO-404/Lynx-Userbot/actions/workflows/main.yml"><img src="https://img.shields.io/github/workflow/status/KENZO-404/Lynx-Userbot/CI/Lynx-Userbot?style=for-the-badge&logo=github-actions&logoColor=aqua" alt="CI" /></a>
 <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.4-white?style=for-the-badge&logo=appveyor"/>
 </p>
@@ -29,6 +30,8 @@
 <a href="https://hub.docker.com/r/kenzo404/lynxuser"> <img src="https://img.shields.io/docker/image-size/kenzo404/lynxuser/Buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
 <a href="https://hub.docker.com/r/kenzo404/lynxuser/tags"> <img src="https://img.shields.io/docker/v/kenzo404/lynxuser/Buster?label=docker%20version&logo=docker&style=for-the-badge" /></a>
 </p>
+
+[![Sparkline](https://stars.medv.io/KENZO-404/Lynx-Userbot.svg)](https://stars.medv.io/KENZO-404/Lynx-Userbot)
 
 ## ⚡Lynx Userbot⚡
 ![Lynx Userbot](https://telegra.ph/file/f3c656862a017f945c0bc.png)
