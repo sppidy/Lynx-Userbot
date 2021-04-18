@@ -386,7 +386,7 @@ async def text_to_speech(query):
 
 # kanged from Blank-x ;---;
 @register(outgoing=True, pattern=r"^\.imdb (.*)")
-async def imdb(e):
+async def imdb(e, credits):
     try:
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
