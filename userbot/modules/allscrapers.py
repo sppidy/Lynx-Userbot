@@ -1158,7 +1158,7 @@ def cm_ru(url: str) -> str:
         reply = "`No cloud.mail.ru links found`\n"
         return reply
     command = f'bin/cmrudl -s {link}'
-    result = popen(command).read()
+    result = os.popen(command).read()
     result = result.splitlines()[-1]
     try:
         data = json.loads(result)
