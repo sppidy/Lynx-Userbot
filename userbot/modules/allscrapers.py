@@ -386,9 +386,9 @@ async def text_to_speech(query):
 
 # kanged from Blank-x ;---;
 @register(outgoing=True, pattern=r"^\.imdb (.*)")
-async def imdb(cs):
+async def imdb(credits):
     try:
-        movie_name = cs.pattern_match.group(1)
+        movie_name = credits.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
         page = get("https://www.imdb.com/find?ref_=nv_sr_fn&q=" + final_name + "&s=all")
@@ -448,7 +448,7 @@ async def imdb(cs):
                 mov_rating = r.strong["title"]
         else:
             mov_rating = "Not available"
-        await cs.edit(
+        await credits.edit(
             "<a href=" + poster + ">&#8203;</a>"
             "<b>Title : </b><code>"
             + mov_title
