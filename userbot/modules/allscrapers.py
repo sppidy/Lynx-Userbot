@@ -75,8 +75,8 @@ from userbot.events import register
 from userbot.utils import chrome, googleimagesdownload, progress, options
 
 CARBONLANG = "auto"
-TTS_LANG = "en"
-TRT_LANG = "en"
+TTS_LANG = "id"
+TRT_LANG = "id"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
 
 
@@ -386,9 +386,9 @@ async def text_to_speech(query):
 
 # kanged from Blank-x ;---;
 @register(outgoing=True, pattern=r"^\.imdb (.*)")
-async def imdb(e, credits):
+async def imdb(credits):
     try:
-        movie_name = e.pattern_match.group(1)
+        movie_name = credits.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
         page = get("https://www.imdb.com/find?ref_=nv_sr_fn&q=" + final_name + "&s=all")
