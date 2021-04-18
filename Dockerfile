@@ -5,7 +5,7 @@ FROM kenzo404/lynxuser:Buster
 # ===========================================
 RUN git clone -b Lynx-Userbot https://github.com/KENZO-404/Lynx-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
-RUN pip install --upgrade pip setuptools
+RUN pip install --no-cache-dir --upgrade pip setuptools
 WORKDIR /root/userbot
 
 # Install Requirements Packages
