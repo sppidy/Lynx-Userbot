@@ -386,9 +386,9 @@ async def text_to_speech(query):
 
 # kanged from Blank-x ;---;
 @register(outgoing=True, pattern=r"^\.imdb (.*)")
-async def imdb(credits):
+async def imdb(cs):
     try:
-        movie_name = credits.pattern_match.group(1)
+        movie_name = cs.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
         page = get("https://www.imdb.com/find?ref_=nv_sr_fn&q=" + final_name + "&s=all")
@@ -448,7 +448,7 @@ async def imdb(credits):
                 mov_rating = r.strong["title"]
         else:
             mov_rating = "Not available"
-        await e.edit(
+        await cs.edit(
             "<a href=" + poster + ">&#8203;</a>"
             "<b>Title : </b><code>"
             + mov_title
@@ -474,7 +474,7 @@ async def imdb(credits):
             parse_mode="HTML",
         )
     except IndexError:
-        await e.edit("Plox enter **Valid movie name** kthx")
+        await cs.edit("Plox enter **Valid movie name** kthx")
 
 
 @register(outgoing=True, pattern=r"^\.trt(?: |$)([\s\S]*)")
