@@ -15,6 +15,7 @@ import barcode
 import asyncurban
 import emoji
 import requests
+import subprocess
 
 from asyncio import sleep
 from barcode.writer import ImageWriter
@@ -1158,7 +1159,7 @@ def cm_ru(url: str) -> str:
         reply = "`No cloud.mail.ru links found`\n"
         return reply
     command = f'bin/cmrudl -s {link}'
-    result = os.system(command).read()
+    result = subprocess.call(command, shell=False).read()
     result = result.splitlines()[-1]
     try:
         data = json.loads(result)
