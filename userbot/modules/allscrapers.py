@@ -580,7 +580,7 @@ async def yt_search(video_q):
 @register(outgoing=True, pattern=r"\.(aud|vid) (.*)")
 async def any(v_url):
     url = v_url.pattern_match.group(2)
-    type = v_url.pattern_match.group(1).lower()
+    url = v_url.pattern_match.group(1).lower()
 
     await v_url.edit("`Preparing to download...`")
 
