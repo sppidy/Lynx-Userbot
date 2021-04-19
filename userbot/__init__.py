@@ -357,7 +357,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "``` ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗮𝗰𝘁𝗶𝘃𝗲 🐈```")
+    await bot.send_message(BOTLOG_CHATID, "```⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡Has Been Active!!```")
     return
 
 with bot:
@@ -388,8 +388,6 @@ from userbot import (
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
-
-
 
 def paginate_help(page_number, loaded_modules, prefix):
     number_of_rows = 5
@@ -440,7 +438,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.reply("⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/KENZO-404/Lynx-Userbot.git)")
             else:
-                await event.reply(f"`Hai Yang Mulia {ALIVE_NAME}\n\nApa Kabarmu ? 🐱`")
+                await event.reply(f"`Hai Yang Mulia {DEFAULTUSER}\n\nApa Kabarmu ? 🐱`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -451,7 +449,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}"f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"        "◎› **Mᴏᴅᴜʟᴇꜱ :** `{}`\n◎› **Mᴇɴᴜ Bᴏᴛ :** \n".format(
+                    text="{}"f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"        "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
                         "** ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ **",
                         len(dugmeler),
                     ),
@@ -460,7 +458,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan ╔╡⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞╗ ",
+                    "Bantuan Dari ⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
@@ -495,7 +493,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Lynx-Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} 😼"
+                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -513,7 +511,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Lynx-Userbot !!! Jangan Menggunakan Milik {ALIVE_NAME} "
+                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -544,7 +542,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"❗❗❗𝟒𝟎𝟒 𝐍𝐎𝐓𝐅𝐎𝐔𝐍𝐃❗❗❗ Dilarang Menggunakan Milik {ALIVE_NAME} 🖕"
+                reply_pop_up_alert = f"🚫!WARNING!🚫 Dilarang Menggunakan Milik {DEFAULTUSER}."
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
