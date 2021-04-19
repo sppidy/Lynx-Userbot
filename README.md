@@ -62,11 +62,11 @@ This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various U
 
  2. Wait for the installation to finish, if you have copied the one below.
 
-[T]   $ pip install telethon && wget https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/string_session.py && python string_session.py
+<T>   $ pip install telethon && wget https://raw.githubusercontent.com/KENZO-404/Lynx-Userbot/Lynx-Userbot/string_session.py && python string_session.py
 
-[P]   $ wget https://raw.githubusercontent.com/CW4RR10R/archives/master/pyro-session.py && pip install pyrogram && python pyro-session.py
+<P>   $ wget https://raw.githubusercontent.com/KENZO-404/Lynx-String-Session/master/pyrogram-session.py && python string_session.py
 
- [T] (For Telethon) and [P] (For Pyrogram)
+ <T> (For Telethon) and <P> (For Pyrogram)
  Just choose Telethon if you want to deploy.
 
 📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
