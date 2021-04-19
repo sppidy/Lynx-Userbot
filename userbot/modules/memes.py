@@ -988,7 +988,7 @@ async def boobs(e):
     await e.edit("`Mengirim Gambar Boobs...`")
     nsfw = requests.get(
         'http://api.oboobs.ru/noise/1').json()[0]["Gambar Boobs"]
-    urllib.request.urlretrieve(
+    urllib.request.urlopen(
         "http://media.oboobs.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'boobs.jpg')
     await e.client.send_file(e.chat_id, "boobs.jpg")
@@ -1003,7 +1003,7 @@ async def butts(e):
     await e.edit("`Mengirim Gambar Pantat Indah...`")
     nsfw = requests.get(
         'http://api.obutts.ru/noise/1').json()[0]["Gambar Pantat"]
-    urllib.request.urlretrieve(
+    urllib.request.urlropen(
         "http://media.obutts.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'butts.jpg')
     await e.client.send_file(e.chat_id, "butts.jpg")
@@ -1872,5 +1872,5 @@ CMD_HELP.update({
     "\n> `.fag` `.gtfo`; `.stfu` `.lol` `.lool` `.fail` `.leave`"
     "\n> `.iwi` `.sayhi` `.koc` `.gas` `.earth` `.love` `.rain`"
     "\n> `.penis` `.emo` `.fuck` `.skull`  `.monyet`\nUsage: Cobain aja"
-    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Alvin`"
+    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `Axel`"
 })
