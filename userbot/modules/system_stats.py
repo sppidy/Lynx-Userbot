@@ -400,7 +400,7 @@ async def amireallyalivereset(event):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 return ALIVE_NAME * ALIVE_NAME
-    await event.edit("`" "Successfully reset user for alive!" "`")
+    await event.edit("Successfully reset user for alive!")
 
 
 CMD_HELP.update({
