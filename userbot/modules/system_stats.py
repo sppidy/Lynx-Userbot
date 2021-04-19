@@ -1,7 +1,6 @@
 # System Stats Lynx-Userbot
 
-import asyncio
-import redis
+
 
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
@@ -15,7 +14,6 @@ import sys
 import time
 from datetime import datetime
 import psutil
-
 from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, LYNX_TEKS_KUSTOM, CMD_HELP, StartTime, UPSTREAM_REPO_BRANCH, INSTAGRAM_ALIVE, bot
 from userbot.events import register
 
@@ -394,13 +392,11 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetsalive$")
-async def amireallyalivereset(event):
-    DEFAULTUSER = event
+@register(outgoing=True, pattern=r"^\.resetalive$")
+async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-return ALIVE_NAME * ALIVE_NAME
-    await event.edit("Successfully reset user for alive!")
+    await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
 CMD_HELP.update({
