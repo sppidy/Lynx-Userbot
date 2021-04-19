@@ -409,7 +409,7 @@ async def imdb(e):
             mov_details = re.sub(r"\s+", " ", pg)
         else:
             mov_details = ""
-        credits = soup.findAll("div", "credit_summary_item")
+        credits = soup.find("div", "credit_summary_item")
         director = credits[0].a.text
         if len(credits) == 1:
             writer = "Not available"
