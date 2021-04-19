@@ -387,8 +387,6 @@ async def text_to_speech(query):
 # kanged from Blank-x ;---;
 @register(outgoing=True, pattern=r"^\.imdb (.*)")
 async def imdb(e):
-    credits = 1
-    print (credits)
     try:
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
@@ -403,9 +401,9 @@ async def imdb(e):
         page1 = get(mov_link)
         soup = BeautifulSoup(page1.content, "lxml")
         if soup.find("div", "poster"):
-            poster = soup.find("div", "poster").img["src"]
+            pg = soup.find("div", "poster").img["src"]
         else:
-            poster = ""
+            pg = ""
         if soup.find("div", "title_wrapper"):
             pg = soup.find("div", "title_wrapper").findNext("div").text
             mov_details = re.sub(r"\s+", " ", pg)
