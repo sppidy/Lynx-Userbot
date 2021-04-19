@@ -401,16 +401,16 @@ async def imdb(e):
         page1 = get(mov_link)
         soup = BeautifulSoup(page1.content, "lxml")
         if soup.find("div", "poster"):
-            pg = soup.find("div", "poster").img["src"]
+            poster = soup.find("div", "poster").img["src"]
         else:
-            pg = ""
+            poster = ""
         if soup.find("div", "title_wrapper"):
             pg = soup.find("div", "title_wrapper").findNext("div").text
             mov_details = re.sub(r"\s+", " ", pg)
         else:
             mov_details = ""
-        credits = soup.find("div", "credit_summary_item")
-        director = credits[0].a.text
+            credits = soup.findAll("div", "credit_summary_item")
+            director = credits[0].a.text
         if len(credits) == 1:
             writer = "Not available"
             stars = "Not available"
