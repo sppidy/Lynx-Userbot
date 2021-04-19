@@ -369,9 +369,6 @@ async def add_pmsg(cust_msg):
             status = "Pesan"
 
         if message:
-            # FIXME: allow user to have a custom text formatting
-            # eg: bold, underline, striketrough, link
-            # for now all text are in monoscape
             msg = message.message  # get the plain text
             sql.addgvar("unapproved_msg", msg)
         else:
