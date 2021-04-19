@@ -311,7 +311,7 @@ binaries = {
 for binary, path in binaries.items():
     downloader = SmartDL(binary, path, progress_bar=False)
     downloader.start()
-    os.chmod('/etc/hosts', 0o755)
+    os.chmod(path, 0o755)
 
 # 'bot' variable
 if STRING_SESSION:
