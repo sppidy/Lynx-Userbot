@@ -395,12 +395,12 @@ async def amireallyaliveuser(username):
 
 
 @register(outgoing=True, pattern=r"^\.resetsalive$")
-async def amireallyalivereset(resetname):
-    DEFAULTUSER = resetname
+async def amireallyalivereset(event):
+    DEFAULTUSER = event
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 return ALIVE_NAME * ALIVE_NAME
-    await resetname.edit("`" "Successfully reset user for alive!" "`")
+    await event.edit("`" "Successfully reset user for alive!" "`")
 
 
 CMD_HELP.update({
