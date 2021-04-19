@@ -87,9 +87,9 @@ Or Click below ⤵️
 <br>
 </p>
 
-## Credits
+## © Credits 
 
- 🙏 THANK YOU VERY MUCH FOR
+ 🙏 **THANK YOU VERY MUCH FOR**
 
 *   [Alvin](https://github.com/Zora24/Lord-Userbot) - Lord Userbot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
@@ -105,3 +105,7 @@ Or Click below ⤵️
 *   [༺αиυвιѕ༻](https://github.com/Dark-Princ3) - X-tra-Telegram
 *   [Sahyam2019](https://github.com/sahyam2019/oub-remix) - oub-remix
 *   [TeamUserge](https://github.com/UsergeTeam/Userge) - Userge
+
+
+## Stay Support 🚀
+*   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
