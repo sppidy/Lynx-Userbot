@@ -12,7 +12,6 @@ bin/*
 TG_BOT_TOKEN.session
 
 # ignore virtualenv files
-
 .Python
 [Bb]in
 [Ii]nclude
