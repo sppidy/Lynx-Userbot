@@ -41,10 +41,6 @@
 <h3 align="center">Userbot Used for Fun on Telegram, and for Maintianing Your Group.</h3>
 <p align="center">&nbsp;</p>
 
-## This is a Repo Lynx-Userbot. 🐈
-
-This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various Userbots on Github.
-
 
 ### 🛠️ How To Get a STRING SESSION ?
 
@@ -72,13 +68,6 @@ This is Repo was Created by [Axel](https://t.me/SyndicateTwenty4) From various U
 📌Noted = If You Just wanna Change Repo , You No Need Regenerate String Sessions, just use What you have.
 
 ```
-The Trick is to go to our Support Group, Then Type #String [Click Here](https://t.me/LordUserbot_Group) to enter our Support Group.
-Or Click below ⤵️
-
-## Group Support 😼
-
-<a href="https://t.me/LordUserbot_Group"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
-
 
 ## <p align="center">DEPLOY ⚡Lynx-Userbot⚡</p>
 
