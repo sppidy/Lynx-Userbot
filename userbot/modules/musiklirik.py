@@ -26,7 +26,10 @@ from youtube_dl.utils import (
 from youtubesearchpython import SearchVideos
 
 from userbot.events import register
-from userbot import CMD_HELP
+from userbot import CMD_HELP, ALIVE_NAME
+
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
 @register(outgoing=True, pattern=r"^\.musik (.*)")
@@ -112,7 +115,7 @@ Connected to server...
         rip_data["title"], rip_data["uploader"]
     )
     await event.edit(f"`{upteload}`")
-    CAPT = f"╭┈────────────────┈\n➥ {rip_data['title']}\n➥ By - {rip_data['uploader']}\n╭┈────────────────┈╯\n➥          [ᴋᴇɴᴢᴏ](t.me/TeamSecret_Kz) | [ᴀxᴇʟ ᴀ.ʟ](t.me/AxelAlexiusL)\n╰┈────────────────┈➤"
+    CAPT = f"╭┈────────────────┈\n➥ {rip_data['title']}\n➥ Uploader - {rip_data['uploader']}\n╭┈────────────────┈╯\n➥ By : {DEFAULTUSER}\n╰┈────────────────┈➤"
     await event.client.send_file(
         event.chat_id,
         f"{rip_data['id']}.mp3",
@@ -158,9 +161,9 @@ async def original(event):
 
 CMD_HELP.update(
     {
-        "musiklirik": "⚡𝘾𝙈𝘿⚡: `.musik <Judul Lagu>`\
+        "musik&lirik": "⚡𝘾𝙈𝘿⚡: `.musik <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mengunduh Sebuah Lagu Yang Diinginkan.\
-         \n⚡𝘾𝙈𝘿⚡: `.lirik` <Judul Lagu>`\
+         \n⚡𝘾𝙈𝘿⚡: `.lirik` <Penyanyi atau Band - Judul Lagu>`\
          \n↳ : Mencari Lirik Lagu Yang Diinginkan."
     }
 )
