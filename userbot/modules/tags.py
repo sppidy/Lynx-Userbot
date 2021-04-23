@@ -17,9 +17,9 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 @register(outgoing=True, pattern=r"^.tags(?: |$)(on|off|all|bots|rec|admins|owner)?")
-async def _(e):
-    okk = e.text
-    lll = e.pattern_match.group(2)
+async def _(event):
+    okk = event.text
+    lll = event.pattern_match.group(2)
     users = 0
     o = 0
     nn = 0
@@ -28,7 +28,7 @@ async def _(e):
         xx = f"{lll}"
     else:
         xx = ""
-    async for bb in e.client.iter_participants(e.chat_id, 99):
+    async for bb in event.client.iter_participants(event.chat_id, 99):
         users = users + 1
         x = bb.status
         y = bb.participant
@@ -59,8 +59,8 @@ async def _(e):
         if "bot" in okk:
             if bb.bot:
                 xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
-    await e.client.send_message(e.chat_id, xx)
-    await e.delete()
+    await event.client.send_message(e.chat_id, xx)
+    await event.delete()
 
 
 CMD_HELP.update({
