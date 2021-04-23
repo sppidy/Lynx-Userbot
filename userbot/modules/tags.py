@@ -13,6 +13,7 @@ from telethon.tl.types import UserStatusOffline as off
 from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 from telethon.utils import get_display_name
+from telethon import custom, events
 from userbot import CMD_HELP, bot
 from userbot.events import register
 
