@@ -1,4 +1,4 @@
-name: PEP8
+name: PyLint
 on:
   push:
     branches: [ Lynx-Userbot ]
@@ -6,7 +6,7 @@ pull_request:
     branches: [ Lynx-Userbot ]
 
 jobs:
-  PEP8:
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
