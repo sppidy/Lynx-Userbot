@@ -212,8 +212,8 @@ async def gunben(userbot):
 
 
 CMD_HELP.update({
-    "globalban":"
-⚡𝘾𝙈𝘿⚡: `.gban`\
+    "globalban":
+    "⚡𝘾𝙈𝘿⚡: `.gban`\
 \n↳ : Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin.\
 \n\n⚡𝘾𝙈𝘿⚡: `.ungban`\
 \n↳ : Membatalkan Banned Secara Global."})
