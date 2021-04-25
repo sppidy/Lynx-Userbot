@@ -987,7 +987,7 @@ async def boobs(e):
     await sleep(3)
     await e.edit("`Mengirim Gambar Boobs...`")
     nsfw = requests.get('http://api.oboobs.ru/noise/1').json()[0]["Gambar Boobs"]
-    urllib.request.urlopen("http://media.oboobs.ru/{}".format(nsfw), "*.jpg")
+    urllib.request.urlretrieve("http://media.oboobs.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'boobs.jpg')
     await e.client.send_file(e.chat_id, "boobs.jpg")
     os.remove("boobs.jpg")
@@ -1000,7 +1000,7 @@ async def butts(e):
     await sleep(3)
     await e.edit("`Mengirim Gambar Pantat Indah...`")
     nsfw = requests.get('http://api.obutts.ru/noise/1').json()[0]["Gambar Pantat"]
-    urllib.request.urlropen("http://media.obutts.ru/{}".format(nsfw), "*.jpg")
+    urllib.request.urlretrieve("http://media.obutts.ru/{}".format(nsfw), "*.jpg")
     os.rename('*.jpg', 'butts.jpg')
     await e.client.send_file(e.chat_id, "butts.jpg")
     os.remove("butts.jpg")
