@@ -1,9 +1,11 @@
 name: PyLint
 on:
-  push:
-    branches: [ Lynx-Userbot ]
-pull_request:
-    branches: [ Lynx-Userbot ]
+   push:
+     branches: [ Lynx-Userbot ]
+   pull_request:
+     branches: [ Lynx-Userbot ]
+
+   workflow_dispatch:
 
 jobs:
 
