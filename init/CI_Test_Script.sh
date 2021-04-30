@@ -9,7 +9,7 @@
 # We need this directive
 # shellcheck disable=1090
 
-export SEMAPHORE_PROJECT_DIR=`pwd`
+export SEMAPHORE_PROJECT_DIR=$(pwd)
 . "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"/telegram
 TELEGRAM_TOKEN=${BOT_API_KEY}
 export BOT_API_KEY TELEGRAM_TOKEN
