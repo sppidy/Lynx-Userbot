@@ -65,7 +65,7 @@ async def _(event):
     if not input_str:
         chat = to_write_chat
     else:
-        mentions = "Bot Dalam {} Channel: \n".format(input_str)
+        mentions = "🤖 Bot Dalam {} Channel: \n".format(input_str)
         try:
             chat = await bot.get_entity(input_str)
         except Exception as e:
@@ -74,10 +74,10 @@ async def _(event):
     try:
         async for x in bot.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
-                mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
+                mentions += "\n• [{}](tg://user?id={}) `{}`".format(
                     x.first_name, x.id, x.id)
             else:
-                mentions += "\n [{}](tg://user?id={}) `{}`".format(
+                mentions += "\n• [{}](tg://user?id={}) `{}`".format(
                     x.first_name, x.id, x.id)
     except Exception as e:
         mentions += " " + str(e) + "\n"
@@ -92,23 +92,23 @@ async def log(log_text):
             reply_msg = await log_text.get_reply_message()
             await reply_msg.forward_to(BOTLOG_CHATID)
         elif log_text.pattern_match.group(1):
-            user = f"#LOG\n ID Obrolan: {log_text.chat_id}\n\n"
+            user = f"#LOG\n ID Obrolan : {log_text.chat_id}\n\n"
             textx = user + log_text.pattern_match.group(1)
             await bot.send_message(BOTLOG_CHATID, textx)
         else:
-            await log_text.edit("`Apa Yang Harus Saya Log?`")
+            await log_text.edit("`Apa Yang Harus Saya Log ?`")
             return
-        await log_text.edit("`Logged Berhasil!`")
+        await log_text.edit("`Logged Telah Berhasil !`")
     else:
-        await log_text.edit("`Fitur Ini Mengharuskan Loging Diaktifkan!`")
+        await log_text.edit("`Fitur Ini Mengharuskan Vars Logging Diaktifkan!`")
     await sleep(2)
     await log_text.delete()
 
 
 @register(outgoing=True, pattern="^.exit$")
-async def kickme(leave):
+async def exit(leave):
     """ Basically it's .kickme command """
-    await leave.edit(f"`👑 Yang Mulia {ALIVE_NAME} Telah Meninggalkan Group...`")
+    await leave.edit(f"`Yang Mulia {ALIVE_NAME} Telah Meninggalkan Group...`")
     await leave.client.kick_participant(leave.chat_id, 'me')
 
 
@@ -121,7 +121,7 @@ async def unmute_chat(unm_e):
         await unm_e.edit('`Running on Non-SQL Mode!`')
         return
     unkread(str(unm_e.chat_id))
-    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan Yang Mulia```")
+    await unm_e.edit("```Berhasil Dibuka, Obrolan Tidak Lagi Dibisukan Yang Mulia.```")
     await sleep(2)
     await unm_e.delete()
 
@@ -221,13 +221,13 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.edit("`Group/Channel Tidak Valid`")
+            await event.edit("`Group/Channel Tidak Valid.`")
             return None
         except ChannelPrivateError:
-            await event.edit("`Ini Adalah Group/Channel Privasi Atau Yang Mulia Telah Terbanned Dari Sana`")
+            await event.edit("`Ini Adalah Group/Channel Privasi Atau Yang Mulia Telah Terbanned Dari Sana.`")
             return None
         except ChannelPublicGroupNaError:
-            await event.edit("`Channel Atau Supergroup Tidak Ditemukan`")
+            await event.edit("`Channel Atau Supergroup Tidak Ditemukan.`")
             return None
         except (TypeError, ValueError) as err:
             await event.edit(str(err))
@@ -392,37 +392,46 @@ async def fetch_info(chat, event):
     return caption
 
 
-@register(outgoing=True, pattern="^.invite(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.invite(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
-        await event.edit("`.invite` Pengguna Ke Obrolan, Tidak Ke Pesan Pribadi")
+        await event.edit("`.invite` users to a chat, not to a Private Message")
     else:
         if not event.is_channel and event.is_group:
             # https://lonamiwebs.github.io/Telethon/methods/messages/add_chat_user.html
-            for user_id in to_add_users.split(" "):
+            for user_id in to_add_users.split():
                 try:
-                    await event.client(functions.messages.AddChatUserRequest(
-                        chat_id=event.chat_id,
-                        user_id=user_id,
-                        fwd_limit=1000000
-                    ))
+                    if user_id.isdigit():
+                        user_id = int(user_id)
+                    await event.client(
+                        functions.messages.AddChatUserRequest(
+                            chat_id=event.chat_id, user_id=user_id, fwd_limit=1000000
+                        )
+                    )
                 except Exception as e:
-                    await event.reply(str(e))
-            await event.edit("`Berhasil Menambahkan Pengguna Ke Obrolan`")
+                    return await event.edit(str(e))
+            await event.edit("`Invited Successfully🔥`")
+            await sleep(3)
+            await event.delete()
         else:
             # https://lonamiwebs.github.io/Telethon/methods/channels/invite_to_channel.html
-            for user_id in to_add_users.split(" "):
+            for user_id in to_add_users.split():
                 try:
-                    await event.client(functions.channels.InviteToChannelRequest(
-                        channel=event.chat_id,
-                        users=[user_id]
-                    ))
+                    if user_id.isdigit():
+                        user_id = int(user_id)
+                    await event.client(
+                        functions.channels.InviteToChannelRequest(
+                            channel=event.chat_id, users=[user_id]
+                        )
+                    )
                 except Exception as e:
-                    await event.reply(str(e))
-            await event.edit("`Berhasil Menambahkan Pengguna Ke Obrolan`")
+                    return await event.edit(str(e))
+            await event.edit("`Invited Successfully🔥`")
+            await sleep(3)
+            await event.delete()
 
 CMD_HELP.update({
     "chat":
