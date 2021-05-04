@@ -45,11 +45,11 @@ async def telegraphs(grop):
 CMD_HELP.update({
     "membuat": "\
 Membuat\
-\nUsage: Untuk membuat Channel, Grup dan Grup bersama Bot.\
-\n\n`.buat g` <nama grup>\
-\nUsage: Membuat grup mu.\
-\n\n`.buat gb` <nama grup>\
-\nUsage: Membuat Grup bersama bot.\
-\n\n`.buat c` <nama channel>\
-\nUsage: Membuat sebuah Channel.\
+\nPenggunaan : Untuk membuat Channel, Grup dan Grup bersama Bot.\
+\n\n⚡𝘾𝙈𝘿⚡: `.buat g` <Nama Group>\
+\n↳ : Membuat Group Mu.\
+\n\n⚡𝘾𝙈𝘿⚡: `.buat gb` <Nama Group>\
+\n↳ : Membuat Group Bersama Dengan Bot.\
+\n\n⚡𝘾𝙈𝘿⚡: `.buat c` <Nama Channel>\
+\n↳ : Membuat Sebuah Channel.\
 "})
