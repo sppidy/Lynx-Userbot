@@ -26,7 +26,7 @@
 </p>
 <p align="justify">
 <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
-<img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.4-white?style=for-the-badge&logo=appveyor"/>
+<img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.5-white?style=for-the-badge&logo=appveyor"/>
 </p>
 <p align="left">
 <a href="https://hub.docker.com/r/kenzo404/lynxuser"> <img src="https://img.shields.io/docker/image-size/kenzo404/lynxuser/Buster?label=docker%20image%20size&logo=docker&style=for-the-badge" /></a>
