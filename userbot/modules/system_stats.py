@@ -345,23 +345,24 @@ async def redis(alive):
     await alive.edit("😼")
     await asyncio.sleep(3)
     output = (
-        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮** \n"
-        f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 ** \n"
-        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯** \n"
-        f"╭╼════════════════════╾╮ \n"
+        f"**ㅤㅤ  ╭─━━═━═━═━═━━─╮**\n"
+        f"**       ⊏┊⚡𝗟𝘆𝗻𝘅-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ ⊨〛💨 **\n"
+        f"**ㅤㅤ  ╰─━━═━═━═━═━━─╯**\n"
+        f"╭╼════════════════════╾╮\n"
         f"│    ⇱  𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌𝐲 𝐏𝐫𝐨𝐟𝐢𝐥𝐞 ⇲ \n"
-        f"┟╼════════════════════╾┤ \n"
-        f"╟◈ 😼  `Lynx     :`{DEFAULTUSER} \n"
-        f"╟◈ 🔎  `Username :`@{user.username} \n"
-        f"╟◈ ⚙️  `Telethon :`v. {version.__version__} \n"
-        f"╟◈ 🐍  `Python   :`v. {python_version()} \n"
-        f"╟◈ 🛠️  `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
-        f"╟◈ 👾  `Bot Ver  :`v. {BOT_VER} \n"
-        f"╟◈ 📂  `Plugins  :`{len(modules)} Plugins \n"
-        f"┞╼════════════════════╾┤ \n"
-        f"├◈ **Don't forget to support our** \n"
-        f"│    **userbot, how to press below.** \n"
-        f"╰╼════════════════════╾╯ \n"
+        f"┟╼════════════════════╾┤\n"
+        f"╟◈ 😼  `Lynx     :` {DEFAULTUSER}\n"
+        f"╟◈ 🔎  `Username :` @{user.username}\n"
+        f"╟◈ ⚙️  `Telethon :` v. {version.__version__}\n"
+        f"╟◈ 🐍  `Python   :` v. {python_version()}\n"
+        f"╟◈ 👾  `Bot Ver  :` v. {BOT_VER}\n"
+        f"╟◈ 🛠️  `Branch   :` {UPSTREAM_REPO_BRANCH}\n"
+        f"╟◈ 💻  `System   :` Ubuntu 20.10\n"
+        f"╟◈ 📂  `Plugins  :` {len(modules)} Plugins\n"
+        f"┞╼════════════════════╾┤\n"
+        f"├◈ **Don't forget to support our**\n"
+        f"│    **userbot, how to press below.**\n"
+        f"╰╼════════════════════╾╯\n"
         f"| [𝗥𝗲𝗽𝗼](https://kenzo-404.github.io/Lynx-Userbot) | [𝗟𝗼𝗿𝗱-𝗧𝗲𝗮𝗺](t.me/LordUserbot_Group) | " f"[𝗠𝘆 𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺]({INSTAGRAM_ALIVE}) | ")
     if ALIVE_LOGO:
         try:
@@ -400,7 +401,7 @@ async def amireallyaliveuser(username):
 async def amireallyalivereset(ureset):
     global DEFAULTUSER # global statement
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node 
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    await ureset.edit("`" "Successfully Reset User For Ur Alive!" "`")
 
 
 CMD_HELP.update({
