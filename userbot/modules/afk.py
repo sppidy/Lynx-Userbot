@@ -264,9 +264,9 @@ async def afk_on_pm(sender):
 
 
 CMD_HELP.update({
-    "afk":
-    "⚡**CMD**⚡: `.afk` |Alasan|\
-\n↳ : __Lakukan ketika ingin OFF.__\n__Siapapun Yang Balas, Tag, Atau Chat Kamu__ \
-__Mereka Akan Tau Alasan Kamu OFF.__\n\n__AFK Bisa Dilakukan Dan Dibatalkan Dimanapun.__\
+    "afk": "✘ Pʟᴜɢɪɴ : `Away From Keyboard`\
+\n\n⚡𝘾𝙈𝘿⚡: `.afk` |Alasan|\
+\n↳ : Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu,\
+Mereka Akan Tau Alasan Kamu OFF.\n\nAFK Bisa Dilakukan Dan Dibatalkan Dimanapun.\
 "
 })
