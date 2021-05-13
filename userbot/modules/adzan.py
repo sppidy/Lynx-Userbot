@@ -53,5 +53,6 @@ async def get_adzan(adzan):
     await adzan.edit(result)
 
 
-CMD_HELP.update({"adzan": "\n\n⚡𝘾𝙈𝘿⚡: `.adzan` <kota>"
+CMD_HELP.update({"adzan": "✘ Pʟᴜɢɪɴ : `Adzan`\
+                 "\n\n⚡𝘾𝙈𝘿⚡: `.adzan` <kota>"
                  "\n↳ : Memberikan Informasi Waktu Sholat."})
