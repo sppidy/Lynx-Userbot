@@ -69,7 +69,7 @@ async def set_not_afk(event):
         except BaseException:
             shite = await bot.send_message(
                 event.chat_id,
-                f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠\n𝗦𝗲𝗷𝗮𝗸 : `{total_afk_time}` 𝗬𝗮𝗻𝗴 𝗟𝗮𝗹𝘂.",
+                f"{ALIVE_NAME} 𝗧𝗲𝗹𝗮𝗵 𝙊𝙣𝙡𝙞𝙣𝙚 𝗞𝗲𝗱𝗮𝗹𝗮𝗺 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺.",
             )
 
         except BaseException:
