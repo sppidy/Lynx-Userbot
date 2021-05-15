@@ -15,16 +15,14 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     PM_AUTO_BAN,
     USERS,
     PM_AUTO_BAN,
-    bot,
-)
+    bot,)
 from userbot.events import register
 # ========================= CONSTANTS ============================
 AFKSTR = [
     f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ, {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ !!!**",
     f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ, {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`",
     f"**{ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n `Bila Anda Melakukan Spam Pada Saya, Anda Akan Terkena Global Banned Secara Otomatis. Terimakasih.`",
-    f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ !!!**",
-]
+    f"**ᴍᴏʜᴏɴ ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ !!!**",]
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
 global afk_start
