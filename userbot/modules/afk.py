@@ -2,7 +2,7 @@
 # Ported by X_ImFine
 # Recode by @mrismanaziz
 # RecodeV2 by @PacarFerdilla
-# RecodeV3 Team Lynx-Userbot
+# RecodeV3 Team Lynx-Userbot ᴀxᴇʟ.ᴀʟ
 
 import asyncio
 import os
