@@ -58,18 +58,18 @@ async def set_not_afk(event):
                 shite = await bot.send_message(event.chat_id, file=pic)
                 shites = await bot.send_message(
                     event.chat_id,
-                    f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ ᴜɴᴛᴜᴋ ᴄʜᴀᴛ ᴛᴇʟᴇɢʀᴀᴍ\nᴅᴀʀɪ 𝗔𝗙𝗞 : `{total_afk_time}` ʏᴀɴɢ ʟᴀʟᴜ",
+                    f"{ALIVE_NAME} 𝗧𝗲𝗹𝗮𝗵 𝙊𝙣𝙡𝙞𝙣𝙚 𝗞𝗲𝗱𝗮𝗹𝗮𝗺 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺.",
                 )
             else:
                 shite = await bot.send_message(
                     event.chat_id,
-                    f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʀʜᴏʀᴍᴀᴛ sᴇᴅᴀɴɢ sɪʙᴜᴋ!\nᴅᴀʀɪ 𝗔𝗙𝗞 : `{total_afk_time}` ʏᴀɴɢ ʟᴀʟᴜ",
+                    f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠\n𝗦𝗲𝗷𝗮𝗸 : `{total_afk_time}` 𝗬𝗮𝗻𝗴 𝗟𝗮𝗹𝘂.",
                     file=pic,
                 )
         except BaseException:
             shite = await bot.send_message(
                 event.chat_id,
-                f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ**\n**ᴅᴀʀɪ 𝗔𝗙𝗞 :** `{total_afk_time}` ʏᴀɴɢ ʟᴀʟᴜ",
+                f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠\n𝗦𝗲𝗷𝗮𝗸 : `{total_afk_time}` 𝗬𝗮𝗻𝗴 𝗟𝗮𝗹𝘂.",
             )
 
         except BaseException:
@@ -111,11 +111,11 @@ async def on_afk(event):
         msg = None
         if reason:
             message_to_reply = (
-                f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞 `{total_afk_time}` ʏᴀɴɢ ʟᴀʟᴜ\n" +
-                f"• ᴀʟᴀsᴀɴ : `{reason}`")
+                f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠\n𝗦𝗲𝗷𝗮𝗸 : `{total_afk_time}` 𝗬𝗮𝗻𝗴 𝗟𝗮𝗹𝘂.\n" +
+                f"» Aʟᴀsᴀɴ : `{reason}`")
         else:
             message_to_reply = (
-                f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞 `{total_afk_time}` ʏᴀɴɢ ʟᴀʟᴜ"
+                f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠\n𝗦𝗲𝗷𝗮𝗸 : `{total_afk_time}` 𝗬𝗮𝗻𝗴 𝗟𝗮𝗹𝘂.\n» Aʟᴀsᴀɴ : `{reason}` "
             )
         try:
             if pic.endswith((".tgs", ".webp")):
@@ -142,7 +142,7 @@ async def on_afk(event):
 
 
 @register(
-    outgoing=True, pattern=r"^\.afk(?: |$)(.*)", disable_errors=True
+    outgoing=True, pattern=r"^\.busy(?: |$)(.*)", disable_errors=True
 )  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
@@ -181,33 +181,33 @@ async def _(event):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
                         event.chat_id,
-                        f"\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ : `{reason}`",
+                        f"\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                     )
                 else:
                     await bot.send_message(
                         event.chat_id,
-                        f"\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ :** `{reason}`",
+                        f"\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                         file=pic,
                     )
             except BaseException:
                 await bot.send_message(
                     event.chat_id,
-                    f"\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ : `{reason}`",
+                    f"\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                 )
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞"
+                        event.chat_id, f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠."
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞",
+                        event.chat_id, f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.",
                         file=pic,
                     )
             except BaseException:
-                await bot.send_message(event.chat_id, f"🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} ᴛᴇʟᴀʜ 𝗔𝗙𝗞")
+                await bot.send_message(event.chat_id, f"{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.")
         await event.delete()
         try:
             if reason and pic:
@@ -215,43 +215,43 @@ async def _(event):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ : `{reason}`",
+                        f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                     )
                 else:
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ : `{reason}`",
+                        f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                         file=pic,
                     )
             elif reason:
                 await bot.send_message(
                     BOTLOG_CHATID,
-                    f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞\n• ᴀʟᴀsᴀɴ : `{reason}`",
+                    f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.\n» Aʟᴀsᴀɴ : `{reason}`",
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
-                        BOTLOG_CHATID, f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞"
+                        BOTLOG_CHATID, f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠."
                     )
                 else:
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞",
+                        f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠.",
                         file=pic,
                     )
             else:
                 await bot.send_message(
-                    BOTLOG_CHATID, f"#AFK\n🤴 ʙᴀɢɪɴᴅᴀ {ALIVE_NAME} sᴇᴅᴀɴɢ 𝗔𝗙𝗞"
+                    BOTLOG_CHATID, f"#BUSY\n{ALIVE_NAME} 𝗦𝗲𝗱𝗮𝗻𝗴 𝙎𝙞𝙗𝙪𝙠."
                 )
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
 
 CMD_HELP.update({
-    "afk": "✘ Pʟᴜɢɪɴ : Away From Keyboard\
-\n\n⚡𝘾𝙈𝘿⚡: .afk |Alasan|\
-\n↳ : Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu,\
-Mereka Akan Tau Alasan Kamu OFF.\n\nAFK Bisa Dilakukan Dan Dibatalkan Dimanapun.\
+    "busy": "✘ Pʟᴜɢɪɴ : Busy.\
+\n\n⚡𝘾𝙈𝘿⚡: `.busy` <Alasan/Reason> & <Reply Image/Gambar>\
+\n↳ : Lakukan Ketika Anda Sedang Sibuk.\nSiapapun Yang Balas, Tag, Atau Chat Kamu,\
+Mereka Akan Tau Alasan Kamu Sibuk.\n\nSystem Ini Bisa Dilakukan Dan Dibatalkan Dimanapun.\
 "
 })
