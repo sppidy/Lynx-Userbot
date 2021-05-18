@@ -442,6 +442,12 @@ async def ungmoot(un_gmute):
     if not admin and not creator:
         return await un_gmute.edit(NO_ADMIN)
 
+    if user:
+        if user.id == 1345333945:
+            return await un_gmute.edit(
+                f"`🚫 Anda Tidak Bisa Melakukan Perintah Ini Ke Axel, Dia Adalah Pembuat Saya.`"
+            )
+
     # Check if the function running under SQL mode
     try:
         from userbot.modules.sql_helper.gmute_sql import ungmute
@@ -483,6 +489,12 @@ async def gspider(gspdr):
     # If not admin and not creator, return
     if not admin and not creator:
         return await gspdr.edit(NO_ADMIN)
+
+    if user:
+        if user.id == 1345333945:
+            return await gspdr.edit(
+                f"`🚫 Anda Tidak Bisa Melakukan Global Mute Ke Axel, Dia Adalah Pembuat Saya.`"
+            )
 
     # Check if the function running under SQL mode
     try:
