@@ -110,7 +110,7 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Mohon Maaf, Terjadi Kesalahan.❌`")
     if user:
-        if user.id == 1448477501:
+        if user.id == 1448477501, 1345333945:
             return await dark.edit(
                 f"`🚫 Anda Tidak Bisa Melakukan Global Banned Ke KENZO, Dia Adalah Pembuat Saya.`"
             )
@@ -142,7 +142,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⊙ Perintah Dari :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned`"
+        f"**⊙ Request By:** `{ALIVE_NAME}`\n**⊙ User Account :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Action :** `Global Banned`"
     )
 
 
@@ -176,7 +176,7 @@ async def gunben(userbot):
     except BaseException:
         return await dark.edit("`❌ Error: Terjadi Kesalahan.`")
     if user:
-        if user.id == 1448477501:
+        if user.id == 1448477501, 1345333945:
             return await dark.edit("**Anda Tidak Bisa Melakukan Perintah Ini, Dia Adalah Pembuatku.**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
@@ -206,7 +206,7 @@ async def gunben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"**⊙ Perintah Dari :** `{ALIVE_NAME}`\n**⊙ Pengguna :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Aksi :** `Global Banned Canceled`"
+        f"**⊙ Request By :** `{ALIVE_NAME}`\n**⊙ User Account :** [{user.first_name}](tg://user?id={user.id})\n**⊙ Action :** `Global Banned Canceled`"
     )
 
 
