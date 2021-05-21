@@ -1431,119 +1431,137 @@ async def make_qr(makeqr):
 
 CMD_HELP.update(
     {
-        "img": "⚡𝘾𝙈𝘿⚡: `.img <search_query>`\
-         \n↳ : Does an image search on Google and shows 5 images."
+        "image": "✘ Pʟᴜɢɪɴ : `Image`"\
+        "⚡𝘾𝙈𝘿⚡: `.img <search_query>`\
+    \n↳ : Does an Image Search on Google and Shows 5 Images."
     }
 )
 CMD_HELP.update(
     {
-        "currency": "⚡𝘾𝙈𝘿⚡: `.currency <amount> <from> <to>`\
-         \n↳ : Converts various currencies for you."
+        "currency": "✘ Pʟᴜɢɪɴ : `Currency`"\
+        "⚡𝘾𝙈𝘿⚡: `.currency <Amount> <From> <To>`\
+    \n↳ : Converts Various Currencies for You."
     }
 )
 CMD_HELP.update(
     {
-        "carbon2": "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply messages]`\
-         \n↳ : Beautify your code using carbon.now.sh\
-         \n**How to Use** > `.crblang` <text> to set language for your code."
+        "carbon2": "✘ Pʟᴜɢɪɴ : `Carbon v.2`"\
+        "⚡𝘾𝙈𝘿⚡: `.carbon <text> [or reply messages]`\
+    \n↳ : Beautify Your Code Using » carbon.now.sh\
+    \nHow to Use =  `.crblang` <Text> to Set Language for Your Code."
     }   
 )
 CMD_HELP.update(
     {
-        "google": "⚡𝘾𝙈𝘿⚡: `.google <query>`\
-         \n↳ : Does a search on Google."
+        "google": "✘ Pʟᴜɢɪɴ : `Google`"\
+        "⚡𝘾𝙈𝘿⚡: `.google <Query>`\
+    \n↳ : Does a Search on Google."
     }
 )
 CMD_HELP.update(
     {
-        "wiki": "⚡𝘾𝙈𝘿⚡: `.wiki <query>`\
-         \n↳ : Does a search on Wikipedia."
+        "wikipedia": "✘ Pʟᴜɢɪɴ : `Wikipedia`"\
+        "⚡𝘾𝙈𝘿⚡: `.wiki <Query>`\
+    \n↳ : Does a Search on Wikipedia."
     }
 )
 CMD_HELP.update(
     {
-        "ud": "⚡𝘾𝙈𝘿⚡: `.ud <query>`\
-         \n↳ : Does a search on Urban Dictionary."
+        "urbandict": "✘ Pʟᴜɢɪɴ : `Urban Dictionary`"\
+        "⚡𝘾𝙈𝘿⚡: `.ud <Query>`\
+    \n↳ : Does a Search on Urban Dictionary."
     }
 )
 CMD_HELP.update(
     {
-        "tts": "⚡𝘾𝙈𝘿⚡: `.tts <text> [or reply]`\
-         \n↳ : Translates text to speech for the language which is set.\
-         \n**How to Use** > `.lang tts <language code>` to set language for tts. (Default is English.)"
+        "tts": "✘ Pʟᴜɢɪɴ : `Google Translate (Voice)`"\
+        "⚡𝘾𝙈𝘿⚡: `.tts <Text> [or Reply]`\
+    \n↳ : Translates Text to Speech for The Language Which is Set.\
+    \nHow to Use = `.lang tts <Language Code>` to Set Language for tts. (Default is English.)"
     }
 )
 CMD_HELP.update(
     {
-        "trt": "⚡𝘾𝙈𝘿⚡: `.trt <text> [or reply]`\
-         \n↳ : Translates text to the language which is set.\
-         \n**How to Use** > `.lang trt <language code>` to set language for trt. (Default is English)"
+        "trt": "✘ Pʟᴜɢɪɴ : `Google Translate (Text)`"\
+        "⚡𝘾𝙈𝘿⚡: `.trt <Text> [or Reply]`\
+    \n↳ : Translates Text to The Language Which is Set.\
+    \nHow to Use = `.lang trt <Language Code>` to Set Language for trt. (Default is English)"
     }
 )
 CMD_HELP.update(
     {
-        "imdb": "⚡𝘾𝙈𝘿⚡: `.imdb <movie-name>`\
-         \n↳ : Shows movie info and other stuff."
+        "imdb": "✘ Pʟᴜɢɪɴ : `Imdb`"\
+        "⚡𝘾𝙈𝘿⚡: `.imdb <Movie-Name>`\
+    \n↳ : Shows Movie Info and Other Stuff."
     }
 )
 CMD_HELP.update(
     {
-        "wolfram": "⚡𝘾𝙈𝘿⚡: `.wolfram` <query>\
-         \n↳ : Get answers to questions using WolframAlpha Spoken Results API."
+        "wolfram": "✘ Pʟᴜɢɪɴ : `Wolfram`"\
+        "⚡𝘾𝙈𝘿⚡: `.wolfram` <Query>\
+    \n↳ : Get Answers to Questions Using WolframAlpha Spoken Results API."
     }
 )
 CMD_HELP.update(
     {     
-        "screenshot": "⚡𝘾𝙈𝘿⚡: `.ss <url>`\
-         \n↳ : Takes a screenshot of a website and sends the screenshot.\
-         \n**Example of a valid URL** : `https://www.google.com`"
+        "screenshot": "✘ Pʟᴜɢɪɴ : `Screenshot`"\
+        "⚡𝘾𝙈𝘿⚡: `.ss <Url>`\
+        \n↳ : Takes a Screenshot of a Website and Sends the Screenshot.\
+    \n**Example of a Valid URL** : `https://www.google.com`"
     }
 )      
 CMD_HELP.update(
     {
-        "nekobin": "⚡𝘾𝙈𝘿⚡: `.neko` <text/reply>\
-         \n↳ : Create a paste or a shortened url using dogbin"
+        "nekobin": "✘ Pʟᴜɢɪɴ : `Nekobin`"\
+        "⚡𝘾𝙈𝘿⚡: `.neko` <Text/Reply>\
+    \n↳ : Create a Paste or a Shortened Url Using Dogbin."
     }
 )
 CMD_HELP.update(
     {
-        "getpaste": "⚡𝘾𝙈𝘿⚡: `.getpaste` <text/reply>\
-         \n↳ : Create a paste or a shortened url using dogbin"
+        "getpaste": "✘ Pʟᴜɢɪɴ : `Get Paste`"\
+        "⚡𝘾𝙈𝘿⚡: `.getpaste` <Text/Reply>\
+    \n↳ : Create a Paste or a Shortened Url Using Dogbin."
     }
 )      
 CMD_HELP.update(
     {
-        "removebg": "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> atau reply ke file gambar (Peringatan: ini tidak akan bekerja untuk sticker.)\
-         \n↳ : Manghapus latar belakang gambar."
+        "removebg": "✘ Pʟᴜɢɪɴ : `Remove Background`"\
+        "⚡𝘾𝙈𝘿⚡: `.rbg` <Link to Image> Atau Reply ke File Gambar.\
+    \n↳ : Manghapus latar belakang gambar.\n(Catatan : Plugin Ini Tidak Bekerja Untuk Sticker.)"
     }
 )       
 CMD_HELP.update(
     {
-        "ocr": "⚡𝘾𝙈𝘿⚡: `.ocr` <language/bahasa>\
-         \n↳ : Reply to an image or sticker to extract text from it."
+        "ocr": "✘ Pʟᴜɢɪɴ : `Ocr`"\
+        "⚡𝘾𝙈𝘿⚡: `.ocr` <Language/Bahasa>\
+    \n↳ : Reply to an Image or Sticker to Extract Text From it."
     }
 )
 CMD_HELP.update(
     {
-        "direct": "⚡𝘾𝙈𝘿⚡`.direct` <url>\
-         \n↳ : Reply to a link or paste a URL to generate a direct download link.\n**Supported Urls** : `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`"
+        "direct": "✘ Pʟᴜɢɪɴ : `Direct`"\
+        "⚡𝘾𝙈𝘿⚡`.direct` <Url>\
+    \n↳ : Reply to a Link or Paste a URL to Generate a Direct Download Link.\n**Supported Urls** : `Google Drive` - `Cloud Mail` - `Yandex.Disk` - `AFH` - `ZippyShare` - `MediaFire` - `SourceForge` - `OSDN` - `GitHub`"
     }
 )
 CMD_HELP.update(
     {
-        "rcode": "⚡𝘾𝙈𝘿⚡: `.makeqr <content>`\
-         \n↳ : Make a QR Code from the given content.\nExample: .makeqr www.google.com\nNote: use .decode <reply to barcode/qrcode> to get decoded content."
+        "rcode": "✘ Pʟᴜɢɪɴ : `QR Code`"\
+        "⚡𝘾𝙈𝘿⚡: `.makeqr <Content>`\
+    \n↳ : Make a QR Code From The Given Content.\nExample: .makeqr www.google.com\nNote: use .decode <Reply to Barcode/Qrcode> to Get Decoded Content."
     }
 )
 CMD_HELP.update(
     {
-       "barcode": "⚡𝘾𝙈𝘿⚡: `.barcode` <content>"      
+       "barcode": "✘ Pʟᴜɢɪɴ : `Barcode`"\
+       "⚡𝘾𝙈𝘿⚡: `.barcode` <Content>"      
     }
 )
 
 CMD_HELP.update(
     {
-       "youtube": 
+       "youtube": "✘ Pʟᴜɢɪɴ : `Youtube`"\
        "⚡𝘾𝙈𝘿⚡ : `.aud <link yt>`\
     \n↳ : Downloads the AUDIO from the given link\
     \n\n⚡𝘾𝙈𝘿⚡ : `.vid <link yt>`\
