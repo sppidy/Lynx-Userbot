@@ -9,7 +9,7 @@
 import json
 import os
 import random
-import pybase64
+import base64
 from lyrics_extractor import SongLyrics as sl
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
@@ -31,15 +31,9 @@ from userbot import CMD_HELP, ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
-a1 = pybase64.standard_b64decode(
-    "QUl6YVN5QXlEQnNZM1dSdEI1WVBDNmFCX3c4SkF5NlpkWE5jNkZV"
-)
-a2 = pybase64.standard_b64decode(
-    "QUl6YVN5QkYwenhMbFlsUE1wOXh3TVFxVktDUVJxOERnZHJMWHNn"
-)
-a3 = pybase64.standard_b64decode(
-    "QUl6YVN5RGRPS253blB3VklRX2xiSDVzWUU0Rm9YakFLSVFWMERR"
-)
+a1 = base64.b64decode("QUl6YVN5QXlEQnNZM1dSdEI1WVBDNmFCX3c4SkF5NlpkWE5jNkZV").decode("ascii")
+a2 = base64.b64decode("QUl6YVN5QkYwenhMbFlsUE1wOXh3TVFxVktDUVJxOERnZHJMWHNn").decode("ascii")
+a3 = base64.b64decode("QUl6YVN5RGRPS253blB3VklRX2xiSDVzWUU0Rm9YakFLSVFWMERR").decode("ascii")
 
 @register(outgoing=True, pattern=r"^\.musik (.*)")
 async def download_video(event):
